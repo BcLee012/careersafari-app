@@ -77,7 +77,10 @@ def extract_from_jd(raw_text: str) -> Tuple[Optional[Dict[str, Any]], Dict[str, 
     extraction 为 None 表示失败；meta 含 mock 标记与错误信息。
     """
     if not llm.is_configured():
-        return llm.mock_extract(raw_text), {"mock": True, "error": "STEPFUN_API_KEY 未配置"}
+        # 未配置 key 时返回 None，让上层落到规则基线。
+        # 不要返回空 mock —— 那会让界面显示「0 条需求」而不说明原因，
+        # 比明确降级更糟。
+        return None, {"mock": False, "error": "STEPFUN_API_KEY 未配置"}
 
     # 实测：推理模型对一条 ~500 字 JD 会产生 8000–10000 token 的 reasoning，
     # max_tokens 必须显著大于 reasoning 才有空间放 content，否则 content 为空。
