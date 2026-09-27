@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CareerSafari · 求职意向定义</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand"><span class="mark">C</span>CareerSafari</div>
+    <div class="seg">
+      <button id="tab-profile" class="on" onclick="showTab('profile')">用户画像</button>
+      <button id="tab-jd" onclick="showTab('jd')">岗位知识库</button>
+    </div>
+    <div id="status"><span class="dot"></span><span id="status-t">加载中…</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ==================== 视图一：用户画像 ==================== -->
+<section id="sec-profile" class="view on">
+  <div class="hero">
+    <h1>把你的求职需求，定义成能验证的东西</h1>
+    <p>五个步骤，先问约束再问偏好。每一步都会告诉你：哪些是客观事实、哪些只是你的自述、哪些现在还不知道。
+       <b>「我不确定」是合法答案</b>——系统不会替你猜。</p>
+  </div>
+
+  <nav class="steps" id="steps"></nav>
+
+  <!-- STEP 1 -->
+  <div class="card step-pane" data-step="1">
+    <div class="eyebrow">第一步 · 硬约束</div>
+    <h2>先问筛子，再问偏好</h2>
+    <p class="sub">这些不是「你喜欢什么」，是<b>划定可行范围的事实</b>。培养方案里的中期考核、开题、答辩节点，
+      就是最典型的约束——它们不关心你的兴趣，只决定你还有多少时间。</p>
+    <div class="grid g3">
+      <div class="f"><label>人设</label><select id="f-persona"></select></div>
+      <div class="f"><label>专业 / 学科</label><input type="text" id="f-major" value="管理科学与工程"></div>
+      <div class="f"><label>年级</label>
+        <select id="f-grade"><option>大一</option><option>大二</option><option>大三</option>
+          <option selected>研一</option><option>研二</option><option>研三</option></select></div>
+    </div>
+    <div class="grid g3" style="margin-top:14px">
+      <div class="f"><label>倾向方向（管科五方向）</label><select id="f-dir"></select></div>
+      <div class="f"><label>期望工作地</label><select id="f-region"></select></div>
+      <div class="f"><label>必须落地的时间点</label><select id="f-timeline">
+        <option value="">— 请选择 —</option><option>今年暑期实习前</option><option>明年暑期实习前</option>
+        <option>毕业前一年</option><option>还没想好</option>
+        <option value="__unknown__">我不确定（登记为未知）</option></select></div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="f"><label>不可接受项</label><select id="f-dealbreaker"></select></div>
+      <div class="f"><label>暑期实习目标</label><input type="text" id="f-intern" placeholder="如：金融行业商业分析"></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="card step-pane" data-step="2" hidden>
+    <div class="eyebrow">第二步 · 能力</div>
+    <h2>「你说你会」和「你做过」是两回事</h2>
+    <p class="sub">标为<b>有证据</b>时必须写清是哪门课、哪个项目、哪段实习。写不出来就会自动降级为「仅自述」——
+      这不是刁难，是因为后端要比对的是企业的硬要求。</p>
+    <div class="grid g2">
+      <div class="skcol"><div class="hd">通用可迁移</div><div id="skills-transferable"></div></div>
+      <div class="skcol"><div class="hd">目标岗位相关</div><div id="skills-specific"></div></div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="card step-pane" data-step="3" hidden>
+    <div class="eyebrow">第三步 · 兴趣</div>
+    <h2>RIASEC 六型 —— 主结构</h2>
+    <p class="sub">霍兰德职业兴趣理论，18 题。它只测兴趣、不测能力，所以只用来<b>给候选方向排序</b>，
+      不用来排除方向。请按真实反应作答，不要按「我应该喜欢」作答。</p>
+    <div class="riasec" id="riasec"></div>
+    <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
+      <div class="grid g2">
+        <div class="f"><label>MBTI（可选 · 辅助标签）</label>
+          <input type="text" id="f-mbti" placeholder="如 INTJ，可留空" maxlength="4"></div>
+        <div class="f"><label>信度确认</label>
+          <label style="font-size:12.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start">
+            <input type="checkbox" id="f-mbti-ack" style="margin-top:4px;flex:none">
+            <span id="mbti-caveat-text"></span></label></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="card step-pane" data-step="4" hidden>
+    <div class="eyebrow">第四步 · 价值观</div>
+    <h2>把 100 分分配到 6 个维度</h2>
+    <p class="sub">自由打分时，人倾向于给每项都打高分——六个 90 分等于没填。
+      <b>强制分配才能逼出真实取舍</b>，而这正是价值观澄清唯一有意义的地方。</p>
+    <div id="values"></div>
+    <div class="vsum" id="vsum-box"><b id="vsum">0</b><span class="muted">/ 100</span>
+      <span class="muted" style="margin-left:auto;font-size:12.5px" id="vsum-msg">还没分配完</span></div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="card step-pane" data-step="5" hidden>
+    <div class="eyebrow">第五步 · 未知项</div>
+    <h2>你现在确定不了什么？</h2>
+    <p class="sub">「我不确定」是合法输出。系统会把它们原样登记为 <span class="mono">unknown</span>，
+      <b>不会替你猜一个答案填上</b>。这是本产品与通用聊天机器人最本质的分界线。</p>
+    <div id="unknown-suggest"></div>
+    <div style="margin-top:16px" id="unknowns"></div>
+    <button class="btn btn-g btn-s" onclick="addUnknown()">+ 添加自定义未知项</button>
+  </div>
+
+  <div class="btn-row" style="margin:18px 0 26px">
+    <button class="btn btn-g" id="btn-prev" onclick="stepGo(-1)">上一步</button>
+    <button class="btn btn-p" id="btn-next" onclick="stepGo(1)">下一步</button>
+    <button class="btn btn-p" id="btn-submit" onclick="submitProfile()" hidden>生成求职意向定义卡</button>
+  </div>
+
+  <div id="card-out" hidden></div>
+</section>
+
+<!-- ==================== 视图二：岗位知识库 ==================== -->
+<section id="sec-jd" class="view">
+  <div class="hero">
+    <h1>把一则 JD，拆成可单独验证的需求</h1>
+    <p>原子化的判据不是「拆得够细」，而是<b>「拆到能否被单独验证」</b>。
+      「熟悉 SQL」不可验证；「能独立编写多表 JOIN 查询」才可验证。
+      不可验证的条目拿去和用户自评比对，比出来的数是假的。</p>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">采集</div>
+    <h2>三种入口</h2>
+    <p class="sub">主流招聘官网是 JS 渲染的 SPA，本地抓不到正文——这是技术现实，不是策略。
+      所以「手动粘贴 / 文件导入」是主路径，URL 采集作为补充。</p>
+    <div class="tabs-src">
+      <button id="src-manual" class="on" onclick="setSrc('manual')">手动粘贴</button>
+      <button id="src-url" onclick="setSrc('url')">URL 采集</button>
+      <button id="src-file" onclick="setSrc('file')">文件导入</button>
+    </div>
+
+    <div id="src-manual-box">
+      <textarea id="jd-text" placeholder="把 JD 原文整段粘贴到这里（至少 50 字符）。&#10;&#10;提示：保留原文的分行和标点，evidence_span 校验依赖逐字比对。"></textarea>
+    </div>
+    <div id="src-url-box" hidden>
+      <div class="grid g3" style="grid-template-columns:1fr auto">
+        <div class="f"><label>URL</label>
+          <input type="text" id="jd-url" placeholder="https://…"></div>
+        <div class="f"><label>&nbsp;</label><button class="btn btn-p" onclick="fetchUrl()">抓取</button></div>
+      </div>
+      <div id="url-msg" style="margin-top:10px"></div>
+    </div>
+    <div id="src-file-box" hidden>
+      <div class="grid g3" style="grid-template-columns:1fr auto">
+        <div class="f"><label>文件（txt / md / html / docx / pdf）</label>
+          <input type="file" id="jd-file"></div>
+        <div class="f"><label>&nbsp;</label><button class="btn btn-p" onclick="uploadFile()">解析文件</button></div>
+      </div>
+      <div id="file-msg" style="margin-top:10px"></div>
+    </div>
+
+    <div class="btn-row" style="margin-top:16px">
+      <button class="btn btn-p" onclick="parseJd()">拆解为原子化需求</button>
+      <span class="muted" style="font-size:12.5px">拆解结果必须经你逐条确认才入库</span>
+    </div>
+    <div id="parse-out" style="margin-top:18px"></div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">已沉淀</div>
+    <h2>岗位知识库</h2>
+    <p class="sub">每条需求的 <span class="mono">evidence_span</span> 都能指回 JD 原文——
+      这是「系统不输出资料库外的事实」的落地方式。鼠标悬停在需求标签上可看原文片段。</p>
+    <div class="searchbar">
+      <input type="text" id="pos-q" placeholder="搜索岗位名 / 能力 / 关键词…" oninput="renderPositions()">
+      <select id="pos-kind" onchange="renderPositions()" style="max-width:150px">
+        <option value="">全部需求</option><option value="hard">仅硬要求</option>
+        <option value="soft">仅软能力</option>
+      </select>
+      <select id="pos-conf" onchange="renderPositions()" style="max-width:180px">
+        <option value="">全部证据等级</option><option value="external">有原文支撑</option>
+        <option value="team">团队判断</option>
+      </select>
+    </div>
+    <div class="chiprow" id="fam-chips"></div>
+    <div class="jdlist" id="positions"></div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">原文库</div>
+    <h2>JD 原文（append-only）</h2>
+    <p class="sub">原文永不修改，只追加。岗位与需求是它的派生视图——任何时候都能回溯一条结论的出处。</p>
+    <div id="jds"></div>
+  </div>
+</section>
+
+<div class="footer">
+  <span>CareerSafari · 本地原型 · 职业认知与决策支持，不做岗位聚合与投递撮合</span>
+  <span class="mono" id="ver"></span>
+</div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
