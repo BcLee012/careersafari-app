@@ -38,7 +38,7 @@ def build_block() -> str:
     L: list[str] = []
     A = L.append
 
-    A("### 4. 能力 Taxonomy\n")
+    A("### 能力目录\n")
     n_alias = sum(len(c["aliases"]) for c in CAPABILITIES)
     A(f"共 {len(CAPABILITIES)} 项能力、{n_alias} 个别名。\n")
     A("匹配在 **canonical capability id** 上做，不做模糊字符串匹配。")
@@ -53,7 +53,7 @@ def build_block() -> str:
     A("**一条文本可能涉及多项能力**（「熟练使用 Excel 与 SQL」同时要求 Excel 和 SQL），")
     A("匹配引擎必须返回能力**集合**而非单项。只归一类会让用户已验证的能力不计入匹配。")
     A("")
-    A("### 5. 培养方案课程映射\n")
+    A("### 培养方案课程映射\n")
     A("数据来源：工程管理学院 1201 管理科学与工程学科学术学位硕士研究生培养方案（2026级）。")
     A("课程代码、学期、教师与学分来自本地培养方案，不由模型补写。\n")
     A("| 能力 | 课程 | 课程代码 | 学期 | 教师 | 学分 | 必修 |")
@@ -76,7 +76,7 @@ def build_block() -> str:
     for m in PROGRAM_MILESTONES:
         A(f"| {m['semester']} | {m['event']} | {m['note']} |")
     A("")
-    A("### 6. 岗位族归一化\n")
+    A("### 候选岗位族\n")
     A(f"共 {len(JOB_FAMILIES)} 个受控岗位族。\n")
     A("LLM 对同一类岗位会给出不同名字（商业分析师 / 战略商业分析师 / 商业分析Leader），")
     A("关键词只用于采集排队提示。正式主岗位族按任务与产出定义，并经过引用和语义核验：\n")
@@ -86,8 +86,8 @@ def build_block() -> str:
         kws = "、".join(f"`{k}`" for k in f["keywords"])
         A(f"| {f['family']} | {kws} |")
     A("")
-    A("无命中归入「其他（未归入受控岗位族）」。同族只保留证据最强的代表参与排名，")
-    A("但展示族内样本数。")
+    A("无命中时保留为「其他（未归入受控岗位族）」，等待职责证据进一步判断。")
+    A("正式匹配按岗位族汇总多家企业证据；未达到准入门槛的岗位族不会进入正式推荐。")
     return "\n".join(L)
 
 
