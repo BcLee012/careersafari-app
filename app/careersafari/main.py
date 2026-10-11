@@ -2,7 +2,7 @@
 
 两个采集面，一个库、一套 ID 规则：
   /api/profile   —— 用户画像端（大学初期人群：硬约束 → 能力两栏 → 兴趣 → 价值观 → 未知登记）
-  /api/jd/*      —— 职场端（JD 原文 → 原子化需求 → 人工确认 → 入库）
+  /api/jd/*      —— 职场端（JD 原文 → 自动检查 → 入库或待确认）
 
 安全设计移植自上一个项目：
   - 写操作要求 X-Admin-Token；ADMIN_TOKEN 未配置时 fail-closed。
@@ -24,9 +24,9 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from . import advice as advice_mod
-from . import db, extractor, fetcher, llm, match as match_mod
+from . import db, extractor, fetcher, ingestion, llm, match as match_mod
 from . import profile as profile_mod
-from .schema import SCHEMA_VERSION, JdRecord, Position, Requirement
+from .schema import SCHEMA_VERSION
 from .security import (allowlist_mode, configured_admin_token, parse_limiter,
                        read_limiter, require_admin)
 
@@ -37,7 +37,7 @@ logger = logging.getLogger("careersafari")
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
-app = FastAPI(title="CareerSafari", version="0.1.0")
+app = FastAPI(title="CareerSafari", version=SCHEMA_VERSION)
 
 
 @app.on_event("startup")
@@ -45,8 +45,7 @@ def _startup() -> None:
     db.init_db()
     _ensure_admin_token()
     if not llm.is_configured():
-        logger.warning("STEPFUN_API_KEY 未配置 —— LLM 功能走 mock 降级路径，"
-                       "JD 拆解将返回占位结果而非真实分析。")
+        logger.warning("模型未配置：预览可使用规则基线，自动入库进入待确认。")
 
 
 def _ensure_admin_token() -> None:
@@ -104,16 +103,26 @@ class ProfileIn(BaseModel):
 
 def build_advice_for(prof, answers: Dict[str, Any]) -> Dict[str, Any]:
     """对全部已沉淀岗位做确定性匹配，生成求职/学习建议。"""
-    positions = db.list_positions(limit=200)
+    positions = db.list_positions(limit=None)
+    with db.connect() as con:
+        counts = dict(con.execute("SELECT status,count(*) FROM jd_records GROUP BY status").fetchall())
+    inventory = {"submitted": sum(counts.values()), "review": counts.get("review", 0),
+                 "checking": counts.get("checking", 0), "excluded": counts.get("excluded", 0),
+                 "fetch_failed": len(db.source_failures()), "admitted": counts.get("ready", 0)}
     if not positions:
-        return {"headline": "岗位知识库还是空的——先去「岗位知识库」页沉淀几条 JD，"
-                            "否则没有任何可比对的对象。",
+        headline = (f"已保存 {inventory['submitted']} 份岗位原文，其中 {inventory['review']} 份待确认、"
+                    f"{inventory['checking']} 份正在检查、{inventory['excluded']} 份范围外。"
+                    "当前还没有通过检查的岗位，暂不形成匹配结果。") if inventory["submitted"] else (
+                    "尚未上传岗位资料，当前没有可比对的岗位。")
+        if inventory["fetch_failed"]:
+            headline += f"另有 {inventory['fetch_failed']} 个来源采集失败，需重新采集。"
+        return {"headline": headline,
                 "positions": [], "learning_plan": [], "two_week_actions": [],
                 "evidence_strength": {"level": "无法评估", "note": "无比对对象"},
-                "excluded": [], "generated_by": "deterministic"}
+                "excluded": [], "generated_by": "deterministic", "library_status": inventory}
     report = match_mod.match_all(positions, prof, answers)
     adv = advice_mod.build_advice(report, prof, answers)
-    adv = advice_mod.polish_with_llm(adv)
+    adv["library_status"] = inventory
     return adv
 
 
@@ -164,7 +173,7 @@ class JdParseIn(BaseModel):
 
 @app.post("/api/jd/parse")
 def jd_parse(payload: JdParseIn):
-    """解析 JD 原文 → 原子化需求 + 生成后校验。不落库，等人工确认。"""
+    """只预览结构/引用检查，不落库；语义审查在统一入库流程完成。"""
     try:
         read_limiter.hit(f"parse:{payload.user_id}")
         parse_limiter.hit(f"parse:{payload.user_id}")
@@ -220,56 +229,73 @@ class JdConfirmIn(BaseModel):
     canonical_name: str = ""
     industry: str = ""
     requirements: List[Dict[str, Any]]
+    extraction: Optional[Dict[str, Any]] = None
+
+
+class JdIngestIn(JdParseIn):
+    retry: bool = False
+
+
+@app.post("/api/jd/ingest")
+def jd_ingest(payload: JdIngestIn, x_admin_token: Optional[str] = Header(default=None)):
+    err = _admin(x_admin_token)
+    if err:
+        return err
+    try:
+        parse_limiter.hit("ingest:admin")
+    except PermissionError as exc:
+        return JSONResponse(status_code=429, content={"ok": False, "error": str(exc)})
+    return ingestion.ingest(payload.raw_text, payload.source_url, payload.source_type,
+                            payload.user_id, retry=payload.retry)
 
 
 @app.post("/api/jd/confirm")
 def jd_confirm(payload: JdConfirmIn, x_admin_token: Optional[str] = Header(default=None)):
-    """人工确认后入库。这一步是人工闸门——LLM 输出不直接进库。"""
+    """兼容旧接口；人工点击不能跳过自动检查，也不信任客户端 confidence。"""
     err = _admin(x_admin_token)
     if err:
         return err
+    try:
+        parse_limiter.hit("ingest:admin")
+    except PermissionError as exc:
+        return JSONResponse(status_code=429, content={"ok": False, "error": str(exc)})
+    candidate = dict(payload.extraction or {})
+    candidate.update(requirements=payload.requirements, canonical_name=payload.canonical_name)
+    return ingestion.ingest(payload.raw_text, payload.source_url, payload.source_type,
+                            payload.user_id, supplied=candidate)
 
-    if not payload.requirements:
-        return {"ok": False, "error": "没有可入库的需求条目。"}
 
-    jd_id = db.new_id("JD")
-    db.save_jd(JdRecord(
-        jd_id=jd_id, raw_text=payload.raw_text, source_type=payload.source_type,
-        source_url=payload.source_url, ingested_by=payload.user_id,
-        status="confirmed", credibility=payload.credibility,
-    ))
+@app.get("/api/jd/reviews")
+def jd_reviews(x_admin_token: Optional[str] = Header(default=None)):
+    err = _admin(x_admin_token)
+    if err:
+        return err
+    reviews = db.list_assessments()
+    for entry in reviews:
+        attempts = entry["details"].get("attempts", [])
+        extracted = next((a.get("extraction") for a in reversed(attempts) if a.get("extraction")), {})
+        entry["title"] = extracted.get("title") or "岗位名称待识别"
+        entry["company"] = extracted.get("company") or "公司待核对"
+        entry["source_url"] = entry["details"].get("source_url", "")
+    return {"ok": True, "reviews": reviews, "source_failures": db.source_failures()}
 
-    pos_id = db.new_id("POS")
-    reqs: List[Requirement] = []
-    for i, r in enumerate(payload.requirements, start=1):
-        text = str(r.get("text", "")).strip()
-        if not text:
-            continue
-        reqs.append(Requirement(
-            req_id=f"{pos_id}-REQ-{i:02d}",
-            kind=str(r.get("kind", "hard")),
-            category=str(r.get("category", "技能")),
-            text=text,
-            evidence_span=str(r.get("evidence_span", "")),
-            confidence=str(r.get("confidence", "external")),
-            team_confidence=r.get("team_confidence"),
-        ))
 
-    pos = Position(
-        position_id=pos_id,
-        canonical_name=payload.canonical_name or "未命名岗位",
-        industry=payload.industry,
-        variant_names=[str(x) for x in (payload.variant_names or [])] if hasattr(payload, "variant_names") else [],
-        work_scenarios=[str(x) for x in (payload.work_scenarios or [])] if hasattr(payload, "work_scenarios") else [],
-        stressors=[str(x) for x in (payload.stressors or [])] if hasattr(payload, "stressors") else [],
-        requirements=reqs,
-        source_jd_ids=[jd_id],
-    )
-    db.save_position(pos)
-
-    db.log_interaction("jd_confirm", payload.user_id, evidence_ids=[r.req_id for r in reqs],
-                       validation={"jd_id": jd_id, "position_id": pos_id, "n_req": len(reqs)})
-    return {"ok": True, "jd_id": jd_id, "position_id": pos_id, "n_requirements": len(reqs)}
+@app.post("/api/jd/{jd_id}/retry")
+def jd_retry(jd_id: str, x_admin_token: Optional[str] = Header(default=None)):
+    err = _admin(x_admin_token)
+    if err:
+        return err
+    try:
+        parse_limiter.hit("ingest:admin")
+    except PermissionError as exc:
+        return JSONResponse(status_code=429, content={"ok": False, "error": str(exc)})
+    row = db.get_jd(jd_id)
+    if not row:
+        return {"ok": False, "error": "JD 不存在"}
+    latest = db.get_assessment(jd_id)
+    details = latest["details"] if latest else {}
+    return ingestion.ingest(row["raw_text"], details.get("source_url") or row["source_url"],
+                            details.get("source_type") or row["source_type"], jd_id=jd_id, retry=True)
 
 
 class JdFetchIn(BaseModel):
@@ -287,15 +313,15 @@ def jd_fetch(payload: JdFetchIn):
 
     if not payload.url.strip():
         return {"ok": False, "error": "URL 不能为空。"}
-    if db.jd_exists_by_url(payload.url):
-        return {"ok": False, "error": "该 URL 已采集过（幂等保护，不重复入库）。"}
+    document, err, warns = fetcher.fetch_document(payload.url)
+    capture_id = db.save_capture(payload.url, document, err)
+    if document is None:
+        return {"ok": False, "error": err, "warnings": warns, "capture_id": capture_id}
 
-    text, err, warns = fetcher.fetch_url(payload.url)
-    if text is None:
-        return {"ok": False, "error": err, "warnings": warns}
-
+    text = document["raw_text"]
     return {"ok": True, "raw_text": text, "source_url": payload.url,
-            "source_type": "url_fetch", "chars": len(text), "warnings": warns}
+            "source_type": "url_fetch", "chars": len(text), "warnings": warns,
+            "capture_id": capture_id, "source_facts": document.get("metadata", {}).get("facts", {})}
 
 
 @app.post("/api/jd/upload")
@@ -317,6 +343,37 @@ def list_jds(limit: int = 500):
 @app.get("/api/positions")
 def list_positions(limit: int = 1000):
     return {"ok": True, "positions": db.list_positions(limit)}
+
+
+@app.get("/api/library/coverage")
+def library_coverage(x_admin_token: Optional[str] = Header(default=None)):
+    denied = _admin(x_admin_token)
+    if denied is not None:
+        return denied
+    from .coverage import coverage_report
+    return {"ok": True, **coverage_report(db.list_positions(None))}
+
+
+@app.get("/api/knowledge/onet")
+def onet_status():
+    from . import onet
+    return {"ok": True, **onet.status()}
+
+
+@app.get("/api/knowledge/search")
+def knowledge_search(family: str, q: str = "", limit: int = 4):
+    from . import onet
+    return {"ok": True, "references": onet.retrieve(family, q, limit),
+            "limitation": onet.LIMITATION, "attribution": onet.ATTRIBUTION}
+
+
+@app.post("/api/knowledge/explain")
+def knowledge_explain(payload: Dict[str, Any], x_admin_token: Optional[str] = Header(default=None)):
+    denied = _admin(x_admin_token)
+    if denied is not None:
+        return denied
+    from . import rag
+    return {"ok": True, **rag.answer(payload.get("family", ""), payload.get("question", ""))}
 
 
 # ---------------------------------------------------------------- 前端

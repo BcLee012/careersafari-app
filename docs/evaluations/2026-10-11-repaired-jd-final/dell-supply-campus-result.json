@@ -1,0 +1,17 @@
+{
+  "key": "dell-supply-campus",
+  "name": "戴尔：全球供应链管理校招",
+  "url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/job/D12257",
+  "collection_seconds": 31.826,
+  "warnings": [
+    "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+  ],
+  "result": {
+    "ok": false,
+    "state": "fetch_failed",
+    "reasons": [
+      "静态正文不足（4字符）；浏览器采集未取得有效正文：渲染后的正文仍过短"
+    ]
+  },
+  "audit": null
+}

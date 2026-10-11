@@ -1,0 +1,997 @@
+{
+  "key": "baidu-content",
+  "name": "百度：内容生态数据分析实习",
+  "url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c",
+  "collection_seconds": 0.765,
+  "warnings": [
+    "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+  ],
+  "source_metadata": {
+    "adapter": "source-2",
+    "facts": {
+      "company": {
+        "value": "百度",
+        "span": "百度校园招聘",
+        "locator": "HTML title + verified official host",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+      },
+      "job_type": {
+        "value": "实习",
+        "span": "INTERN",
+        "locator": "detailData.recruitType + URL route",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+      },
+      "title": {
+        "value": "数据分析师实习生（J75756）",
+        "span": "数据分析师实习生（J75756）",
+        "locator": "detailData.postInfo.name",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+      },
+      "published_date": {
+        "value": "2024-07-08",
+        "span": "2024-07-08",
+        "locator": "detailData.postInfo.publishDate",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+      },
+      "updated_date": {
+        "value": "2026-07-21",
+        "span": "2026-07-21",
+        "locator": "detailData.postInfo.updateDate",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+      }
+    },
+    "conflicts": []
+  },
+  "result": {
+    "ok": true,
+    "state": "review",
+    "jd_id": "JD-CE1A730D",
+    "position_id": null,
+    "reasons": [
+      "主岗位族待分类",
+      "岗位分类缺少内容或依据"
+    ],
+    "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+    "n_requirements": 0,
+    "cached": false,
+    "elapsed_seconds": 54.22
+  },
+  "audit": {
+    "jd_id": "JD-CE1A730D",
+    "fingerprint": "6a18ec442c069573f502ce6153c1d7e490c7c5767e68be4bf3d53194d2a83101",
+    "state": "review",
+    "details_json": "{\"position_id\": null, \"result\": {\"ok\": true, \"state\": \"review\", \"jd_id\": \"JD-CE1A730D\", \"position_id\": null, \"reasons\": [\"主岗位族待分类\", \"岗位分类缺少内容或依据\"], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 0, \"cached\": false, \"elapsed_seconds\": 54.22}, \"attempts\": [{\"extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析师实习生（J75756）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2024-07-08\", \"published_date_span\": \"2024-07-08\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenarios\": [\"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"沉淀分析方法论，构建自动化数据分析工具\"], \"family\": \"数据分析\", \"family_spans\": [\"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会 针对核心指标及业务高频需求，推动看板线上化，提升工作效率 支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长 沉淀分析方法论，构建自动化数据分析工具\"], \"secondary_tags\": [\"内容生态分析\", \"异动归因\", \"看板搭建\", \"运营策略优化\", \"自动化工具构建\"], \"stressors\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上，硕士及以上优先\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"具备数学、统计、计算机等相关专业\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"evidence_span\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"evidence_span\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有主人翁意识、积极上进\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}], \"extraction_notes\": \"\", \"_mock\": false}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析师实习生（J75756）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2024-07-08\", \"published_date_span\": \"2024-07-08\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenarios\": [\"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"沉淀分析方法论，构建自动化数据分析工具\"], \"family\": \"数据分析\", \"family_spans\": [\"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会 针对核心指标及业务高频需求，推动看板线上化，提升工作效率 支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长 沉淀分析方法论，构建自动化数据分析工具\"], \"secondary_tags\": [\"内容生态分析\", \"异动归因\", \"看板搭建\", \"运营策略优化\", \"自动化工具构建\"], \"stressors\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上，硕士及以上优先\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"具备数学、统计、计算机等相关专业\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"evidence_span\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"evidence_span\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有主人翁意识、积极上进\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}], \"extraction_notes\": \"\", \"_mock\": false}, \"source_overrides\": [], \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 832, \"prompt_tokens\": 1445, \"completion_tokens\": 5731, \"total_tokens\": 7176, \"prompt_tokens_details\": {\"cached_tokens\": 832}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 34.284}, \"check\": {\"structural\": {\"total\": 6, \"passed\": 6, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"本科及以上，硕士及以上优先\"}, {\"idx\": 1, \"ok\": true, \"text\": \"具备数学、统计、计算机等相关专业\"}, {\"idx\": 2, \"ok\": true, \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"idx\": 3, \"ok\": true, \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"idx\": 4, \"ok\": true, \"text\": \"有主人翁意识、积极上进\"}, {\"idx\": 5, \"ok\": true, \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"数据分析师实习生（J75756）\", \"span\": \"数据分析师实习生（J75756）\", \"spans\": [{\"text\": \"数据分析师实习生（J75756）\", \"raw_start\": 3, \"raw_end\": 19, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"实习\", \"span\": \"INTERN\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2024-07-08\", \"span\": \"2024-07-08\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2024-07-08\", \"span\": \"2024-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"本科及以上，硕士及以上优先\", \"span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"spans\": [{\"text\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"raw_start\": 192, \"raw_end\": 222, \"normalized_start\": 182}], \"basis\": \"body\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"具备数学、统计、计算机等相关专业\", \"span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"spans\": [{\"text\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"raw_start\": 192, \"raw_end\": 222, \"normalized_start\": 182}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"span\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"spans\": [{\"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"raw_start\": 256, \"raw_end\": 314, \"normalized_start\": 244}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"span\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"spans\": [{\"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"raw_start\": 224, \"raw_end\": 254, \"normalized_start\": 213}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"有主人翁意识、积极上进\", \"span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"spans\": [{\"text\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"raw_start\": 316, \"raw_end\": 360, \"normalized_start\": 303}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\", \"span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"spans\": [{\"text\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"raw_start\": 316, \"raw_end\": 360, \"normalized_start\": 303}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"span\": \"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"spans\": [{\"text\": \"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"raw_start\": 58, \"raw_end\": 97, \"normalized_start\": 53}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"span\": \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"spans\": [{\"text\": \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"raw_start\": 99, \"raw_end\": 127, \"normalized_start\": 93}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"span\": \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"spans\": [{\"text\": \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"raw_start\": 129, \"raw_end\": 163, \"normalized_start\": 122}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"沉淀分析方法论，构建自动化数据分析工具\", \"span\": \"沉淀分析方法论，构建自动化数据分析工具\", \"spans\": [{\"text\": \"沉淀分析方法论，构建自动化数据分析工具\", \"raw_start\": 165, \"raw_end\": 184, \"normalized_start\": 157}], \"basis\": \"body\"}], \"problems\": [\"岗位分类引用不在原文\"], \"model\": \"\"}}, {\"extraction\": {\"company\": \"百度\", \"company_span\": \"\", \"title\": \"数据分析师实习生（J75756）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"日常实习\", \"published_date\": \"2024-07-08\", \"published_date_span\": \"2024-07-08\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenarios\": [\"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"沉淀分析方法论，构建自动化数据分析工具\"], \"family\": \"待分类\", \"family_spans\": [], \"secondary_tags\": [\"内容生态分析\", \"异动归因\", \"看板搭建\", \"运营策略优化\", \"自动化工具构建\"], \"stressors\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上，硕士及以上优先\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"具备数学、统计、计算机等相关专业\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"evidence_span\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"evidence_span\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有主人翁意识、积极上进\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}], \"extraction_notes\": \"1. 原文未出现公司名称相关表述，company_span为空；2. 原文未提供岗位族分类依据，family字段暂填待分类，family_spans为空；3. 招聘阶段原文表述为‘日常实习’，故job_type_span调整为对应正文内容。\"}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"\", \"title\": \"数据分析师实习生（J75756）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"日常实习\", \"published_date\": \"2024-07-08\", \"published_date_span\": \"2024-07-08\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenarios\": [\"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"沉淀分析方法论，构建自动化数据分析工具\"], \"family\": \"待分类\", \"family_spans\": [], \"secondary_tags\": [\"内容生态分析\", \"异动归因\", \"看板搭建\", \"运营策略优化\", \"自动化工具构建\"], \"stressors\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上，硕士及以上优先\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"具备数学、统计、计算机等相关专业\", \"evidence_span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"evidence_span\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"evidence_span\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有主人翁意识、积极上进\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\", \"evidence_span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}], \"extraction_notes\": \"1. 原文未出现公司名称相关表述，company_span为空；2. 原文未提供岗位族分类依据，family字段暂填待分类，family_spans为空；3. 招聘阶段原文表述为‘日常实习’，故job_type_span调整为对应正文内容。\"}, \"source_overrides\": [], \"extraction_meta\": {\"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 896, \"prompt_tokens\": 2135, \"completion_tokens\": 3627, \"total_tokens\": 5762, \"prompt_tokens_details\": {\"cached_tokens\": 896}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 19.926, \"repair_reasons\": [\"岗位分类引用不在原文\"], \"ok\": true, \"error\": \"\"}, \"check\": {\"structural\": {\"total\": 6, \"passed\": 6, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"本科及以上，硕士及以上优先\"}, {\"idx\": 1, \"ok\": true, \"text\": \"具备数学、统计、计算机等相关专业\"}, {\"idx\": 2, \"ok\": true, \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"idx\": 3, \"ok\": true, \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"idx\": 4, \"ok\": true, \"text\": \"有主人翁意识、积极上进\"}, {\"idx\": 5, \"ok\": true, \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"数据分析师实习生（J75756）\", \"span\": \"数据分析师实习生（J75756）\", \"spans\": [{\"text\": \"数据分析师实习生（J75756）\", \"raw_start\": 3, \"raw_end\": 19, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"实习\", \"span\": \"INTERN\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2024-07-08\", \"span\": \"2024-07-08\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2024-07-08\", \"span\": \"2024-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"本科及以上，硕士及以上优先\", \"span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"spans\": [{\"text\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"raw_start\": 192, \"raw_end\": 222, \"normalized_start\": 182}], \"basis\": \"body\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"具备数学、统计、计算机等相关专业\", \"span\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"spans\": [{\"text\": \"本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"raw_start\": 192, \"raw_end\": 222, \"normalized_start\": 182}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"span\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"spans\": [{\"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"raw_start\": 256, \"raw_end\": 314, \"normalized_start\": 244}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"span\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"spans\": [{\"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"raw_start\": 224, \"raw_end\": 254, \"normalized_start\": 213}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"有主人翁意识、积极上进\", \"span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"spans\": [{\"text\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"raw_start\": 316, \"raw_end\": 360, \"normalized_start\": 303}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地\", \"span\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"spans\": [{\"text\": \"有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"raw_start\": 316, \"raw_end\": 360, \"normalized_start\": 303}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"span\": \"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"spans\": [{\"text\": \"围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"raw_start\": 58, \"raw_end\": 97, \"normalized_start\": 53}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"span\": \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"spans\": [{\"text\": \"针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"raw_start\": 99, \"raw_end\": 127, \"normalized_start\": 93}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"span\": \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"spans\": [{\"text\": \"支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"raw_start\": 129, \"raw_end\": 163, \"normalized_start\": 122}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"沉淀分析方法论，构建自动化数据分析工具\", \"span\": \"沉淀分析方法论，构建自动化数据分析工具\", \"spans\": [{\"text\": \"沉淀分析方法论，构建自动化数据分析工具\", \"raw_start\": 165, \"raw_end\": 184, \"normalized_start\": 157}], \"basis\": \"body\"}], \"problems\": [\"主岗位族待分类\", \"岗位分类缺少内容或依据\"], \"model\": \"\"}}], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"job_type\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"title\": {\"value\": \"数据分析师实习生（J75756）\", \"span\": \"数据分析师实习生（J75756）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"published_date\": {\"value\": \"2024-07-08\", \"span\": \"2024-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"updated_date\": {\"value\": \"2026-07-21\", \"span\": \"2026-07-21\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, \"conflicts\": []}, \"repair_meta\": {\"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 896, \"prompt_tokens\": 2135, \"completion_tokens\": 3627, \"total_tokens\": 5762, \"prompt_tokens_details\": {\"cached_tokens\": 896}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 19.926, \"repair_reasons\": [\"岗位分类引用不在原文\"], \"ok\": true, \"error\": \"\"}, \"pipeline_version\": \"auto-evidence-2\", \"schema_version\": \"0.3.0\"}",
+    "checked_at": "2026-10-11T10:53:34",
+    "details": {
+      "position_id": null,
+      "result": {
+        "ok": true,
+        "state": "review",
+        "jd_id": "JD-CE1A730D",
+        "position_id": null,
+        "reasons": [
+          "主岗位族待分类",
+          "岗位分类缺少内容或依据"
+        ],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "n_requirements": 0,
+        "cached": false,
+        "elapsed_seconds": 54.22
+      },
+      "attempts": [
+        {
+          "extraction": {
+            "company": "百度",
+            "company_span": "百度校园招聘",
+            "title": "数据分析师实习生（J75756）",
+            "location": "北京市",
+            "job_type": "实习",
+            "job_type_span": "INTERN",
+            "published_date": "2024-07-08",
+            "published_date_span": "2024-07-08",
+            "canonical_name": "数据分析师",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenarios": [
+              "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+              "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+              "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+              "沉淀分析方法论，构建自动化数据分析工具"
+            ],
+            "family": "数据分析",
+            "family_spans": [
+              "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会 针对核心指标及业务高频需求，推动看板线上化，提升工作效率 支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长 沉淀分析方法论，构建自动化数据分析工具"
+            ],
+            "secondary_tags": [
+              "内容生态分析",
+              "异动归因",
+              "看板搭建",
+              "运营策略优化",
+              "自动化工具构建"
+            ],
+            "stressors": [],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "本科及以上，硕士及以上优先",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "具备数学、统计、计算机等相关专业",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "evidence_span": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "evidence_span": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "有主人翁意识、积极上进",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              }
+            ],
+            "extraction_notes": "",
+            "_mock": false
+          },
+          "model_extraction": {
+            "company": "百度",
+            "company_span": "百度校园招聘",
+            "title": "数据分析师实习生（J75756）",
+            "location": "北京市",
+            "job_type": "实习",
+            "job_type_span": "INTERN",
+            "published_date": "2024-07-08",
+            "published_date_span": "2024-07-08",
+            "canonical_name": "数据分析师",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenarios": [
+              "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+              "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+              "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+              "沉淀分析方法论，构建自动化数据分析工具"
+            ],
+            "family": "数据分析",
+            "family_spans": [
+              "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会 针对核心指标及业务高频需求，推动看板线上化，提升工作效率 支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长 沉淀分析方法论，构建自动化数据分析工具"
+            ],
+            "secondary_tags": [
+              "内容生态分析",
+              "异动归因",
+              "看板搭建",
+              "运营策略优化",
+              "自动化工具构建"
+            ],
+            "stressors": [],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "本科及以上，硕士及以上优先",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "具备数学、统计、计算机等相关专业",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "evidence_span": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "evidence_span": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "有主人翁意识、积极上进",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              }
+            ],
+            "extraction_notes": "",
+            "_mock": false
+          },
+          "source_overrides": [],
+          "extraction_meta": {
+            "mock": false,
+            "error": "",
+            "model": "step-3.7-flash",
+            "usage": {
+              "cached_tokens": 832,
+              "prompt_tokens": 1445,
+              "completion_tokens": 5731,
+              "total_tokens": 7176,
+              "prompt_tokens_details": {
+                "cached_tokens": 832
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "elapsed_seconds": 34.284
+          },
+          "check": {
+            "structural": {
+              "total": 6,
+              "passed": 6,
+              "failed": 0,
+              "items": [
+                {
+                  "idx": 0,
+                  "ok": true,
+                  "text": "本科及以上，硕士及以上优先"
+                },
+                {
+                  "idx": 1,
+                  "ok": true,
+                  "text": "具备数学、统计、计算机等相关专业"
+                },
+                {
+                  "idx": 2,
+                  "ok": true,
+                  "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+                },
+                {
+                  "idx": 3,
+                  "ok": true,
+                  "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+                },
+                {
+                  "idx": 4,
+                  "ok": true,
+                  "text": "有主人翁意识、积极上进"
+                },
+                {
+                  "idx": 5,
+                  "ok": true,
+                  "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地"
+                }
+              ],
+              "reject_all": false,
+              "note": ""
+            },
+            "claims": [
+              {
+                "claim_id": "title",
+                "kind": "title",
+                "text": "数据分析师实习生（J75756）",
+                "span": "数据分析师实习生（J75756）",
+                "spans": [
+                  {
+                    "text": "数据分析师实习生（J75756）",
+                    "raw_start": 3,
+                    "raw_end": 19,
+                    "normalized_start": 2
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "company",
+                "kind": "company",
+                "text": "百度",
+                "span": "百度校园招聘",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "百度",
+                  "span": "百度校园招聘",
+                  "locator": "HTML title + verified official host",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                }
+              },
+              {
+                "claim_id": "stage",
+                "kind": "stage",
+                "text": "实习",
+                "span": "INTERN",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "实习",
+                  "span": "INTERN",
+                  "locator": "detailData.recruitType + URL route",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                }
+              },
+              {
+                "claim_id": "date",
+                "kind": "published_date",
+                "text": "2024-07-08",
+                "span": "2024-07-08",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "2024-07-08",
+                  "span": "2024-07-08",
+                  "locator": "detailData.postInfo.publishDate",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                }
+              },
+              {
+                "claim_id": "req-0",
+                "kind": "requirement",
+                "text": "本科及以上，硕士及以上优先",
+                "span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                "spans": [
+                  {
+                    "text": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                    "raw_start": 192,
+                    "raw_end": 222,
+                    "normalized_start": 182
+                  }
+                ],
+                "basis": "body",
+                "category": "学历",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-1",
+                "kind": "requirement",
+                "text": "具备数学、统计、计算机等相关专业",
+                "span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                "spans": [
+                  {
+                    "text": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                    "raw_start": 192,
+                    "raw_end": 222,
+                    "normalized_start": 182
+                  }
+                ],
+                "basis": "body",
+                "category": "专业",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-2",
+                "kind": "requirement",
+                "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "span": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "spans": [
+                  {
+                    "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                    "raw_start": 256,
+                    "raw_end": 314,
+                    "normalized_start": 244
+                  }
+                ],
+                "basis": "body",
+                "category": "技能",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-3",
+                "kind": "requirement",
+                "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "span": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "spans": [
+                  {
+                    "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                    "raw_start": 224,
+                    "raw_end": 254,
+                    "normalized_start": 213
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-4",
+                "kind": "requirement",
+                "text": "有主人翁意识、积极上进",
+                "span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                "spans": [
+                  {
+                    "text": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                    "raw_start": 316,
+                    "raw_end": 360,
+                    "normalized_start": 303
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-5",
+                "kind": "requirement",
+                "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地",
+                "span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                "spans": [
+                  {
+                    "text": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                    "raw_start": 316,
+                    "raw_end": 360,
+                    "normalized_start": 303
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "work_scenarios-0",
+                "kind": "work_scenarios",
+                "text": "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                "span": "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                "spans": [
+                  {
+                    "text": "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                    "raw_start": 58,
+                    "raw_end": 97,
+                    "normalized_start": 53
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-1",
+                "kind": "work_scenarios",
+                "text": "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                "span": "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                "spans": [
+                  {
+                    "text": "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                    "raw_start": 99,
+                    "raw_end": 127,
+                    "normalized_start": 93
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-2",
+                "kind": "work_scenarios",
+                "text": "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                "span": "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                "spans": [
+                  {
+                    "text": "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                    "raw_start": 129,
+                    "raw_end": 163,
+                    "normalized_start": 122
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-3",
+                "kind": "work_scenarios",
+                "text": "沉淀分析方法论，构建自动化数据分析工具",
+                "span": "沉淀分析方法论，构建自动化数据分析工具",
+                "spans": [
+                  {
+                    "text": "沉淀分析方法论，构建自动化数据分析工具",
+                    "raw_start": 165,
+                    "raw_end": 184,
+                    "normalized_start": 157
+                  }
+                ],
+                "basis": "body"
+              }
+            ],
+            "problems": [
+              "岗位分类引用不在原文"
+            ],
+            "model": ""
+          }
+        },
+        {
+          "extraction": {
+            "company": "百度",
+            "company_span": "",
+            "title": "数据分析师实习生（J75756）",
+            "location": "北京市",
+            "job_type": "实习",
+            "job_type_span": "日常实习",
+            "published_date": "2024-07-08",
+            "published_date_span": "2024-07-08",
+            "canonical_name": "数据分析师",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenarios": [
+              "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+              "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+              "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+              "沉淀分析方法论，构建自动化数据分析工具"
+            ],
+            "family": "待分类",
+            "family_spans": [],
+            "secondary_tags": [
+              "内容生态分析",
+              "异动归因",
+              "看板搭建",
+              "运营策略优化",
+              "自动化工具构建"
+            ],
+            "stressors": [],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "本科及以上，硕士及以上优先",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "具备数学、统计、计算机等相关专业",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "evidence_span": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "evidence_span": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "有主人翁意识、积极上进",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              }
+            ],
+            "extraction_notes": "1. 原文未出现公司名称相关表述，company_span为空；2. 原文未提供岗位族分类依据，family字段暂填待分类，family_spans为空；3. 招聘阶段原文表述为‘日常实习’，故job_type_span调整为对应正文内容。"
+          },
+          "model_extraction": {
+            "company": "百度",
+            "company_span": "",
+            "title": "数据分析师实习生（J75756）",
+            "location": "北京市",
+            "job_type": "实习",
+            "job_type_span": "日常实习",
+            "published_date": "2024-07-08",
+            "published_date_span": "2024-07-08",
+            "canonical_name": "数据分析师",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenarios": [
+              "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+              "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+              "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+              "沉淀分析方法论，构建自动化数据分析工具"
+            ],
+            "family": "待分类",
+            "family_spans": [],
+            "secondary_tags": [
+              "内容生态分析",
+              "异动归因",
+              "看板搭建",
+              "运营策略优化",
+              "自动化工具构建"
+            ],
+            "stressors": [],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "本科及以上，硕士及以上优先",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "具备数学、统计、计算机等相关专业",
+                "evidence_span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "evidence_span": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "evidence_span": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "有主人翁意识、积极上进",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地",
+                "evidence_span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+              }
+            ],
+            "extraction_notes": "1. 原文未出现公司名称相关表述，company_span为空；2. 原文未提供岗位族分类依据，family字段暂填待分类，family_spans为空；3. 招聘阶段原文表述为‘日常实习’，故job_type_span调整为对应正文内容。"
+          },
+          "source_overrides": [],
+          "extraction_meta": {
+            "model": "step-3.7-flash",
+            "usage": {
+              "cached_tokens": 896,
+              "prompt_tokens": 2135,
+              "completion_tokens": 3627,
+              "total_tokens": 5762,
+              "prompt_tokens_details": {
+                "cached_tokens": 896
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "elapsed_seconds": 19.926,
+            "repair_reasons": [
+              "岗位分类引用不在原文"
+            ],
+            "ok": true,
+            "error": ""
+          },
+          "check": {
+            "structural": {
+              "total": 6,
+              "passed": 6,
+              "failed": 0,
+              "items": [
+                {
+                  "idx": 0,
+                  "ok": true,
+                  "text": "本科及以上，硕士及以上优先"
+                },
+                {
+                  "idx": 1,
+                  "ok": true,
+                  "text": "具备数学、统计、计算机等相关专业"
+                },
+                {
+                  "idx": 2,
+                  "ok": true,
+                  "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+                },
+                {
+                  "idx": 3,
+                  "ok": true,
+                  "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+                },
+                {
+                  "idx": 4,
+                  "ok": true,
+                  "text": "有主人翁意识、积极上进"
+                },
+                {
+                  "idx": 5,
+                  "ok": true,
+                  "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地"
+                }
+              ],
+              "reject_all": false,
+              "note": ""
+            },
+            "claims": [
+              {
+                "claim_id": "title",
+                "kind": "title",
+                "text": "数据分析师实习生（J75756）",
+                "span": "数据分析师实习生（J75756）",
+                "spans": [
+                  {
+                    "text": "数据分析师实习生（J75756）",
+                    "raw_start": 3,
+                    "raw_end": 19,
+                    "normalized_start": 2
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "company",
+                "kind": "company",
+                "text": "百度",
+                "span": "百度校园招聘",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "百度",
+                  "span": "百度校园招聘",
+                  "locator": "HTML title + verified official host",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                }
+              },
+              {
+                "claim_id": "stage",
+                "kind": "stage",
+                "text": "实习",
+                "span": "INTERN",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "实习",
+                  "span": "INTERN",
+                  "locator": "detailData.recruitType + URL route",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                }
+              },
+              {
+                "claim_id": "date",
+                "kind": "published_date",
+                "text": "2024-07-08",
+                "span": "2024-07-08",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "2024-07-08",
+                  "span": "2024-07-08",
+                  "locator": "detailData.postInfo.publishDate",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                }
+              },
+              {
+                "claim_id": "req-0",
+                "kind": "requirement",
+                "text": "本科及以上，硕士及以上优先",
+                "span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                "spans": [
+                  {
+                    "text": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                    "raw_start": 192,
+                    "raw_end": 222,
+                    "normalized_start": 182
+                  }
+                ],
+                "basis": "body",
+                "category": "学历",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-1",
+                "kind": "requirement",
+                "text": "具备数学、统计、计算机等相关专业",
+                "span": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                "spans": [
+                  {
+                    "text": "本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                    "raw_start": 192,
+                    "raw_end": 222,
+                    "normalized_start": 182
+                  }
+                ],
+                "basis": "body",
+                "category": "专业",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-2",
+                "kind": "requirement",
+                "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "span": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                "spans": [
+                  {
+                    "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                    "raw_start": 256,
+                    "raw_end": 314,
+                    "normalized_start": 244
+                  }
+                ],
+                "basis": "body",
+                "category": "技能",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-3",
+                "kind": "requirement",
+                "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "span": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                "spans": [
+                  {
+                    "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                    "raw_start": 224,
+                    "raw_end": 254,
+                    "normalized_start": 213
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-4",
+                "kind": "requirement",
+                "text": "有主人翁意识、积极上进",
+                "span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                "spans": [
+                  {
+                    "text": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                    "raw_start": 316,
+                    "raw_end": 360,
+                    "normalized_start": 303
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-5",
+                "kind": "requirement",
+                "text": "具备良好的结论呈现和沟通表达能力，能有效影响业务，推动建议落地",
+                "span": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                "spans": [
+                  {
+                    "text": "有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                    "raw_start": 316,
+                    "raw_end": 360,
+                    "normalized_start": 303
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "work_scenarios-0",
+                "kind": "work_scenarios",
+                "text": "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                "span": "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                "spans": [
+                  {
+                    "text": "围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                    "raw_start": 58,
+                    "raw_end": 97,
+                    "normalized_start": 53
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-1",
+                "kind": "work_scenarios",
+                "text": "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                "span": "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                "spans": [
+                  {
+                    "text": "针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                    "raw_start": 99,
+                    "raw_end": 127,
+                    "normalized_start": 93
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-2",
+                "kind": "work_scenarios",
+                "text": "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                "span": "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                "spans": [
+                  {
+                    "text": "支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                    "raw_start": 129,
+                    "raw_end": 163,
+                    "normalized_start": 122
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-3",
+                "kind": "work_scenarios",
+                "text": "沉淀分析方法论，构建自动化数据分析工具",
+                "span": "沉淀分析方法论，构建自动化数据分析工具",
+                "spans": [
+                  {
+                    "text": "沉淀分析方法论，构建自动化数据分析工具",
+                    "raw_start": 165,
+                    "raw_end": 184,
+                    "normalized_start": 157
+                  }
+                ],
+                "basis": "body"
+              }
+            ],
+            "problems": [
+              "主岗位族待分类",
+              "岗位分类缺少内容或依据"
+            ],
+            "model": ""
+          }
+        }
+      ],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c",
+      "source_type": "url_fetch",
+      "source_metadata": {
+        "adapter": "source-2",
+        "facts": {
+          "company": {
+            "value": "百度",
+            "span": "百度校园招聘",
+            "locator": "HTML title + verified official host",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+          },
+          "job_type": {
+            "value": "实习",
+            "span": "INTERN",
+            "locator": "detailData.recruitType + URL route",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+          },
+          "title": {
+            "value": "数据分析师实习生（J75756）",
+            "span": "数据分析师实习生（J75756）",
+            "locator": "detailData.postInfo.name",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+          },
+          "published_date": {
+            "value": "2024-07-08",
+            "span": "2024-07-08",
+            "locator": "detailData.postInfo.publishDate",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+          },
+          "updated_date": {
+            "value": "2026-07-21",
+            "span": "2026-07-21",
+            "locator": "detailData.postInfo.updateDate",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+          }
+        },
+        "conflicts": []
+      },
+      "repair_meta": {
+        "model": "step-3.7-flash",
+        "usage": {
+          "cached_tokens": 896,
+          "prompt_tokens": 2135,
+          "completion_tokens": 3627,
+          "total_tokens": 5762,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "elapsed_seconds": 19.926,
+        "repair_reasons": [
+          "岗位分类引用不在原文"
+        ],
+        "ok": true,
+        "error": ""
+      },
+      "pipeline_version": "auto-evidence-2",
+      "schema_version": "0.3.0"
+    }
+  }
+}

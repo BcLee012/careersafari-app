@@ -1,0 +1,12 @@
+{
+  "name": "戴尔：全球供应链管理校招",
+  "result": {
+    "ok": false,
+    "state": "fetch_failed",
+    "reasons": [
+      "正文抽取失败或过短（4 字符）。该页可能是 JS 渲染的 SPA——请改用「手动粘贴」或「文件导入」。"
+    ]
+  },
+  "audit": null,
+  "elapsed_seconds": 0
+}

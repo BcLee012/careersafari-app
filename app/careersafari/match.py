@@ -1,161 +1,142 @@
-"""
-确定性匹配引擎：用户画像 × 岗位要求 → 差距报告。
-
-为什么不让 LLM 做这一步：
-  匹配是这套产品的立论基础。如果用 LLM 匹配，同一个用户两次提交可能得到不同结果，
-  且无法解释「为什么说我缺 SQL」。确定性规则可复现、可测试、可逐条解释——
-  「为什么推荐这个」必须有真实答案。
-
-输出四类 + 一个诚实的覆盖率：
-  匹配（有证据）  岗位要求的能力，用户有可验证证据
-  待验证（仅自述）岗位要求的能力，用户自述会但无证据
-  缺口           岗位要求的能力，用户完全没有
-  无法比对        需求无法归入任何能力（如「有实习经历优先」这类经验要求）
-
-覆盖率公式公开透明，并明确标注为**团队判断**——不伪装成客观度量。
+"""可复现的证据匹配：有作品引用 / 课程或自述 / 明确缺口 / 未知。
+作品引用只说明提供了可检查材料，不证明真实贡献或能力达到 JD 程度。
 """
 from __future__ import annotations
+import re
 
-from typing import Any, Dict, List, Optional
+from .curriculum import CURRICULUM, NO_COURSE_NOTE, SOFT_CAPABILITIES, capabilities_of, capability_name, dealbreaker_conflict
+from . import families, ranking
 
-from .curriculum import (CURRICULUM, NO_COURSE_NOTE, SOFT_CAPABILITIES,
-                         capability_name, capabilities_of, dealbreaker_conflict,
-                         job_family)
-
-# 只对这些类别的需求做能力比对。学历/专业/证书/经验走单独的门槛检查。
 CAPABILITY_CATEGORIES = {"技能", "工具", "软能力"}
 
 
-def _user_cap_index(skills: List[Any]) -> Dict[str, Dict[str, Any]]:
-    """capability_id -> {verified, evidence_text, name, rating}"""
-    idx: Dict[str, Dict[str, Any]] = {}
+def _user_cap_index(skills):
+    idx = {}
     for s in skills:
+        state = getattr(s, "evidence_state", "course_or_self_report")
+        artifact = bool(state == "artifact_provided" and s.evidence_text.strip() and
+                        getattr(s, "artifact_reference", "").strip())
+        status = "gap" if getattr(s, "confirmed_gap", False) else (
+                 "matched" if artifact else "unknown" if state == "unknown" else "unverified")
+        item = {"status": status, "evidence_text": s.evidence_text, "name": s.name,
+                "artifact_reference": getattr(s, "artifact_reference", ""), "rating": s.self_rating,
+                "evidence_source": getattr(s, "evidence_source", "self_report")}
+        strength = {"unknown": 0, "gap": 1, "unverified": 2, "matched": 3}
         for cid in capabilities_of(s.name):
-            cur = idx.get(cid)
-            # 同一能力多处自述时，取证据最强的那条
-            if cur is None or (s.verified and not cur["verified"]):
-                idx[cid] = {"verified": bool(s.verified),
-                            "evidence_text": s.evidence_text,
-                            "name": s.name, "rating": s.self_rating}
+            if cid not in idx or strength[status] > strength[idx[cid]["status"]]:
+                idx[cid] = item
     return idx
 
 
-def _threshold_check(req: Dict[str, Any], answers: Dict[str, Any]) -> Optional[str]:
-    """学历/专业类硬门槛的确定性检查。返回提示或 None。"""
-    text = str(req.get("text", ""))
-    cat = req.get("category", "")
+def _threshold_check(req, answers):
+    text, cat = req.get("text", ""), req.get("category", "")
+    status, note = "unknown", "尚不能确定是否满足要求"
     if cat == "学历":
-        if "硕士" in text and str(answers.get("grade", "")).startswith("研"):
-            return "你的年级满足硕士学历要求。"
-        if "博士" in text:
-            return "该岗位要求博士学历，与你当前阶段不符。"
-        if "本科" in text and str(answers.get("grade", "")).startswith("研"):
-            return "该岗位本科即可，你的学历高于门槛。"
-    if cat == "专业":
-        major = str(answers.get("major", ""))
-        if major and (major in text or "相关专业" in text):
-            return f"你的专业（{major}）在该岗位的专业要求范围内。"
-    return None
-
-
-def match_position(position: Dict[str, Any], profile, answers: Dict[str, Any]) -> Dict[str, Any]:
-    """对单个岗位做完整匹配。position 为 db.list_positions() 返回的结构。"""
-    skills_idx = _user_cap_index(profile.skills)
-    jd_text = " ".join(str(r.get("text", "")) for r in position["requirements"])
-
-    matched, unverified, gaps, incomparable, thresholds = [], [], [], [], []
-
-    for req in position["requirements"]:
-        cat = req.get("category", "")
-        if cat in ("学历", "专业"):
-            note = _threshold_check(req, answers)
-            if note:
-                thresholds.append({"req_id": req["req_id"], "text": req["text"], "note": note})
-            continue
-        if cat not in CAPABILITY_CATEGORIES:
-            incomparable.append({"req_id": req["req_id"], "text": req["text"],
-                                 "reason": f"类别「{cat}」不走能力比对（经验/证书类需人工判断）"})
-            continue
-
-        caps = capabilities_of(req.get("text", ""))
-        if not caps:
-            incomparable.append({"req_id": req["req_id"], "text": req["text"],
-                                 "reason": "无法归入既有能力 Taxonomy，未做比对"})
-            continue
-
-        # 一条需求可能要求多项能力（「熟练使用 Excel 与 SQL」），逐项分别比对
-        for cid in caps:
-            u = skills_idx.get(cid)
-            base = {"req_id": req["req_id"], "capability": cid,
-                    "capability_name": capability_name(cid),
-                    "requirement": req["text"],
-                    "evidence_span": req.get("evidence_span", ""),
-                    "confidence": req.get("confidence", "external"),
-                    "is_hard": cid not in SOFT_CAPABILITIES}
-
-            if u and u["verified"]:
-                matched.append({**base, "user_evidence": u["evidence_text"]})
-            elif u:
-                unverified.append({**base, "user_rating": u["rating"]})
+        degree = answers.get("attained_degree", "")
+        ranks = {"本科": 1, "硕士": 2, "博士": 3}
+        # Listed alternatives denote the minimum, not the highest named degree.
+        required = next((ranks[d] for d in ("本科", "硕士", "博士") if d in text), None)
+        if "优先" in text:
+            return {"req_id": req["req_id"], "text": text, "status": "unknown", "note": "学历优先项，不作为排除条件"}
+        if "在读" in text and str(answers.get("grade", "")).startswith("研") and "硕士" in text:
+            status, note = "supported", "当前年级与硕士在读要求一致；其他条件仍需确认"
+        elif any(w in text for w in ("在校", "在读", "应届", "毕业生")):
+            note = "需核对在读或应届资格及毕业时间，不能直接以已取得学历排除"
+        elif degree in ranks and required:
+            enrolled = str(answers.get("grade", "")).startswith(("大", "研", "博"))
+            completed_required = bool(re.search(r"已取得|须取得|必须取得|获得.{0,8}学位|毕业证|学位证", text))
+            if ranks[degree] < required and enrolled and not completed_required:
+                note = "已取得学历低于文字要求，但岗位未明确是否接受在读/预计毕业；保留资格待确认，不直接排除学生"
             else:
-                courses = CURRICULUM.get(cid, [])
-                gaps.append({**base, "courses": courses,
-                             "remediable_in_program": bool(courses),
-                             "note": "" if courses else NO_COURSE_NOTE})
+                status = "supported" if ranks[degree] >= required else "conflict"
+                note = "已取得学历满足最低学历条件" if status == "supported" else "已取得学历低于明确学历要求（仅限此份JD）"
+        else:
+            note = "在读年级不能代替已取得学历；需确认岗位是否接受在读或应届"
+    elif cat == "专业":
+        major = str(answers.get("major", "")).strip()
+        if major and major not in ("__unknown__", "__skip__") and major in text:
+            status, note = "supported", f"原文明确包含你的专业（{major}）"
+        else:
+            note = "原文未明确列出该专业；“相关专业”不能自动确认对应关系"
+    return {"req_id": req["req_id"], "text": text, "status": status, "note": note}
 
-    comparable = len(matched) + len(unverified) + len(gaps)
-    coverage = round((len(matched) + len(unverified)) / comparable, 3) if comparable else None
-    verified_coverage = round(len(matched) / comparable, 3) if comparable else None
 
-    # 硬约束排除（hard 命中才排除；soft 只提示）
-    excluded, exclude_reason = False, ""
-    constraint_warnings: List[str] = []
-    for c in profile.constraints:
-        if c.key == "dealbreaker":
-            ex, warn = dealbreaker_conflict(c.value, jd_text)
+def _classify(matrix, idx):
+    bins = {"matched": [], "unverified": [], "gaps": [], "unknown": []}
+    for item in matrix:
+        cid = item["capability"]
+        u = idx.get(cid)
+        status = u["status"] if u else "unknown"
+        base = {**item, "is_hard": cid not in SOFT_CAPABILITIES,
+                "courses": CURRICULUM.get(cid, []), "remediable_in_program": bool(CURRICULUM.get(cid)),
+                "note": "作品引用尚未核实贡献与熟练度" if status == "matched" else (
+                        "未提供信息，不能推断能力不足" if status == "unknown" else NO_COURSE_NOTE if not CURRICULUM.get(cid) else "")}
+        if u:
+            base.update(user_evidence=u["evidence_text"], artifact_reference=u["artifact_reference"],
+                        evidence_source=u["evidence_source"])
+        bins["gaps" if status == "gap" else status].append(base)
+    return bins
+
+
+def match_position(position, profile, answers):
+    """单 JD 检查，用于约束提示与明细；不作为岗位族代表或正式排名。"""
+    matrix, thresholds, incomparable = {}, [], []
+    for req in position["requirements"]:
+        if req.get("confidence") != "external":
+            continue
+        cat = req.get("category")
+        if cat in ("学历", "专业"):
+            thresholds.append(_threshold_check(req, answers))
+            continue
+        caps = capabilities_of(req.get("text", "")) if cat in CAPABILITY_CATEGORIES else []
+        if not caps:
+            incomparable.append({"req_id": req["req_id"], "text": req["text"], "reason": "信息不足或尚未建立受控对应关系"})
+        for cid in caps:
+            row = matrix.setdefault(cid, {"capability": cid, "capability_name": capability_name(cid), "evidence": []})
+            row["evidence"].append({"req_id": req["req_id"], "text": req["text"], "span": req.get("evidence_span", "")})
+    bins = _classify(list(matrix.values()), _user_cap_index(profile.skills))
+    raw_tasks = " ".join(position.get("work_scenarios", []) + position.get("stressors", []))
+    excluded, reasons, warnings = False, [], []
+    for constraint in profile.constraints:
+        if constraint.key == "dealbreaker":
+            ex, warn = dealbreaker_conflict(constraint.value, raw_tasks)
             if ex:
-                excluded, exclude_reason = True, warn
-                break
-            if warn:
-                constraint_warnings.append(warn)
-
-    # 未知项的关联影响
-    unknown_impact = []
-    gap_caps = {g["capability"] for g in gaps}
-    for u in profile.unknowns:
-        for cid in capabilities_of(u.field):
-            if cid in gap_caps:
-                unknown_impact.append({"unknown": u.field, "capability": capability_name(cid)})
-
-    # 只在该岗位出现、用户却未提及的能力里，挑可补课的作为行动项
-    actions = [g for g in gaps if g["remediable_in_program"]]
-
-    return {
-        "position_id": position["position_id"],
-        "canonical_name": position["canonical_name"],
-        "job_family": job_family(position["canonical_name"]),
-        "industry": position["industry"],
-        "excluded": excluded,
-        "exclude_reason": exclude_reason,
-        "matched": matched,
-        "unverified": unverified,
-        "gaps": gaps,
-        "incomparable": incomparable,
-        "thresholds": thresholds,
-        "unknown_impact": unknown_impact,
-        "constraint_warnings": constraint_warnings,
-        "n_actions": len(actions),
-        "coverage": coverage,
-        "verified_coverage": verified_coverage,
-        "n_comparable": comparable,
-        "score_note": ("coverage =（匹配 + 待验证）/ 可比对需求数；"
-                       "verified_coverage = 匹配 / 可比对需求数。"
-                       "两者都是**团队定义的启发式指标**，不是标准化测评分数。"),
-    }
+                excluded = True
+                reasons.append(warn)
+            elif warn:
+                warnings.append(warn)
+    for threshold in thresholds:
+        if threshold["status"] == "conflict":
+            excluded = True
+            reasons.append(threshold["note"] + "（仅限此份JD）")
+    return {**bins, "position_id": position["position_id"], "canonical_name": position["canonical_name"],
+            "excluded": excluded, "exclude_reason": "；".join(reasons), "constraint_warnings": warnings,
+            "thresholds": thresholds, "incomparable": incomparable,
+            "coverage": None, "verified_coverage": None, "n_comparable": len(matrix)}
 
 
-def match_all(positions: List[Dict[str, Any]], profile, answers: Dict[str, Any]) -> List[Dict[str, Any]]:
-    out = [match_position(p, profile, answers) for p in positions]
-    # 未被硬约束排除的排前面；同组内按「已验证覆盖率」降序
-    out.sort(key=lambda r: (r["excluded"], -(r["verified_coverage"] or 0)))
-    return out
+def match_all(positions, profile, answers):
+    idx = _user_cap_index(profile.skills)
+    report = []
+    target_stage = answers.get("target_stage") or "实习"
+    for family in families.aggregate(positions):
+        if family["stage"] != target_stage:
+            continue
+        checks = [match_position(p, profile, answers) for p in family["members"]]
+        allowed = [p for p, check in zip(family["members"], checks) if not check["excluded"]]
+        excluded = bool(checks) and not allowed
+        # 特定公司工作方式不传播成整个岗位族的必然属性。
+        if allowed and len(allowed) != len(family["members"]):
+            compatible = families.aggregate(allowed)
+            family = compatible[0]
+        common = [m for m in family["matrix"] if m["scope"] == "cross_employer"]
+        bins = _classify(common, idx) if family["eligible"] and not excluded else {
+               "matched": [], "unverified": [], "gaps": [], "unknown": []}
+        scenario = [m for m in family["matrix"] if m["scope"] == "scenario_specific"]
+        report.append({**family, **bins, "excluded": excluded,
+                       "exclude_reason": "；".join(dict.fromkeys(c["exclude_reason"] for c in checks if c["excluded"])),
+                       "constraint_warnings": list(dict.fromkeys(w for c in checks for w in c["constraint_warnings"])),
+                       "thresholds": [t for c in checks for t in c["thresholds"]],
+                       "scenario_specific": scenario, "n_comparable": len(common),
+                       "coverage": None, "verified_coverage": None})
+    return ranking.rank(report, answers)

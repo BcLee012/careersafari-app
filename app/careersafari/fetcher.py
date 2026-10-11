@@ -6,13 +6,19 @@
     所以这里关掉 requests 的自动跳转，手动一跳跃一验证。
   - 响应体有大小上限，避免超大页面把内存吃满。
 
-已知现实（上一个项目已踩过）：主流招聘官网是 JS 渲染的 SPA，本地 requests 抓不到正文。
-所以本模块只是 ingestion 的一条路径，不是主路径；主路径是「手动粘贴 + 文件导入」。
+采集先尝试 HTTP；正文不足时尝试一次受控浏览器渲染。始终保留正文与来源字段的区别。
 """
 from __future__ import annotations
 
 import logging
-from typing import Optional
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import threading
+from pathlib import Path
 from typing import Dict, List, Optional
 from urllib.parse import urljoin, urlparse
 
@@ -33,9 +39,107 @@ REDIRECT_CODES = {301, 302, 303, 307, 308}
 MAX_REDIRECTS = 4
 MAX_BYTES = 3 * 1024 * 1024
 MIN_TEXT_LEN = 200
+ADAPTER_VERSION = "source-3"
+_BROWSER_LOCK = threading.BoundedSemaphore(1)
 
 
-def fetch_url(url: str, timeout: float = 15.0, *, enforce_allowlist: Optional[bool] = None):
+def source_metadata(html: str, url: str) -> dict:
+    """来源专属解析；只读取官方详情数据，绝不执行页面脚本。"""
+    from bs4 import BeautifulSoup
+    p = urlparse(url)
+    from .sector_sources import HOSTS, metadata
+    if p.hostname in HOSTS:
+        return metadata(html, url)
+    if p.hostname in ("jobs.bytedance.com", "campus.jd.com", "zhaopin.meituan.com"):
+        from .source_adapters import api_metadata
+        return api_metadata(html, url)
+    match = re.fullmatch(r"/jobs/detail/(INTERN|GRADUATE|SOCIAL)/([\w-]+)/?", p.path)
+    if p.scheme != "https" or p.hostname != "talent.baidu.com" or not match:
+        return {}
+    soup = BeautifulSoup(html, "html.parser")
+    data = None
+    for script in soup.find_all("script"):
+        text = script.get_text()
+        marker = re.search(r"window\.__INITIAL_DATA__\s*=\s*", text)
+        if not marker:
+            continue
+        # SSR uses bare undefined. Replace only tokens outside quoted strings.
+        text = re.sub(r'"(?:\\.|[^"\\])*"|\bundefined\b',
+                      lambda m: "null" if m.group() == "undefined" else m.group(), text[marker.end():])
+        try:
+            data, _ = json.JSONDecoder().raw_decode(text)
+        except (ValueError, TypeError):
+            continue
+        break
+    detail = data.get("detailData", {}) if isinstance(data, dict) else {}
+    detail = detail if isinstance(detail, dict) else {}
+    post = detail.get("postInfo", {})
+    if not isinstance(post, dict) or post.get("postId") != match[2]:
+        return {}
+    stage = {"INTERN": "实习", "GRADUATE": "校招", "SOCIAL": "社招"}
+    result = {"adapter": ADAPTER_VERSION, "facts": {}, "conflicts": []}
+    if detail.get("recruitType") != match[1]:
+        result["conflicts"].append("官方招聘路径与详情招聘阶段不一致")
+        return result
+    # Require the official site's own identity, not merely a name in job copy.
+    identity = (soup.title.get_text() if soup.title else "")
+    if "百度" not in identity:
+        return {}
+    def fact(key, value, span, locator):
+        if isinstance(value, str) and value and isinstance(span, str):
+            result["facts"][key] = {"value": value, "span": span,
+                                      "locator": locator, "source_url": url}
+    fact("company", "百度", identity, "HTML title + verified official host")
+    fact("job_type", stage[match[1]], str(detail["recruitType"]), "detailData.recruitType + URL route")
+    fact("title", post.get("name"), post.get("name"), "detailData.postInfo.name")
+    fact("published_date", post.get("publishDate"), post.get("publishDate"), "detailData.postInfo.publishDate")
+    fact("updated_date", post.get("updateDate"), post.get("updateDate"), "detailData.postInfo.updateDate")
+    return result
+
+
+def _document(html, url, requested_url, method):
+    from datetime import datetime, timezone
+    return {"raw_text": clean_html(html) or "", "html": html, "final_url": url,
+            "requested_url": requested_url, "method": method,
+            "captured_at": datetime.now(timezone.utc).isoformat(),
+            "metadata": source_metadata(html, url), "adapter_version": ADAPTER_VERSION}
+
+
+def _browser_document(url: str, enforce_allowlist=False):
+    """Optional Playwright worker; one attempt, bounded time, every network hop checked."""
+    runtime = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/node"
+    node = os.environ.get("CAREERSAFARI_BROWSER_NODE") or shutil.which("node")
+    if (runtime / "bin/node").exists() and not os.environ.get("CAREERSAFARI_BROWSER_NODE"):
+        node = str(runtime / "bin/node")
+    if not node:
+        return None, "浏览器采集未配置 Node.js"
+    env = {k: v for k, v in os.environ.items() if k in
+           {"PATH", "HOME", "LANG", "TMPDIR", "NODE_PATH", "FETCH_ALLOW_NON_PUBLIC", "FETCH_ALLOWLIST_MODE"}}
+    env["NODE_PATH"] = os.environ.get("CAREERSAFARI_BROWSER_NODE_PATH", env.get("NODE_PATH", str(runtime / "node_modules")))
+    if enforce_allowlist:
+        env["FETCH_ALLOWLIST_MODE"] = "enforce"
+    if not _BROWSER_LOCK.acquire(blocking=False):
+        return None, "浏览器采集忙，请稍后重试"
+    try:
+        r = subprocess.run([node, str(Path(__file__).with_name("browser_fetch.cjs")), url, sys.executable],
+                           capture_output=True, text=True, env=env, timeout=45)
+        data = json.loads(r.stdout) if r.stdout.strip() else {}
+        if not data.get("ok"):
+            return None, data.get("error", "浏览器采集失败")
+        html = data.get("html", "")
+        if len(html.encode()) > MAX_BYTES:
+            return None, "浏览器页面超过体积上限"
+        final = assert_safe_url(data["final_url"])
+        return _document(html, final, url, "browser"), ""
+    except subprocess.TimeoutExpired:
+        return None, "浏览器采集超时（最多45秒）"
+    except (OSError, ValueError, KeyError):
+        return None, "浏览器采集运行不可用或结果无效"
+    finally:
+        _BROWSER_LOCK.release()
+
+
+def fetch_document(url: str, timeout: float = 15.0, *, enforce_allowlist: Optional[bool] = None):
     """
     抓取 URL 正文。
 
@@ -81,7 +185,7 @@ def fetch_url(url: str, timeout: float = 15.0, *, enforce_allowlist: Optional[bo
             if not location:
                 return None, "重定向缺少 Location 头", warnings
             next_url = urljoin(current, location)
-            if enforce_allowlist:
+            if mode == "enforce" or enforce_allowlist is True:
                 ok2, why2 = is_domain_allowed(next_url)
                 if not ok2:
                     return None, f"重定向目标被白名单拒绝：{why2}", warnings
@@ -101,13 +205,25 @@ def fetch_url(url: str, timeout: float = 15.0, *, enforce_allowlist: Optional[bo
         if not html:
             return None, "响应体为空或超过体积上限", warnings
 
-        text = clean_html(html)
-        if text and len(text) >= MIN_TEXT_LEN:
-            return text, "", warnings
-        return None, (f"正文抽取失败或过短（{len(text or '')} 字符）。"
-                      "该页可能是 JS 渲染的 SPA——请改用「手动粘贴」或「文件导入」。"), warnings
+        doc = _document(html, current, url, "http")
+        if len(doc["raw_text"]) >= MIN_TEXT_LEN:
+            return doc, "", warnings
+        short_len = len(doc["raw_text"])
+        rendered, browser_error = _browser_document(current, enforce_allowlist=(mode == "enforce" or enforce_allowlist is True))
+        if rendered and len(rendered["raw_text"]) >= MIN_TEXT_LEN:
+            rendered["requested_url"] = url
+            warnings.append("静态正文不足，已使用一次浏览器采集")
+            return rendered, "", warnings
+        return None, (f"静态正文不足（{short_len}字符）；浏览器采集未取得有效正文："
+                      f"{browser_error or '渲染后的正文仍过短'}"), warnings
 
     return None, f"重定向次数超过 {MAX_REDIRECTS}", warnings
+
+
+def fetch_url(url: str, timeout: float = 15.0, *, enforce_allowlist: Optional[bool] = None):
+    """兼容旧的纯正文接口；新采集入口使用 fetch_document 保存来源。"""
+    doc, error, warnings = fetch_document(url, timeout, enforce_allowlist=enforce_allowlist)
+    return (doc["raw_text"] if doc else None), error, warnings
 
 
 def _get_once(url: str, timeout: float) -> Optional[requests.Response]:
@@ -140,8 +256,8 @@ def _read_limited(resp: requests.Response, max_bytes: int = MAX_BYTES) -> Option
                 continue
             total += len(chunk)
             if total > max_bytes:
-                logger.warning("响应体超过 %d 字节，已截断", max_bytes)
-                break
+                logger.warning("响应体超过 %d 字节，拒绝保存截断正文", max_bytes)
+                return None
             chunks.append(chunk)
     except Exception as exc:  # noqa: BLE001
         logger.error("读取响应体失败：%s", exc)

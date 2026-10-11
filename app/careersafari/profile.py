@@ -86,14 +86,23 @@ VALUE_DIMENSIONS = [
 ]
 
 MBTI_CAVEAT = (
-    "MBTI 的重测信度约五成（同一人两次测试约一半概率落入不同类型），"
-    "且对工作绩效的预测力较弱（Pittenger, 1993）。此处仅作自我反思的辅助标签，"
-    "不作为方向判定依据。"
+    "人格类型仅作为自我反思的辅助信息，不用于排除岗位或决定方向排名。"
+    "16Personalities 的结果不是正式 MBTI 测量，不能据此判断职业能力或绩效。"
 )
 
 
 def questionnaire() -> Dict[str, Any]:
     """前端据此渲染表单。前端不自己发明字段。"""
+    from .curriculum import capability_name
+    additions = {
+        "MSE-FIN": ["RISK", "RESEARCH"],
+        "MSE-BIGDATA": ["DATA_PREP", "DATA_PIPELINE", "RESEARCH"],
+        "MSE-COMPLEX": ["PRODUCT_REQ"],
+        "MSE-OSCM": ["PROCUREMENT", "LOGISTICS"],
+        "MSE-ISM": ["PRODUCT_REQ", "DATA_PIPELINE"],
+    }
+    specific = {code: list(dict.fromkeys(names + [capability_name(cid) for cid in additions.get(code, [])]))
+                for code, names in JOB_SPECIFIC_SKILLS.items()}
     return {
         "schema_version": SCHEMA_VERSION,
         "persona_options": PERSONA_OPTIONS,
@@ -103,7 +112,7 @@ def questionnaire() -> Dict[str, Any]:
         "value_dimensions": VALUE_DIMENSIONS,
         "mbti_caveat": MBTI_CAVEAT,
         "transferable_skills": TRANSFERABLE_SKILLS,
-        "job_specific_skills": JOB_SPECIFIC_SKILLS,
+        "job_specific_skills": specific,
         "major_directions": MAJOR_DIRECTIONS,
         "common_degree_courses": COMMON_DEGREE_COURSES,
         "program_milestones": PROGRAM_MILESTONES,
@@ -156,14 +165,21 @@ def build_profile(user_id: str, answers: Dict[str, Any]) -> Profile:
         if not name:
             continue
         ev_text = str(item.get("evidence_text", "")).strip()
-        verified = bool(item.get("verified")) and bool(ev_text)
+        reference = str(item.get("artifact_reference", "")).strip()
+        source = str(item.get("evidence_source", "self_report"))
+        state = "artifact_provided" if source == "practical" and reference and ev_text else (
+                "unknown" if item.get("evidence_state") == "unknown" else "course_or_self_report")
+        # 旧 verified 勾选不再作为验证完成的依据。
+        verified = False
         skills.append(SkillItem(
             name=name,
             column=str(item.get("column", "transferable")),
             self_rating=_as_int(item.get("self_rating"), 0) or None,
             verified=verified,
             evidence_text=ev_text,
-            evidence=EvidenceType.USER_STATED if verified else EvidenceType.UNVERIFIED,
+            evidence=EvidenceType.UNKNOWN if state == "unknown" else EvidenceType.USER_STATED,
+            evidence_state=state, evidence_source=source,
+            artifact_reference=reference, confirmed_gap=item.get("confirmed_gap") is True,
         ))
 
     # ---- 兴趣：RIASEC 为主，MBTI 为辅助
@@ -208,8 +224,8 @@ def profile_card(profile: Profile, answers: Optional[Dict[str, Any]] = None) -> 
     输出「求职意向定义卡」——人类可读 + 机器可读双格式。
     每一项都带证据等级标注：这是本产品与通用 AI 助手的分界线。
     """
-    verified = [s for s in profile.skills if s.verified]
-    unverified = [s for s in profile.skills if not s.verified]
+    verified = [s for s in profile.skills if s.evidence_state == "artifact_provided"]
+    unverified = [s for s in profile.skills if s.evidence_state == "course_or_self_report"]
 
     # 同分方向的排序提示：价值观权重最高的维度。
     # 并列时必须全部列出 —— 任意挑一个等于把排序建立在字典遍历顺序上，那是伪造信号。
@@ -231,7 +247,7 @@ def profile_card(profile: Profile, answers: Optional[Dict[str, Any]] = None) -> 
         "skills": {
             "verified": [
                 {"name": s.name, "column": s.column, "rating": s.self_rating,
-                 "evidence": s.evidence_text, "evidence_type": s.evidence.value}
+                 "evidence": s.evidence_text, "artifact_reference": s.artifact_reference, "evidence_type": s.evidence.value}
                 for s in verified
             ],
             "unverified": [
@@ -253,8 +269,8 @@ def _honesty_summary(profile: Profile, n_verified: int, n_unverified: int) -> Li
     """把「我们知道什么/不知道什么」明说出来。这是产品的核心承诺。"""
     lines: List[str] = []
     n_constraints = len([c for c in profile.constraints if c.evidence != EvidenceType.UNKNOWN])
-    lines.append(f"已确认硬约束 {n_constraints} 项（客观事实，直接决定可行范围）。")
-    lines.append(f"能力项 {n_verified} 项有证据支撑，{n_unverified} 项仅为自述、未经任何验证。")
+    lines.append(f"已填写约束 {n_constraints} 项，来源为用户自述，尚未独立核实。")
+    lines.append(f"能力项 {n_verified} 项提供作品引用，{n_unverified} 项为课程学习或自述。作品引用尚未核实贡献和熟练度。")
     if profile.unknowns:
         lines.append(f"显式登记未知 {len(profile.unknowns)} 项："
                      + "、".join(u.field for u in profile.unknowns)

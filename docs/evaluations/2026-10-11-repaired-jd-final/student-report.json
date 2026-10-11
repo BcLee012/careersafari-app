@@ -1,0 +1,72 @@
+{
+  "synthetic_profile": true,
+  "answers": {
+    "persona": "研一 · 方向未定型",
+    "major": "管理科学与工程",
+    "grade": "研一",
+    "attained_degree": "本科",
+    "target_stage": "实习",
+    "direction_interest": "大数据分析与决策",
+    "skills": [
+      {
+        "name": "SQL 取数",
+        "column": "transferable",
+        "evidence_source": "self_report",
+        "evidence_text": "模拟输入：学习过 SQL，没有提交作品。"
+      }
+    ]
+  },
+  "advice": {
+    "headline": "当前尚无满足证据门槛的岗位画像，暂不做正式匹配。你的画像已保留；候选方向可浏览，需补足有效 JD、企业来源或发布日期。",
+    "positions": [],
+    "candidate_families": [
+      {
+        "job_family": "产品经理",
+        "stage": "实习",
+        "jd_count": 1,
+        "employer_count": 1,
+        "candidate_count": 1,
+        "reasons": [
+          "近24个月有效去重 JD 1/6 份",
+          "独立企业 1/3 家",
+          "尚无至少两家企业支持的可比对能力"
+        ]
+      },
+      {
+        "job_family": "数据分析",
+        "stage": "实习",
+        "jd_count": 1,
+        "employer_count": 1,
+        "candidate_count": 2,
+        "reasons": [
+          "近24个月有效去重 JD 1/6 份",
+          "独立企业 1/3 家",
+          "尚无至少两家企业支持的可比对能力"
+        ]
+      }
+    ],
+    "learning_plan": [],
+    "learning_hard": [],
+    "learning_soft": [],
+    "two_week_actions": [],
+    "evidence_strength": {
+      "level": "信息待补充",
+      "note": "作品引用不等于已验证掌握，未知不等于缺口。",
+      "matched": 0,
+      "unverified": 0,
+      "gaps": 0,
+      "unknown": 0
+    },
+    "excluded": [],
+    "generated_by": "deterministic",
+    "llm_status": "not_needed",
+    "library_status": {
+      "submitted": 5,
+      "review": 0,
+      "checking": 0,
+      "excluded": 1,
+      "fetch_failed": 1,
+      "admitted": 4
+    }
+  }
+}

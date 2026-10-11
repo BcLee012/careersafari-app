@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-10-11T09:47:47.526853+00:00",
+  "implementation_version": "0.3",
+  "source_urls": 906,
+  "employer_groups": 10,
+  "source_record_states": {
+    "ready": 138,
+    "review": 29,
+    "raw": 739
+  },
+  "sector_summary": "summary.json",
+  "source_manifests": [
+    {
+      "path": "data/evidence/2026-10-11/manifest.json",
+      "sha256": "2780201b236344ed30f32f0ee3184e628d5c25ee792a475cbb4510ddf0f52b13"
+    },
+    {
+      "path": "data/evidence/2026-10-11-sector-expansion/manifest.json",
+      "sha256": "1c0a364b2b01552723bd6da2228ff64e25c5e523c71e4eb7f681f3db4d842471"
+    }
+  ],
+  "backup": {
+    "path": "data/evidence/2026-10-11-sector-expansion/consolidated-final.db",
+    "saved_at": "2026-10-11T09:44:40.520406+00:00",
+    "sha256": "04687dd30c195182082ba394706298aa248fcea1bb2f8e3c114070a8eb406f4c",
+    "bytes": 41226240,
+    "integrity_check": "ok"
+  },
+  "report_export_read_only_check": {
+    "admission_digest_before": "bd982b6b7a388a95d99951b71638d35525201d1b8d793cb43e358d299b77884c",
+    "admission_digest_after": "bd982b6b7a388a95d99951b71638d35525201d1b8d793cb43e358d299b77884c",
+    "unchanged": true
+  },
+  "verification": {
+    "latest_regression_passes": 75,
+    "date": "2026-10-11",
+    "browser_check": "previous coverage phase; no UI changes in sector phase"
+  },
+  "ai_batch": {
+    "completed": 48,
+    "ready": 34,
+    "review": 14,
+    "running": false,
+    "additional_batch_started": false
+  },
+  "git_committed": false,
+  "git_pushed": false,
+  "large_assets_local_only": true
+}

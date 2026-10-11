@@ -1,0 +1,891 @@
+{
+  "key": "baidu-growth",
+  "name": "百度：用户增长数据分析实习",
+  "url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d",
+  "collection_seconds": 0.73,
+  "warnings": [
+    "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+  ],
+  "source_metadata": {
+    "adapter": "source-2",
+    "facts": {
+      "company": {
+        "value": "百度",
+        "span": "百度校园招聘",
+        "locator": "HTML title + verified official host",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+      },
+      "job_type": {
+        "value": "实习",
+        "span": "INTERN",
+        "locator": "detailData.recruitType + URL route",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+      },
+      "title": {
+        "value": "数据分析实习生（J98221）",
+        "span": "数据分析实习生（J98221）",
+        "locator": "detailData.postInfo.name",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+      },
+      "published_date": {
+        "value": "2026-03-12",
+        "span": "2026-03-12",
+        "locator": "detailData.postInfo.publishDate",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+      },
+      "updated_date": {
+        "value": "2026-07-21",
+        "span": "2026-07-21",
+        "locator": "detailData.postInfo.updateDate",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+      }
+    },
+    "conflicts": []
+  },
+  "result": {
+    "ok": true,
+    "state": "ready",
+    "jd_id": "JD-CFDD1B9E",
+    "position_id": "POS-31A1CF0D",
+    "reasons": [],
+    "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+    "n_requirements": 9,
+    "cached": false,
+    "elapsed_seconds": 43.689
+  },
+  "audit": {
+    "jd_id": "JD-CFDD1B9E",
+    "fingerprint": "88897711ed5fe72a54df9beef5ea42d9087974d330bbcf326a6d327bd259dd5a",
+    "state": "ready",
+    "details_json": "{\"position_id\": \"POS-31A1CF0D\", \"result\": {\"ok\": true, \"state\": \"ready\", \"jd_id\": \"JD-CFDD1B9E\", \"position_id\": \"POS-31A1CF0D\", \"reasons\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 9, \"cached\": false, \"elapsed_seconds\": 43.689}, \"attempts\": [{\"extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析实习生（J98221）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2026-03-12\", \"published_date_span\": \"2026-03-12\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"数据分析\", \"family_evidence_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"secondary_tags\": [\"用户增长业务数据分析\", \"DAU/新增/调起/留存等指标监控\", \"日常业务监控分析\", \"专题分析报告产出\"], \"stressor_ids\": [\"S14\"], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"研究生及以上学历\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-研究生及以上学历，统计、数学相关专业优先\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"统计、数学相关专业优先\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-研究生及以上学历，统计、数学相关专业优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通SQL/Excel\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-精通SQL/Excel，熟悉python/R语言数据处理优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"熟悉python/R语言数据处理优先\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-精通SQL/Excel，熟悉python/R语言数据处理优先\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\", \"evidence_ids\": [\"S15\"], \"evidence_spans\": [\"-每周可保持至少4天在岗，实习时长不少于六个月\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\", \"evidence_ids\": [\"S13\"], \"evidence_spans\": [\"-对数据敏感，善于从数据中发现异常和潜在机会点\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具有强自主性、自驱力、责任心\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"优秀的逻辑思维和沟通协调能力\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"勇于承担工作压力并面对挑战\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"]}], \"extraction_notes\": \"原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取\", \"_mock\": false, \"family_spans\": [\"-负责支持分析用户增长相关业务数据分析工作\", \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"-快速响应业务分析需求，提供用户数据、统计数据\", \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\"], \"work_scenarios\": [\"-负责支持分析用户增长相关业务数据分析工作\", \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"-快速响应业务分析需求，提供用户数据、统计数据\", \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\"], \"stressors\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"], \"_reference_errors\": []}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析实习生（J98221）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2026-03-12\", \"published_date_span\": \"2026-03-12\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"数据分析\", \"family_evidence_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"secondary_tags\": [\"用户增长业务数据分析\", \"DAU/新增/调起/留存等指标监控\", \"日常业务监控分析\", \"专题分析报告产出\"], \"stressor_ids\": [\"S14\"], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"研究生及以上学历\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"统计、数学相关专业优先\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通SQL/Excel\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"熟悉python/R语言数据处理优先\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\", \"evidence_ids\": [\"S15\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\", \"evidence_ids\": [\"S13\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具有强自主性、自驱力、责任心\", \"evidence_ids\": [\"S14\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"优秀的逻辑思维和沟通协调能力\", \"evidence_ids\": [\"S14\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"勇于承担工作压力并面对挑战\", \"evidence_ids\": [\"S14\"]}], \"extraction_notes\": \"原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取\", \"_mock\": false}, \"source_overrides\": [], \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 64, \"prompt_tokens\": 1761, \"completion_tokens\": 4476, \"total_tokens\": 6237, \"prompt_tokens_details\": {\"cached_tokens\": 64}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 26.625}, \"check\": {\"structural\": {\"total\": 9, \"passed\": 9, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"研究生及以上学历\"}, {\"idx\": 1, \"ok\": true, \"text\": \"统计、数学相关专业优先\"}, {\"idx\": 2, \"ok\": true, \"text\": \"精通SQL/Excel\"}, {\"idx\": 3, \"ok\": true, \"text\": \"熟悉python/R语言数据处理优先\"}, {\"idx\": 4, \"ok\": true, \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\"}, {\"idx\": 5, \"ok\": true, \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\"}, {\"idx\": 6, \"ok\": true, \"text\": \"具有强自主性、自驱力、责任心\"}, {\"idx\": 7, \"ok\": true, \"text\": \"优秀的逻辑思维和沟通协调能力\"}, {\"idx\": 8, \"ok\": true, \"text\": \"勇于承担工作压力并面对挑战\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"数据分析实习生（J98221）\", \"span\": \"数据分析实习生（J98221）\", \"spans\": [{\"text\": \"数据分析实习生（J98221）\", \"raw_start\": 3, \"raw_end\": 18, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"实习\", \"span\": \"INTERN\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"数据分析\", \"span\": \"-负责支持分析用户增长相关业务数据分析工作\\n-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\\n-快速响应业务分析需求，提供用户数据、统计数据\\n-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"spans\": [{\"text\": \"-负责支持分析用户增长相关业务数据分析工作\", \"raw_start\": 56, \"raw_end\": 77, \"normalized_start\": 51}, {\"text\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"raw_start\": 78, \"raw_end\": 112, \"normalized_start\": 72}, {\"text\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"raw_start\": 113, \"raw_end\": 136, \"normalized_start\": 106}, {\"text\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"raw_start\": 137, \"raw_end\": 169, \"normalized_start\": 129}], \"basis\": \"body\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2026-03-12\", \"span\": \"2026-03-12\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2026-03-12\", \"span\": \"2026-03-12\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"研究生及以上学历\", \"span\": \"-研究生及以上学历，统计、数学相关专业优先\", \"spans\": [{\"text\": \"-研究生及以上学历，统计、数学相关专业优先\", \"raw_start\": 176, \"raw_end\": 197, \"normalized_start\": 166}], \"basis\": \"body\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"统计、数学相关专业优先\", \"span\": \"-研究生及以上学历，统计、数学相关专业优先\", \"spans\": [{\"text\": \"-研究生及以上学历，统计、数学相关专业优先\", \"raw_start\": 176, \"raw_end\": 197, \"normalized_start\": 166}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"精通SQL/Excel\", \"span\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"spans\": [{\"text\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"raw_start\": 198, \"raw_end\": 229, \"normalized_start\": 187}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"熟悉python/R语言数据处理优先\", \"span\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"spans\": [{\"text\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"raw_start\": 198, \"raw_end\": 229, \"normalized_start\": 187}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\", \"span\": \"-每周可保持至少4天在岗，实习时长不少于六个月\", \"spans\": [{\"text\": \"-每周可保持至少4天在岗，实习时长不少于六个月\", \"raw_start\": 301, \"raw_end\": 324, \"normalized_start\": 287}], \"basis\": \"body\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\", \"span\": \"-对数据敏感，善于从数据中发现异常和潜在机会点\", \"spans\": [{\"text\": \"-对数据敏感，善于从数据中发现异常和潜在机会点\", \"raw_start\": 230, \"raw_end\": 253, \"normalized_start\": 218}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-6\", \"kind\": \"requirement\", \"text\": \"具有强自主性、自驱力、责任心\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-7\", \"kind\": \"requirement\", \"text\": \"优秀的逻辑思维和沟通协调能力\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-8\", \"kind\": \"requirement\", \"text\": \"勇于承担工作压力并面对挑战\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"-负责支持分析用户增长相关业务数据分析工作\", \"span\": \"-负责支持分析用户增长相关业务数据分析工作\", \"spans\": [{\"text\": \"-负责支持分析用户增长相关业务数据分析工作\", \"raw_start\": 56, \"raw_end\": 77, \"normalized_start\": 51}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"span\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"spans\": [{\"text\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"raw_start\": 78, \"raw_end\": 112, \"normalized_start\": 72}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"span\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"spans\": [{\"text\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"raw_start\": 113, \"raw_end\": 136, \"normalized_start\": 106}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"span\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"spans\": [{\"text\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"raw_start\": 137, \"raw_end\": 169, \"normalized_start\": 129}], \"basis\": \"body\"}, {\"claim_id\": \"stressors-0\", \"kind\": \"stressors\", \"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\"}], \"problems\": [], \"model\": \"step-3.7-flash\", \"elapsed_seconds\": 17.048, \"usage\": {\"prompt_tokens\": 3320, \"completion_tokens\": 3017, \"total_tokens\": 6337, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"semantic\": [{\"claim_id\": \"title\", \"verdict\": \"supported\", \"reason\": \"原文明确包含岗位名称“数据分析实习生（J98221）”，与声明一致\"}, {\"claim_id\": \"company\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘企业为百度，与声明一致\"}, {\"claim_id\": \"stage\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘类型为实习，与声明一致\"}, {\"claim_id\": \"family\", \"verdict\": \"supported\", \"reason\": \"原文工作职责均围绕数据分析相关任务展开，支持该岗位属于数据分析类\"}, {\"claim_id\": \"date\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的岗位发布日期为2026-03-12，与声明一致\"}, {\"claim_id\": \"req-0\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确要求研究生及以上学历，与声明一致\"}, {\"claim_id\": \"req-1\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确统计、数学相关专业优先，与声明一致\"}, {\"claim_id\": \"req-2\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确要求精通SQL/Excel，与声明一致\"}, {\"claim_id\": \"req-3\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确熟悉python/R语言数据处理优先，与声明一致\"}, {\"claim_id\": \"req-4\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确每周至少4天在岗、实习时长不少于六个月，与声明一致\"}, {\"claim_id\": \"req-5\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确对数据敏感、善于从数据中发现异常和潜在机会点，与声明一致\"}, {\"claim_id\": \"req-6\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确具备强自主性、自驱力、责任心，与声明一致\"}, {\"claim_id\": \"req-7\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确具备优秀的逻辑思维和沟通协调能力，与声明一致\"}, {\"claim_id\": \"req-8\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确勇于承担工作压力并面对挑战，与声明一致\"}, {\"claim_id\": \"work_scenarios-0\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含负责支持分析用户增长相关业务数据分析工作，与声明一致\"}, {\"claim_id\": \"work_scenarios-1\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含理解业务、协助完成日常监控分析（含DAU、新增、调起、留存等方向），与声明一致\"}, {\"claim_id\": \"work_scenarios-2\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含快速响应业务分析需求、提供用户数据和统计数据，与声明一致\"}, {\"claim_id\": \"work_scenarios-3\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含结合业务场景进行分析解读、洞察业务机会、辅助产出专题分析报告，与声明一致\"}, {\"claim_id\": \"stressors-0\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确提及勇于承担工作压力并面对挑战，与声明一致\"}]}}], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"job_type\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"title\": {\"value\": \"数据分析实习生（J98221）\", \"span\": \"数据分析实习生（J98221）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"published_date\": {\"value\": \"2026-03-12\", \"span\": \"2026-03-12\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"updated_date\": {\"value\": \"2026-07-21\", \"span\": \"2026-07-21\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+    "checked_at": "2026-10-11T10:55:03",
+    "details": {
+      "position_id": "POS-31A1CF0D",
+      "result": {
+        "ok": true,
+        "state": "ready",
+        "jd_id": "JD-CFDD1B9E",
+        "position_id": "POS-31A1CF0D",
+        "reasons": [],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "n_requirements": 9,
+        "cached": false,
+        "elapsed_seconds": 43.689
+      },
+      "attempts": [
+        {
+          "extraction": {
+            "company": "百度",
+            "company_span": "百度校园招聘",
+            "title": "数据分析实习生（J98221）",
+            "location": "北京市",
+            "job_type": "实习",
+            "job_type_span": "INTERN",
+            "published_date": "2026-03-12",
+            "published_date_span": "2026-03-12",
+            "canonical_name": "数据分析师",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenario_ids": [
+              "S6",
+              "S7",
+              "S8",
+              "S9"
+            ],
+            "family": "数据分析",
+            "family_evidence_ids": [
+              "S6",
+              "S7",
+              "S8",
+              "S9"
+            ],
+            "secondary_tags": [
+              "用户增长业务数据分析",
+              "DAU/新增/调起/留存等指标监控",
+              "日常业务监控分析",
+              "专题分析报告产出"
+            ],
+            "stressor_ids": [
+              "S14"
+            ],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "研究生及以上学历",
+                "evidence_ids": [
+                  "S11"
+                ],
+                "evidence_spans": [
+                  "-研究生及以上学历，统计、数学相关专业优先"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "统计、数学相关专业优先",
+                "evidence_ids": [
+                  "S11"
+                ],
+                "evidence_spans": [
+                  "-研究生及以上学历，统计、数学相关专业优先"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "精通SQL/Excel",
+                "evidence_ids": [
+                  "S12"
+                ],
+                "evidence_spans": [
+                  "-精通SQL/Excel，熟悉python/R语言数据处理优先"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "熟悉python/R语言数据处理优先",
+                "evidence_ids": [
+                  "S12"
+                ],
+                "evidence_spans": [
+                  "-精通SQL/Excel，熟悉python/R语言数据处理优先"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "经验",
+                "text": "每周可保持至少4天在岗，实习时长不少于六个月",
+                "evidence_ids": [
+                  "S15"
+                ],
+                "evidence_spans": [
+                  "-每周可保持至少4天在岗，实习时长不少于六个月"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "对数据敏感，善于从数据中发现异常和潜在机会点",
+                "evidence_ids": [
+                  "S13"
+                ],
+                "evidence_spans": [
+                  "-对数据敏感，善于从数据中发现异常和潜在机会点"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具有强自主性、自驱力、责任心",
+                "evidence_ids": [
+                  "S14"
+                ],
+                "evidence_spans": [
+                  "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "优秀的逻辑思维和沟通协调能力",
+                "evidence_ids": [
+                  "S14"
+                ],
+                "evidence_spans": [
+                  "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "勇于承担工作压力并面对挑战",
+                "evidence_ids": [
+                  "S14"
+                ],
+                "evidence_spans": [
+                  "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+                ]
+              }
+            ],
+            "extraction_notes": "原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取",
+            "_mock": false,
+            "family_spans": [
+              "-负责支持分析用户增长相关业务数据分析工作",
+              "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+              "-快速响应业务分析需求，提供用户数据、统计数据",
+              "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告"
+            ],
+            "work_scenarios": [
+              "-负责支持分析用户增长相关业务数据分析工作",
+              "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+              "-快速响应业务分析需求，提供用户数据、统计数据",
+              "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告"
+            ],
+            "stressors": [
+              "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+            ],
+            "_reference_errors": []
+          },
+          "model_extraction": {
+            "company": "百度",
+            "company_span": "百度校园招聘",
+            "title": "数据分析实习生（J98221）",
+            "location": "北京市",
+            "job_type": "实习",
+            "job_type_span": "INTERN",
+            "published_date": "2026-03-12",
+            "published_date_span": "2026-03-12",
+            "canonical_name": "数据分析师",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenario_ids": [
+              "S6",
+              "S7",
+              "S8",
+              "S9"
+            ],
+            "family": "数据分析",
+            "family_evidence_ids": [
+              "S6",
+              "S7",
+              "S8",
+              "S9"
+            ],
+            "secondary_tags": [
+              "用户增长业务数据分析",
+              "DAU/新增/调起/留存等指标监控",
+              "日常业务监控分析",
+              "专题分析报告产出"
+            ],
+            "stressor_ids": [
+              "S14"
+            ],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "研究生及以上学历",
+                "evidence_ids": [
+                  "S11"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "统计、数学相关专业优先",
+                "evidence_ids": [
+                  "S11"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "精通SQL/Excel",
+                "evidence_ids": [
+                  "S12"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "技能",
+                "text": "熟悉python/R语言数据处理优先",
+                "evidence_ids": [
+                  "S12"
+                ]
+              },
+              {
+                "kind": "hard",
+                "category": "经验",
+                "text": "每周可保持至少4天在岗，实习时长不少于六个月",
+                "evidence_ids": [
+                  "S15"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "对数据敏感，善于从数据中发现异常和潜在机会点",
+                "evidence_ids": [
+                  "S13"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具有强自主性、自驱力、责任心",
+                "evidence_ids": [
+                  "S14"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "优秀的逻辑思维和沟通协调能力",
+                "evidence_ids": [
+                  "S14"
+                ]
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "勇于承担工作压力并面对挑战",
+                "evidence_ids": [
+                  "S14"
+                ]
+              }
+            ],
+            "extraction_notes": "原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取",
+            "_mock": false
+          },
+          "source_overrides": [],
+          "extraction_meta": {
+            "mock": false,
+            "error": "",
+            "model": "step-3.7-flash",
+            "usage": {
+              "cached_tokens": 64,
+              "prompt_tokens": 1761,
+              "completion_tokens": 4476,
+              "total_tokens": 6237,
+              "prompt_tokens_details": {
+                "cached_tokens": 64
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "elapsed_seconds": 26.625
+          },
+          "check": {
+            "structural": {
+              "total": 9,
+              "passed": 9,
+              "failed": 0,
+              "items": [
+                {
+                  "idx": 0,
+                  "ok": true,
+                  "text": "研究生及以上学历"
+                },
+                {
+                  "idx": 1,
+                  "ok": true,
+                  "text": "统计、数学相关专业优先"
+                },
+                {
+                  "idx": 2,
+                  "ok": true,
+                  "text": "精通SQL/Excel"
+                },
+                {
+                  "idx": 3,
+                  "ok": true,
+                  "text": "熟悉python/R语言数据处理优先"
+                },
+                {
+                  "idx": 4,
+                  "ok": true,
+                  "text": "每周可保持至少4天在岗，实习时长不少于六个月"
+                },
+                {
+                  "idx": 5,
+                  "ok": true,
+                  "text": "对数据敏感，善于从数据中发现异常和潜在机会点"
+                },
+                {
+                  "idx": 6,
+                  "ok": true,
+                  "text": "具有强自主性、自驱力、责任心"
+                },
+                {
+                  "idx": 7,
+                  "ok": true,
+                  "text": "优秀的逻辑思维和沟通协调能力"
+                },
+                {
+                  "idx": 8,
+                  "ok": true,
+                  "text": "勇于承担工作压力并面对挑战"
+                }
+              ],
+              "reject_all": false,
+              "note": ""
+            },
+            "claims": [
+              {
+                "claim_id": "title",
+                "kind": "title",
+                "text": "数据分析实习生（J98221）",
+                "span": "数据分析实习生（J98221）",
+                "spans": [
+                  {
+                    "text": "数据分析实习生（J98221）",
+                    "raw_start": 3,
+                    "raw_end": 18,
+                    "normalized_start": 2
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "company",
+                "kind": "company",
+                "text": "百度",
+                "span": "百度校园招聘",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "百度",
+                  "span": "百度校园招聘",
+                  "locator": "HTML title + verified official host",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+                }
+              },
+              {
+                "claim_id": "stage",
+                "kind": "stage",
+                "text": "实习",
+                "span": "INTERN",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "实习",
+                  "span": "INTERN",
+                  "locator": "detailData.recruitType + URL route",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+                }
+              },
+              {
+                "claim_id": "family",
+                "kind": "family",
+                "text": "数据分析",
+                "span": "-负责支持分析用户增长相关业务数据分析工作\n-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\n-快速响应业务分析需求，提供用户数据、统计数据\n-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                "spans": [
+                  {
+                    "text": "-负责支持分析用户增长相关业务数据分析工作",
+                    "raw_start": 56,
+                    "raw_end": 77,
+                    "normalized_start": 51
+                  },
+                  {
+                    "text": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                    "raw_start": 78,
+                    "raw_end": 112,
+                    "normalized_start": 72
+                  },
+                  {
+                    "text": "-快速响应业务分析需求，提供用户数据、统计数据",
+                    "raw_start": 113,
+                    "raw_end": 136,
+                    "normalized_start": 106
+                  },
+                  {
+                    "text": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                    "raw_start": 137,
+                    "raw_end": 169,
+                    "normalized_start": 129
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "date",
+                "kind": "published_date",
+                "text": "2026-03-12",
+                "span": "2026-03-12",
+                "basis": "source",
+                "source_evidence": {
+                  "value": "2026-03-12",
+                  "span": "2026-03-12",
+                  "locator": "detailData.postInfo.publishDate",
+                  "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+                }
+              },
+              {
+                "claim_id": "req-0",
+                "kind": "requirement",
+                "text": "研究生及以上学历",
+                "span": "-研究生及以上学历，统计、数学相关专业优先",
+                "spans": [
+                  {
+                    "text": "-研究生及以上学历，统计、数学相关专业优先",
+                    "raw_start": 176,
+                    "raw_end": 197,
+                    "normalized_start": 166
+                  }
+                ],
+                "basis": "body",
+                "category": "学历",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-1",
+                "kind": "requirement",
+                "text": "统计、数学相关专业优先",
+                "span": "-研究生及以上学历，统计、数学相关专业优先",
+                "spans": [
+                  {
+                    "text": "-研究生及以上学历，统计、数学相关专业优先",
+                    "raw_start": 176,
+                    "raw_end": 197,
+                    "normalized_start": 166
+                  }
+                ],
+                "basis": "body",
+                "category": "专业",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-2",
+                "kind": "requirement",
+                "text": "精通SQL/Excel",
+                "span": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                "spans": [
+                  {
+                    "text": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                    "raw_start": 198,
+                    "raw_end": 229,
+                    "normalized_start": 187
+                  }
+                ],
+                "basis": "body",
+                "category": "技能",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-3",
+                "kind": "requirement",
+                "text": "熟悉python/R语言数据处理优先",
+                "span": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                "spans": [
+                  {
+                    "text": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                    "raw_start": 198,
+                    "raw_end": 229,
+                    "normalized_start": 187
+                  }
+                ],
+                "basis": "body",
+                "category": "技能",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-4",
+                "kind": "requirement",
+                "text": "每周可保持至少4天在岗，实习时长不少于六个月",
+                "span": "-每周可保持至少4天在岗，实习时长不少于六个月",
+                "spans": [
+                  {
+                    "text": "-每周可保持至少4天在岗，实习时长不少于六个月",
+                    "raw_start": 301,
+                    "raw_end": 324,
+                    "normalized_start": 287
+                  }
+                ],
+                "basis": "body",
+                "category": "经验",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-5",
+                "kind": "requirement",
+                "text": "对数据敏感，善于从数据中发现异常和潜在机会点",
+                "span": "-对数据敏感，善于从数据中发现异常和潜在机会点",
+                "spans": [
+                  {
+                    "text": "-对数据敏感，善于从数据中发现异常和潜在机会点",
+                    "raw_start": 230,
+                    "raw_end": 253,
+                    "normalized_start": 218
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-6",
+                "kind": "requirement",
+                "text": "具有强自主性、自驱力、责任心",
+                "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                "spans": [
+                  {
+                    "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                    "raw_start": 254,
+                    "raw_end": 300,
+                    "normalized_start": 241
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-7",
+                "kind": "requirement",
+                "text": "优秀的逻辑思维和沟通协调能力",
+                "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                "spans": [
+                  {
+                    "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                    "raw_start": 254,
+                    "raw_end": 300,
+                    "normalized_start": 241
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-8",
+                "kind": "requirement",
+                "text": "勇于承担工作压力并面对挑战",
+                "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                "spans": [
+                  {
+                    "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                    "raw_start": 254,
+                    "raw_end": 300,
+                    "normalized_start": 241
+                  }
+                ],
+                "basis": "body",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "work_scenarios-0",
+                "kind": "work_scenarios",
+                "text": "-负责支持分析用户增长相关业务数据分析工作",
+                "span": "-负责支持分析用户增长相关业务数据分析工作",
+                "spans": [
+                  {
+                    "text": "-负责支持分析用户增长相关业务数据分析工作",
+                    "raw_start": 56,
+                    "raw_end": 77,
+                    "normalized_start": 51
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-1",
+                "kind": "work_scenarios",
+                "text": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                "span": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                "spans": [
+                  {
+                    "text": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                    "raw_start": 78,
+                    "raw_end": 112,
+                    "normalized_start": 72
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-2",
+                "kind": "work_scenarios",
+                "text": "-快速响应业务分析需求，提供用户数据、统计数据",
+                "span": "-快速响应业务分析需求，提供用户数据、统计数据",
+                "spans": [
+                  {
+                    "text": "-快速响应业务分析需求，提供用户数据、统计数据",
+                    "raw_start": 113,
+                    "raw_end": 136,
+                    "normalized_start": 106
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "work_scenarios-3",
+                "kind": "work_scenarios",
+                "text": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                "span": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                "spans": [
+                  {
+                    "text": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                    "raw_start": 137,
+                    "raw_end": 169,
+                    "normalized_start": 129
+                  }
+                ],
+                "basis": "body"
+              },
+              {
+                "claim_id": "stressors-0",
+                "kind": "stressors",
+                "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                "spans": [
+                  {
+                    "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                    "raw_start": 254,
+                    "raw_end": 300,
+                    "normalized_start": 241
+                  }
+                ],
+                "basis": "body"
+              }
+            ],
+            "problems": [],
+            "model": "step-3.7-flash",
+            "elapsed_seconds": 17.048,
+            "usage": {
+              "prompt_tokens": 3320,
+              "completion_tokens": 3017,
+              "total_tokens": 6337,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "semantic": [
+              {
+                "claim_id": "title",
+                "verdict": "supported",
+                "reason": "原文明确包含岗位名称“数据分析实习生（J98221）”，与声明一致"
+              },
+              {
+                "claim_id": "company",
+                "verdict": "supported",
+                "reason": "官方来源解析的招聘企业为百度，与声明一致"
+              },
+              {
+                "claim_id": "stage",
+                "verdict": "supported",
+                "reason": "官方来源解析的招聘类型为实习，与声明一致"
+              },
+              {
+                "claim_id": "family",
+                "verdict": "supported",
+                "reason": "原文工作职责均围绕数据分析相关任务展开，支持该岗位属于数据分析类"
+              },
+              {
+                "claim_id": "date",
+                "verdict": "supported",
+                "reason": "官方来源解析的岗位发布日期为2026-03-12，与声明一致"
+              },
+              {
+                "claim_id": "req-0",
+                "verdict": "supported",
+                "reason": "原文职责要求明确要求研究生及以上学历，与声明一致"
+              },
+              {
+                "claim_id": "req-1",
+                "verdict": "supported",
+                "reason": "原文职责要求明确统计、数学相关专业优先，与声明一致"
+              },
+              {
+                "claim_id": "req-2",
+                "verdict": "supported",
+                "reason": "原文职责要求明确要求精通SQL/Excel，与声明一致"
+              },
+              {
+                "claim_id": "req-3",
+                "verdict": "supported",
+                "reason": "原文职责要求明确熟悉python/R语言数据处理优先，与声明一致"
+              },
+              {
+                "claim_id": "req-4",
+                "verdict": "supported",
+                "reason": "原文职责要求明确每周至少4天在岗、实习时长不少于六个月，与声明一致"
+              },
+              {
+                "claim_id": "req-5",
+                "verdict": "supported",
+                "reason": "原文职责要求明确对数据敏感、善于从数据中发现异常和潜在机会点，与声明一致"
+              },
+              {
+                "claim_id": "req-6",
+                "verdict": "supported",
+                "reason": "原文职责要求明确具备强自主性、自驱力、责任心，与声明一致"
+              },
+              {
+                "claim_id": "req-7",
+                "verdict": "supported",
+                "reason": "原文职责要求明确具备优秀的逻辑思维和沟通协调能力，与声明一致"
+              },
+              {
+                "claim_id": "req-8",
+                "verdict": "supported",
+                "reason": "原文职责要求明确勇于承担工作压力并面对挑战，与声明一致"
+              },
+              {
+                "claim_id": "work_scenarios-0",
+                "verdict": "supported",
+                "reason": "原文工作职责明确包含负责支持分析用户增长相关业务数据分析工作，与声明一致"
+              },
+              {
+                "claim_id": "work_scenarios-1",
+                "verdict": "supported",
+                "reason": "原文工作职责明确包含理解业务、协助完成日常监控分析（含DAU、新增、调起、留存等方向），与声明一致"
+              },
+              {
+                "claim_id": "work_scenarios-2",
+                "verdict": "supported",
+                "reason": "原文工作职责明确包含快速响应业务分析需求、提供用户数据和统计数据，与声明一致"
+              },
+              {
+                "claim_id": "work_scenarios-3",
+                "verdict": "supported",
+                "reason": "原文工作职责明确包含结合业务场景进行分析解读、洞察业务机会、辅助产出专题分析报告，与声明一致"
+              },
+              {
+                "claim_id": "stressors-0",
+                "verdict": "supported",
+                "reason": "原文职责要求明确提及勇于承担工作压力并面对挑战，与声明一致"
+              }
+            ]
+          }
+        }
+      ],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d",
+      "source_type": "url_fetch",
+      "source_metadata": {
+        "adapter": "source-2",
+        "facts": {
+          "company": {
+            "value": "百度",
+            "span": "百度校园招聘",
+            "locator": "HTML title + verified official host",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+          },
+          "job_type": {
+            "value": "实习",
+            "span": "INTERN",
+            "locator": "detailData.recruitType + URL route",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+          },
+          "title": {
+            "value": "数据分析实习生（J98221）",
+            "span": "数据分析实习生（J98221）",
+            "locator": "detailData.postInfo.name",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+          },
+          "published_date": {
+            "value": "2026-03-12",
+            "span": "2026-03-12",
+            "locator": "detailData.postInfo.publishDate",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+          },
+          "updated_date": {
+            "value": "2026-07-21",
+            "span": "2026-07-21",
+            "locator": "detailData.postInfo.updateDate",
+            "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+          }
+        },
+        "conflicts": []
+      },
+      "repair_meta": null,
+      "pipeline_version": "auto-evidence-3",
+      "schema_version": "0.3.0"
+    }
+  }
+}

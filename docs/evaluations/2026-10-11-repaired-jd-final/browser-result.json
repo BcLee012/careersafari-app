@@ -1,0 +1,126 @@
+{
+  "synthetic_profile": true,
+  "profile_response": {
+    "ok": true,
+    "card": {
+      "persona": "研一 · 方向未定型",
+      "hard_constraints": [
+        {
+          "label": "专业/学科",
+          "value": "管理科学与工程",
+          "evidence": "user_stated"
+        },
+        {
+          "label": "年级",
+          "value": "研一",
+          "evidence": "user_stated"
+        },
+        {
+          "label": "倾向的研究方向",
+          "value": "大数据分析与决策",
+          "evidence": "user_stated"
+        }
+      ],
+      "interest": {
+        "riasec_code": "",
+        "riasec_scores": {
+          "R": 0,
+          "I": 0,
+          "A": 0,
+          "S": 0,
+          "E": 0,
+          "C": 0
+        },
+        "mbti_hint": "",
+        "mbti_caveat": ""
+      },
+      "skills": {
+        "verified": [],
+        "unverified": []
+      },
+      "values": {
+        "salary": 0,
+        "stability": 0,
+        "growth": 0,
+        "autonomy": 0,
+        "impact": 0,
+        "balance": 0
+      },
+      "top_value": {
+        "dimension": "",
+        "weight": 0,
+        "tied": [],
+        "note": "未填写价值观权重。"
+      },
+      "unknowns": [],
+      "honesty_summary": [
+        "已填写约束 3 项，来源为用户自述，尚未独立核实。",
+        "能力项 0 项提供作品引用，0 项为课程学习或自述。作品引用尚未核实贡献和熟练度。",
+        "未登记任何未知项。"
+      ],
+      "consistency_warnings": [
+        "人设为「方向未定型」但未登记任何未知项。对目标人群而言，通常至少有一项是无法自行判断的——建议补登。"
+      ],
+      "schema_version": "0.3.0",
+      "profile_id": "PROF-35B848C9",
+      "response_id": "RESP-BA128DA0"
+    },
+    "advice": {
+      "headline": "当前尚无满足证据门槛的岗位画像，暂不做正式匹配。你的画像已保留；候选方向可浏览，需补足有效 JD、企业来源或发布日期。",
+      "positions": [],
+      "candidate_families": [
+        {
+          "job_family": "产品经理",
+          "stage": "实习",
+          "jd_count": 1,
+          "employer_count": 1,
+          "candidate_count": 1,
+          "reasons": [
+            "近24个月有效去重 JD 1/6 份",
+            "独立企业 1/3 家",
+            "尚无至少两家企业支持的可比对能力"
+          ]
+        },
+        {
+          "job_family": "数据分析",
+          "stage": "实习",
+          "jd_count": 1,
+          "employer_count": 1,
+          "candidate_count": 2,
+          "reasons": [
+            "近24个月有效去重 JD 1/6 份",
+            "独立企业 1/3 家",
+            "尚无至少两家企业支持的可比对能力"
+          ]
+        }
+      ],
+      "learning_plan": [],
+      "learning_hard": [],
+      "learning_soft": [],
+      "two_week_actions": [],
+      "evidence_strength": {
+        "level": "信息待补充",
+        "note": "作品引用不等于已验证掌握，未知不等于缺口。",
+        "matched": 0,
+        "unverified": 0,
+        "gaps": 0,
+        "unknown": 0
+      },
+      "excluded": [],
+      "generated_by": "deterministic",
+      "llm_status": "not_needed",
+      "library_status": {
+        "submitted": 5,
+        "review": 0,
+        "checking": 0,
+        "excluded": 1,
+        "fetch_failed": 1,
+        "admitted": 4
+      }
+    }
+  },
+  "report_text": "求职意向定义卡\n研一 · 方向未定型\n\nprofile PROF-35B848C9 · response RESP-BA128DA0 · schema 0.3.0\n\n⚠\n输入一致性警告\n人设为「方向未定型」但未登记任何未知项。对目标人群而言，通常至少有一项是无法自行判断的——建议补登。\n硬约束 · 客观事实，划定可行范围\n专业/学科\n管理科学与工程\nuser_stated\n年级\n研一\nuser_stated\n倾向的研究方向\n大数据分析与决策\nuser_stated\n兴趣\n兴趣码未生成 · 各维度未分化\n能力 · 提供作品引用（贡献与熟练度待核实）\n无\n能力 · 课程学习或自述\n无\n价值观最高项\n并列：\n\n未填写价值观权重。\n\n显式未知\n未登记任何未知项\n诚实性摘要\n✓\n已填写约束 3 项，来源为用户自述，尚未独立核实。\n能力项 0 项提供作品引用，0 项为课程学习或自述。作品引用尚未核实贡献和熟练度。\n未登记任何未知项。\n机器可读（完整 JSON）\n岗位探索报告\n\n当前尚无满足证据门槛的岗位画像，暂不做正式匹配。你的画像已保留；候选方向可浏览，需补足有效 JD、企业来源或发布日期。\n\n作品引用不等于已验证掌握，未知不等于缺口。\n\n当前暂无正式匹配结果\n证据待补充的候选方向\n产品经理 · 实习\n\n近24个月有效去重 JD 1/6 份；独立企业 1/3 家；尚无至少两家企业支持的可比对能力。未进入正式匹配。\n\n数据分析 · 实习\n\n近24个月有效去重 JD 1/6 份；独立企业 1/3 家；尚无至少两家企业支持的可比对能力。未进入正式匹配。",
+  "review_text": "来源采集失败\n\n静态正文不足（4字符）；浏览器采集未取得有效正文：渲染后的正文仍过短\n\n查看招聘原文\n\n重新采集来源",
+  "admitted_count": 4,
+  "page_errors": []
+}

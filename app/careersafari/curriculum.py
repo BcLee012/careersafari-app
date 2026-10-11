@@ -14,15 +14,15 @@
 """
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 # ---------------------------------------------------------------- 能力 taxonomy
 # aliases 按特异性从高到低排列，匹配时取第一个命中。
 CAPABILITIES: List[Dict] = [
     {"id": "SQL", "name": "SQL 取数", "aliases": [
-        "sql", "多表", "join", "窗口函数", "取数", "查询优化"]},
+        "sql", "多表join", "窗口函数", "查询优化"]},
     {"id": "PYTHON", "name": "Python / R 数据处理", "aliases": [
-        "python", "r语言", "r 语言", "pandas", "numpy", "数据处理"]},
+        "python", "r语言", "r 语言", "pandas", "numpy"]},
     {"id": "STATS", "name": "统计分析与计量", "aliases": [
         "统计", "计量", "回归", "假设检验", "推断统计", "spss", "sas"]},
     {"id": "OPT", "name": "最优化建模", "aliases": [
@@ -45,7 +45,7 @@ CAPABILITIES: List[Dict] = [
     {"id": "ERP", "name": "ERP / APS 系统", "aliases": [
         "erp", "aps", "sap", "系统操作"]},
     {"id": "SYSANALYSIS", "name": "信息系统分析与设计", "aliases": [
-        "信息系统", "系统分析", "系统设计", "需求分析", "数据库设计"]},
+        "信息系统", "系统分析", "系统设计", "数据库设计"]},
     {"id": "ML", "name": "机器学习基础", "aliases": [
         "机器学习", "监督学习", "分类模型", "聚类", "特征工程"]},
     {"id": "SIM", "name": "仿真与计算实验", "aliases": [
@@ -62,6 +62,13 @@ CAPABILITIES: List[Dict] = [
         "抗压", "压力", "节奏快", "高强度", "多任务"]},
     {"id": "ENGLISH", "name": "英语能力", "aliases": [
         "英语", "英文", "学术英语", "english"]},
+    {"id": "DATA_PREP", "name": "数据整理与质量检查", "aliases": ["数据清洗", "数据处理", "数据质量", "取数"]},
+    {"id": "DATA_PIPELINE", "name": "数据工程与数据管道", "aliases": ["数据仓库", "数据开发", "etl", "hadoop", "spark", "flink"]},
+    {"id": "PROCUREMENT", "name": "采购与供应商管理", "aliases": ["采购", "寻源", "供应商", "招标"]},
+    {"id": "LOGISTICS", "name": "物流履约与网络规划", "aliases": ["物流", "仓储", "履约", "运输", "配送网络"]},
+    {"id": "PRODUCT_REQ", "name": "产品需求分析与设计", "aliases": ["需求分析", "需求文档", "产品设计", "产品规划", "原型", "prd"]},
+    {"id": "RESEARCH", "name": "行业与市场研究", "aliases": ["行业研究", "市场研究", "竞品分析", "行业分析", "市场调研"]},
+    {"id": "RISK", "name": "风险识别与合规分析", "aliases": ["风险识别", "风险评估", "合规", "反欺诈", "内控", "审计"]},
 ]
 
 _BY_ID = {c["id"]: c for c in CAPABILITIES}
@@ -83,9 +90,11 @@ def capabilities_of(text: str) -> List[str]:
     if not text:
         return []
     low = text.lower()
+    import re
     out: List[str] = []
     for cap in CAPABILITIES:
-        if any(alias in low for alias in cap["aliases"]):
+        if any((bool(re.search(r"(?<![a-z0-9_])" + re.escape(alias) + r"(?![a-z0-9_])", low))
+                if re.fullmatch(r"[a-z0-9_ ]+", alias) else alias in low) for alias in cap["aliases"] + [cap["name"].lower()]):
             out.append(cap["id"])
     return out
 
@@ -217,16 +226,23 @@ def dealbreaker_conflict(dealbreaker: str, jd_text: str):
     """
     if not dealbreaker or dealbreaker in ("无明显不可接受项",):
         return False, ""
+    import re
+    # 否定、不确定频次不能被普通关键词当成明确冲突。
+    jd_text = re.sub(r"(?:无需|不需要|不要求|无须|不涉及|没有|无)[^。；;\n]{0,12}(?:出差|加班|销售|演讲)", "", jd_text)
+    exact = {"长期出差": ["长期出差", "长期驻场", "长期外派"],
+             "高频加班/996": ["996", "大小周", "单休", "频繁加班", "高频加班"],
+             "纯销售性质": ["纯销售", "主要负责销售"],
+             "需要频繁公开演讲": ["频繁公开演讲", "高频路演"],
+             "工作地点不固定": ["多地办公", "全国 base", "base 全国"]}
     for rule in DEALBREAKER_RULES:
         if rule["dealbreaker"] != dealbreaker:
             continue
-        for kw in rule.get("hard", []):
+        for kw in exact.get(dealbreaker, []):
             if kw in jd_text:
                 return True, f"{rule['reason']}（命中关键词：「{kw}」）"
-        for kw in rule.get("soft", []):
+        for kw in rule.get("hard", []) + rule.get("soft", []):
             if kw in jd_text:
-                return False, (f"{rule['reason']}——但 JD 仅出现通用软性表述「{kw}」，"
-                               f"未明确承诺工时/地点安排，因此**不排除**，仅提示你需要核实。")
+                return False, f"JD 提到「{kw}」，但频次、工作性质或具体安排尚不明确；需补充信息，当前不排除。"
     return False, ""
 
 
@@ -235,6 +251,10 @@ def dealbreaker_conflict(dealbreaker: str, jd_text: str):
 # 直接当独立岗位会让「被 N 个岗位要求」的统计虚高，结果列表也碎成一地。
 # 用受控词表归到少数几个族，统计和展示都建立在族上。
 JOB_FAMILIES: List[Dict[str, Any]] = [
+    {"family": "金融分析与研究", "keywords": ["金融分析", "投资研究", "量化研究", "金融工程"]},
+    {"family": "数据工程", "keywords": ["数据工程", "数据开发"]},
+    {"family": "运筹优化与仿真", "keywords": ["运筹", "优化算法", "仿真"]},
+    {"family": "智能系统与信息系统", "keywords": ["智能系统", "信息系统", "系统分析"]},
     {"family": "数据分析", "keywords": ["数据分析", "数据挖掘", "风控数据", "风险数据", "数据运营"]},
     {"family": "商业/经营分析", "keywords": ["商业分析", "经营分析", "商业变现", "战略商业"]},
     {"family": "战略分析", "keywords": ["战略分析", "战略研究", "行业研究", "商业洞察"]},

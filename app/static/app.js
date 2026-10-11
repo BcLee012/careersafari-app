@@ -64,6 +64,7 @@ async function init(){
   Q = await api('/api/questionnaire');
 
   $('f-persona').innerHTML = Q.persona_options.map(o=>`<option>${esc(o)}</option>`).join('');
+  if(Q.persona_options.includes('研一 · 方向未定型')) $('f-persona').value='研一 · 方向未定型';
   $('f-region').innerHTML = '<option value="">— 请选择 —</option>' +
     Q.regions.map(o=>`<option>${esc(o)}</option>`).join('') +
     '<option value="__unknown__">我不确定（登记为未知）</option>';
@@ -80,7 +81,7 @@ async function init(){
 /* ---------------- 能力 ---------------- */
 function skillHTML(name, col){
   const key = col+'::'+name;
-  const r = state.ratings[key] || 3;
+  const r = state.ratings[key] || 0;
   const v = !!state.verified[key];
   return `<div class="sk ${v?'open':''}" data-key="${esc(key)}" data-col="${col}">
     <div class="skwrap" style="flex:1">
@@ -89,9 +90,12 @@ function skillHTML(name, col){
         <span class="stars">${[1,2,3,4,5].map(n=>
           `<button type="button" class="${n<=r?'on':''}" onclick="setRating(this,${n})">★</button>`).join('')}</span>
         <button type="button" class="ev-btn ${v?'on':''}" onclick="toggleEv(this)">
-          ${v?'✓ 有证据':'有证据？'}</button>
+          ${v?'补充经历':'有经历可补充'}</button>
       </div>
-      <div class="ev"><input type="text" placeholder="哪门课 / 哪个项目 / 哪段实习"
+      <div class="ev">
+        <select class="ev-source" onchange="state.evSources=state.evSources||{};state.evSources[this.closest('.sk').dataset.key]=this.value">${[['self_report','自述'],['course','课程学习'],['practical','实践经历']].map(([val,label])=>`<option value="${val}" ${(state.evSources?.[key]||'self_report')===val?'selected':''}>${label}</option>`).join('')}</select>
+        <input class="artifact-ref" type="text" placeholder="作品链接或材料编号（可选）" value="${esc(state.artifacts?.[key]||'')}" oninput="state.artifacts=state.artifacts||{};state.artifacts[this.closest('.sk').dataset.key]=this.value">
+        <input type="text" placeholder="做过什么、负责哪一步、产出是什么"
         value="${esc(state.evText&&state.evText[key]||'')}"
         oninput="state.evText=state.evText||{};state.evText['${esc(key)}']=this.value"></div>
     </div></div>`;
@@ -106,7 +110,7 @@ function toggleEv(btn){
   state.verified[key]=!state.verified[key];
   box.classList.toggle('open', state.verified[key]);
   btn.classList.toggle('on', state.verified[key]);
-  btn.textContent = state.verified[key] ? '✓ 有证据' : '有证据？';
+  btn.textContent = state.verified[key] ? '补充经历' : '有经历可补充';
 }
 function renderSkills(){
   $('skills-transferable').innerHTML = Q.transferable_skills.map(n=>skillHTML(n,'transferable')).join('');
@@ -201,9 +205,11 @@ function collectAnswers(){
     const col=box.dataset.col, key=box.dataset.key;
     const verified=!!state.verified[key];
     const ev=(state.evText&&state.evText[key]||'').trim();
-    if(verified && !ev) return;              // 说有证据却写不出 → 降级为纯自述
-    skills.push({name, column:col, self_rating:state.ratings[key]||3,
-                 verified, evidence_text:ev});
+    if(!state.ratings[key] && !ev) return;
+    skills.push({name, column:col, self_rating:state.ratings[key]||null,
+                 verified:false, evidence_text:ev,
+                 evidence_source:box.querySelector('.ev-source').value,
+                 artifact_reference:box.querySelector('.artifact-ref').value.trim()});
   });
   const values={};
   document.querySelectorAll('.vrow input[type=range]').forEach(el=>{
@@ -217,7 +223,7 @@ function collectAnswers(){
     if(f) unknowns.push({field:f, reason:r.querySelector('.u-reason').value.trim()});
   });
 
-  return { persona:$('f-persona').value, major:$('f-major').value, grade:$('f-grade').value,
+  return { target_stage:$('f-stage').value, attained_degree:$('f-degree').value, persona:$('f-persona').value, major:$('f-major').value, grade:$('f-grade').value,
     direction_interest:$('f-dir').value, region:$('f-region').value, timeline:$('f-timeline').value,
     dealbreaker:$('f-dealbreaker').value, intern_goal:$('f-intern').value, skills, riasec,
     mbti:$('f-mbti').value.trim().toUpperCase(), mbti_caveat_ack:$('f-mbti-ack').checked,
@@ -270,9 +276,9 @@ function renderCard(c){
         ${c.interest.mbti_hint?`<span class="tag warn">MBTI ${esc(c.interest.mbti_hint)}（辅助）</span>`:''}
       </div>
       ${c.interest.mbti_caveat?`<p class="muted" style="font-size:12px;margin-top:7px">${esc(c.interest.mbti_caveat)}</p>`:''}
-      <div class="sec-t">能力 · 有证据支撑</div>
+      <div class="sec-t">能力 · 提供作品引用（贡献与熟练度待核实）</div>
       <div class="chips">${vsk}</div>
-      <div class="sec-t">能力 · 仅自述，未经验证</div>
+      <div class="sec-t">能力 · 课程学习或自述</div>
       <div class="chips">${usk}</div>
       <div class="sec-t">价值观最高项</div>
       <div>${tvLine}</div>
@@ -310,10 +316,10 @@ async function fetchUrl(){
   const url=$('jd-url').value.trim();
   $('url-msg').innerHTML='<span class="spin"></span> 抓取中…';
   const r=await api('/api/jd/fetch',{method:'POST',body:JSON.stringify({url,user_id:'demo-user'})});
-  if(!r.ok){ $('url-msg').innerHTML=`<div class="note bad"><span class="ic">✕</span><div>${esc(r.error)}</div></div>`+warnBox(r.warnings); return; }
+  if(!r.ok){ $('url-msg').innerHTML=`<div class="note bad"><span class="ic">✕</span><div>${esc(r.error)}</div></div>`+warnBox(r.warnings); refreshJds(); return; }
   $('url-msg').innerHTML=`<div class="note ok"><span class="ic">✓</span><div>正文 ${r.chars} 字符</div></div>`+warnBox(r.warnings);
   state.rawText=r.raw_text; state.sourceType='url_fetch'; state.sourceUrl=r.source_url;
-  $('jd-text').value=r.raw_text.slice(0,4000); setSrc('manual');
+  $('jd-text').value=r.raw_text; $('jd-source-url').value=state.sourceUrl; setSrc('manual');
 }
 async function uploadFile(){
   const f=$('jd-file').files[0];
@@ -326,100 +332,46 @@ async function uploadFile(){
   if(!r.ok){ $('file-msg').innerHTML=`<div class="note bad"><span class="ic">✕</span><div>${esc(r.error)}</div></div>`; return; }
   $('file-msg').innerHTML=`<div class="note ok"><span class="ic">✓</span><div>${esc(r.filename)} · ${r.chars} 字符</div></div>`;
   state.rawText=r.raw_text; state.sourceType='file_upload'; state.sourceUrl='';
-  $('jd-text').value=r.raw_text.slice(0,4000); setSrc('manual');
+  $('jd-text').value=r.raw_text; $('jd-source-url').value=state.sourceUrl; setSrc('manual');
 }
 async function parseJd(){
   const raw=$('jd-text').value.trim();
-  if(raw.length<50){ $('parse-out').innerHTML='<div class="note warn"><span class="ic">⚠</span><div>JD 原文至少需要 50 字符。</div></div>'; return; }
-  $('parse-out').innerHTML='<div class="card"><span class="spin"></span> 拆解中，可能需要 10–60 秒…</div>';
-  const r=await api('/api/jd/parse',{method:'POST',body:JSON.stringify({
-    raw_text:raw, source_type:state.sourceType, source_url:state.sourceUrl, user_id:'demo-user'})});
-  if(!r.ok){ $('parse-out').innerHTML=`<div class="note bad"><span class="ic">✕</span><div>${esc(r.error)}</div></div>`; return; }
-  state.lastParse=r;
-  if(r.degraded||r.rule_based){
-    $('parse-out').innerHTML=`<div class="note warn"><span class="ic">⚠</span>
-      <div><b>已降级为规则基线解析</b><br>${esc(r.error||'LLM 不可用')}
-      <br><span class="muted">这不是 LLM 分析，是关键词规则的确定性切分：零依赖、可复现，
-      但只证明「原文出现过这些词」，不构成语义理解。</span></div></div>` + renderParseBody(r);
-    return;
-  }
-  if(r.reject_all){
-    $('parse-out').innerHTML=`<div class="note bad"><span class="ic">✕</span>
-      <div><b>已整体拒绝</b>：${r.validation.total} 条需求全部无法在原文中找到支撑，
-      疑似模型编造，不予入库。</div></div>`;
-    return;
-  }
-  $('parse-out').innerHTML = renderParseBody(r);
+  if(raw.length<50){ $('parse-out').textContent='JD 原文至少需要 50 字符。'; return; }
+  $('parse-out').innerHTML='<div class="card"><span class="spin"></span> 正在检查来源并拆解，完成后自动保存结果…</div>';
+  const r=await api('/api/jd/ingest',{method:'POST',body:JSON.stringify({
+    raw_text:raw, source_type:state.sourceType, source_url:$('jd-source-url').value.trim(), user_id:'demo-user'})});
+  renderIngestResult(r);
+  refreshPositions(); refreshJds();
 }
-function renderParseBody(r){
-  const v=r.validation;
-  const rows=r.requirements_preview.map(q=>`
-    <div class="req ${q.span_ok?'':'bad'}">
-      <div><span class="tag ${q.kind==='soft'?'warn':'info'}">${esc(q.kind)}</span>
-           <span class="tag">${esc(q.category)}</span></div>
-      <div>${esc(q.text)}</div>
-      <div class="sp mono">${esc(q.evidence_span||'（无原文支撑）')}</div>
-      <div>${q.span_ok?'<span class="tag ok">已验证</span>':'<span class="tag bad">无原文支撑</span>'}</div>
-    </div>`).join('');
-  return `
-    <div class="note ${v.failed?'warn':'ok'}"><span class="ic">${v.failed?'⚠':'✓'}</span>
-      <div><b>生成后校验</b>：共 ${v.total} 条，通过 ${v.passed} 条，未通过 ${v.failed} 条。
-      ${r.rule_based
-        ? '<br><span class="muted">规则基线的 evidence_span 是逐字切片，校验必然通过。</span>'
-        : '<br>每条需求的 evidence_span 都回到原文做了子串匹配；匹配不上的标为「无原文支撑」并降级为团队判断，不当作外部证据采信。'}</div></div>
-    <div class="grid g2" style="grid-template-columns:1fr 1fr auto;align-items:end;margin-bottom:14px">
-      <div class="f"><label>标准化岗位名</label>
-        <input type="text" id="c-name" value="${esc(r.extraction.canonical_name||'')}"></div>
-      <div class="f"><label>行业</label>
-        <input type="text" id="c-industry" value="${esc(r.extraction.industry||'')}"></div>
-      <div class="f"><label>&nbsp;</label><button class="btn btn-p" onclick="confirmJd()">确认入库</button></div>
-    </div>
-    ${rows}`;
+function renderIngestResult(r){
+  if(!r.ok){ $('parse-out').innerHTML=`<div class="note bad">${esc(r.error)}</div>`; return; }
+  const labels={ready:'自动检查通过，已保存岗位',review:'已保存原文，进入待确认队列',excluded:'已保存原文，该招聘阶段不在首批范围'};
+  $('parse-out').innerHTML=`<div class="note ${r.state==='ready'?'ok':'warn'}"><div>
+    <b>${esc(labels[r.state]||r.state)}</b>${r.cached?'（复用已有检查）':''}
+    <p>${(r.reasons||[]).map(esc).join('<br>')}</p>
+    <p>${esc(r.source_note||'')}</p>
+    <span class="mono">${esc(r.jd_id)}</span>
+    ${r.state==='review'?`<button class="btn" onclick="retryJd('${esc(r.jd_id)}')">重新检查</button>`:''}
+    </div></div>`;
 }
-async function confirmJd(){
-  const r=state.lastParse; if(!r){ return; }
-  const reqs=r.requirements_preview.map(q=>({kind:q.kind,category:q.category,text:q.text,
-    evidence_span:q.evidence_span, confidence:q.span_ok?'external':'team',
-    team_confidence:q.span_ok?null:0.3}));
-  const out=await api('/api/jd/confirm',{method:'POST',body:JSON.stringify({
-    user_id:'demo-user', raw_text:state.rawText||$('jd-text').value,
-    source_type:state.sourceType, source_url:state.sourceUrl,
-    canonical_name:$('c-name').value, industry:$('c-industry').value, requirements:reqs})});
-  $('parse-out').innerHTML = out.ok
-    ? `<div class="note ok"><span class="ic">✓</span><div>已入库：position
-       <span class="mono">${esc(out.position_id)}</span>，需求 ${out.n_requirements} 条，
-       JD <span class="mono">${esc(out.jd_id)}</span></div></div>`
-    : `<div class="note bad"><span class="ic">✕</span><div>入库失败：${esc(out.error)}</div></div>`;
+async function retryJd(id){
+  $('parse-out').textContent='重新检查中…';
+  renderIngestResult(await api('/api/jd/'+encodeURIComponent(id)+'/retry',{method:'POST'}));
   refreshPositions(); refreshJds();
 }
 let POS_CACHE=[], FAM_FILTER='';
 
-const FAM_RULES=[['数据分析',['数据分析','数据挖掘','风控数据','风险数据','数据运营']],
-  ['商业/经营分析',['商业分析','经营分析','商业变现','战略商业']],
-  ['战略分析',['战略分析','战略研究','行业研究','商业洞察']],
-  ['供应链计划',['供应链计划','计划专员','s&op','需求计划','库存计划']],
-  ['采购',['采购','寻源','供应商质量','品类管理']],
-  ['物流履约',['物流','仓储','履约','关务','跨境物流']],
-  ['产品运营',['运营','用户增长','增长','内容运营']],
-  ['产品经理',['产品经理']],
-  ['项目管理',['项目管理','项目经理','项目专员']],
-  ['风控合规',['风控','合规','反欺诈','审计']]];
-
-function jobFamilyOf(n){
-  const s=(n||'').toLowerCase();
-  for(const [fam,kws] of FAM_RULES) if(kws.some(k=>s.includes(k.toLowerCase()))) return fam;
-  return '其他（未归入受控岗位族）';
-}
+function familyOf(p){ return p.admission?.family || '待重新检查'; }
 
 async function refreshPositions(){
   const r=await api('/api/positions'); const box=$('positions');
   if(!r.ok||!r.positions.length){
     box.innerHTML='<div class="empty">还没有沉淀任何岗位。先去上面拆解一条 JD。</div>'; return; }
   POS_CACHE=r.positions;
-  const fams=[...new Set(r.positions.map(p=>jobFamilyOf(p.canonical_name)))].sort();
+  const fams=[...new Set(r.positions.map(p=>familyOf(p)))].sort();
   $('fam-chips').innerHTML =
     `<button class="${FAM_FILTER===''?'on':''}" onclick="FAM_FILTER='';renderPositions()">全部 ${r.positions.length}</button>` +
-    fams.map(f=>{const c=r.positions.filter(p=>jobFamilyOf(p.canonical_name)===f).length;
+    fams.map(f=>{const c=r.positions.filter(p=>familyOf(p)===f).length;
       return `<button class="${FAM_FILTER===f?'on':''}" onclick="FAM_FILTER='${esc(f)}';renderPositions()">${esc(f)} ${c}</button>`;}).join('');
   renderPositions();
 }
@@ -430,7 +382,7 @@ function renderPositions(){
   const q=($('pos-q').value||'').trim().toLowerCase();
   const kind=$('pos-kind').value, conf=$('pos-conf').value;
   let list=POS_CACHE;
-  if(FAM_FILTER) list=list.filter(p=>jobFamilyOf(p.canonical_name)===FAM_FILTER);
+  if(FAM_FILTER) list=list.filter(p=>familyOf(p)===FAM_FILTER);
   if(q) list=list.filter(p=>
     (p.canonical_name+' '+(p.industry||'')+' '+p.requirements.map(r=>r.text).join(' '))
       .toLowerCase().includes(q));
@@ -445,26 +397,54 @@ function renderPositions(){
     const ext=p.requirements.filter(q=>q.confidence==='external').length;
     return `<div class="pos fade"><div class="ph">
       <b>${esc(p.canonical_name)}</b>
-      <span class="tag">${esc(jobFamilyOf(p.canonical_name))}</span>
+      <span class="tag">${esc(familyOf(p))}</span>
       ${p.industry?`<span class="tag">${esc(p.industry)}</span>`:''}
       <span class="tag info">${hard} 硬</span><span class="tag warn">${soft} 软</span>
-      <span class="tag ok">${ext} 有原文支撑</span>
+      <span class="tag ok">${ext} 有原文引用</span>
+      <span class="tag ${p.admission?.current?'info':'warn'}">${p.admission?.current?'通过自动检查':'历史数据待检查'}</span>
       <span class="mono faint">${esc(p.position_id)}</span></div>
       <div class="chips">${p.requirements.map(q=>
-        `<span class="tag ${q.confidence==='external'?'ok':'warn'}" title="${esc(q.evidence_span||'')}">${esc(q.text)}</span>`).join('')}</div>
+        `<span class="tag ${q.confidence==='external'?'ok':'warn'}" title="${esc((q.evidence_spans||[]).join('\n')||q.evidence_span||'')}">${esc(q.text)}</span>`).join('')}</div>
     </div>`;}).join('');
 }
 
 async function refreshJds(){
+  const coverage=await api('/api/library/coverage');
+  if(coverage.ok){
+    const current=$('knowledge-family').value;
+    $('knowledge-family').innerHTML=[...new Set(coverage.rows.map(r=>r.family))].map(f=>`<option value="${esc(f)}">${esc(f)}</option>`).join('');
+    if([...$('knowledge-family').options].some(o=>o.value===current)) $('knowledge-family').value=current;
+  }
+  $('coverage-status').innerHTML=coverage.ok ? `<p>${coverage.eligible_count} / ${coverage.target_count} 个岗位方向与招聘阶段已有足够证据。</p>
+    <p class="muted">${esc(coverage.note)}</p><details><summary>查看全部方向与缺口</summary>
+    <table class="tbl"><tr><th>方向</th><th>阶段</th><th>有效 JD</th><th>企业</th><th>进度</th></tr>
+    ${coverage.rows.map(r=>`<tr><td>${esc(r.family)}</td><td>${esc(r.stage)}</td><td>${r.jd_count} / 6</td><td>${r.employer_count} / 3</td><td>${r.eligible?'可比对':'待补齐'}</td></tr>`).join('')}</table></details>`
+    : '<p class="muted">填写管理令牌后可查看覆盖进度</p>';
+  const queue=await api('/api/jd/reviews');
+  const humanReason=s=>String(s).replace(/company/g,'公司信息').replace(/family/g,'岗位分类').replace(/stage/g,'招聘阶段')
+    .replace(/req-(\d+)/g,(_,n)=>'第'+(+n+1)+'项要求').replace(/evidence_span/g,'原文引用');
+  $('reviews').innerHTML=queue.ok ? (queue.reviews.map(j=>`<div class="fam"><b>${esc(j.title)} · ${esc(j.company)}</b>
+    <p>${(j.details?.result?.reasons||[]).map(s=>esc(humanReason(s))).join('；')}</p>
+    <p>${sourceLink(j.source_url)} <small>${esc(j.jd_id)}</small></p>
+    <button class="btn" onclick="retryJd('${esc(j.jd_id)}')">重新检查</button>
+    <button class="btn" data-recollect-url="${esc(j.source_url)}">重新采集来源</button></div>`).join('')
+    + (queue.source_failures||[]).map(s=>`<div class="fam"><b>来源采集失败</b><p>${esc(s.error)}</p>
+      <p>${sourceLink(s.source_url)}</p><button class="btn" data-recollect-url="${esc(s.source_url)}">重新采集来源</button></div>`).join('')
+    || '<p class="muted">暂无待确认或采集失败项</p>') : '<p class="muted">填写管理令牌后可查看待确认队列</p>';
   const r=await api('/api/jds'); const box=$('jds');
   if(!r.ok||!r.jds.length){ box.innerHTML='<div class="empty">暂无 JD 原文。</div>'; return; }
   box.innerHTML=`<table class="tbl"><tr><th>JD ID</th><th>来源</th><th>可信度</th>
     <th>状态</th><th>字符</th><th>URL</th></tr>${r.jds.map(j=>`<tr>
     <td class="mono">${esc(j.jd_id)}</td><td>${esc(j.source_type)}</td>
-    <td><span class="tag info">${esc(j.credibility)}</span></td><td>${esc(j.status)}</td>
+    <td><span class="tag info">${esc(j.credibility)}</span></td><td>${esc({raw:'已保存，待检查',checking:'正在检查',ready:'检查通过',review:'待确认',excluded:'范围外'}[j.status]||j.status)}</td>
     <td class="mono">${j.raw_len}</td>
     <td class="mono faint">${esc(j.source_url||'—')}</td></tr>`).join('')}</table>`;
 }
+
+$('reviews').addEventListener('click',event=>{
+  const button=event.target.closest('[data-recollect-url]');
+  if(button){$('jd-url').value=button.dataset.recollectUrl;setSrc('url');fetchUrl();}
+});
 
 $('f-dir').addEventListener('change', renderSkills);
 init();
@@ -475,122 +455,63 @@ function verdictTag(v){
   const m={'证据充分':'ok','可行，需补证':'info','差距较大':'warn','已排除':'bad','样本不足':'unk'};
   return `<span class="tag ${m[v]||''}">${esc(v)}</span>`;
 }
+function sourceLink(url){
+  try {
+    const u=new URL(url);
+    const jd=u.hostname==='campus.jd.com' && u.pathname.match(/^\/api\/wx\/position\/detail\/(\d+)$/);
+    if(jd) return `<a href="https://campus.jd.com/#/jobs" title="原始接口：${esc(u.href)}" target="_blank" rel="noopener noreferrer">京东校招官网 · 岗位编号 ${esc(jd[1])}</a>`;
+    if(['http:','https:'].includes(u.protocol)) return `<a href="${esc(u.href)}" target="_blank" rel="noopener noreferrer">查看招聘原文</a>`;
+  } catch(e) {}
+  return '来源未提供';
+}
 function renderAdvice(a){
   if(!a) return;
-  const box=document.createElement('div');
-  box.className='result fade'; box.style.marginTop='18px';
-
-  const es=a.evidence_strength||{};
-  const top=(a.positions||[]).find(p=>p.verdict!=='已排除');
-  const nExcluded=(a.positions||[]).filter(p=>p.verdict==='已排除').length;
-
-  // 方向结论卡片：前 3 名高亮，覆盖率用条形可视化
-  const fams=(a.positions||[]).map((p,i)=>{
-    const cov=p.verified_coverage;
-    const pct=cov==null?0:Math.round(cov*100);
-    return `<div class="fam ${i<3&&p.verdict!=='已排除'?'top':''}">
-      <div class="fh">
-        <span class="pill mono faint">${p.rank}</span>
-        <b>${esc(p.job_family||p.name)}</b>
-        ${verdictTag(p.verdict)}
-        ${p.family_size?`<span class="pill">库内 ${p.family_size} 个同族岗位</span>`:''}
-        <span style="margin-left:auto" class="cov">
-          <span class="track"><span class="fill" style="width:${pct}%"></span></span>
-          <span class="num">${pct}%</span>
-        </span>
-      </div>
-      <div class="muted" style="font-size:12px">代表岗位：${esc(p.name)}
-        ${p.n_comparable!=null?` · 可比对需求 ${p.n_comparable} 条`:''}
-        ${p.industry?` · ${esc(p.industry)}`:''}</div>
-      ${(p.why||[]).map(w=>`<div class="fw ${/冲突|不排除|样本不足/.test(w)?'warn':''}">${esc(w)}</div>`).join('')}
-    </div>`;}).join('') || '<div class="empty">暂无可比对岗位</div>';
-
-  const hard=(a.learning_hard||[]).map(l=>{
-    const cs=l.courses.map(c=>`<span class="tag ${c.mandatory?'unk':'info'}">《${esc(c.course)}》${esc(c.semester)} · ${esc(c.teacher)} · ${esc(c.credits)}学分${c.mandatory?' · 必修':''}</span>`).join(' ');
-    return `<div class="fam"><div class="fh"><b>${esc(l.capability_name)}</b>
-      <span class="tag">被 ${l.needed_by.length} 个岗位要求</span>
-      <span class="pill">${esc(l.needed_by.slice(0,4).join('、'))}${l.needed_by.length>4?' 等':''}</span></div>
-      <div class="chips">${cs||'<span class="tag warn">培养方案内无对应课程</span>'}</div>
-      ${l.note?`<div class="muted" style="font-size:12px;margin-top:5px">${esc(l.note)}</div>`:''}</div>`;
-  }).join('') || '<div class="empty">没有可通过选课弥补的硬缺口</div>';
-
-  const soft=(a.learning_soft||[]).map(l=>`
-    <div class="fam"><div class="fh"><b>${esc(l.capability_name)}</b>
-      <span class="tag warn">选课无法获得</span>
-      <span class="tag">被 ${l.needed_by.length} 个岗位要求</span></div>
-      <div class="muted" style="font-size:12.5px">${esc(l.note)}</div></div>`).join('')
-    || '<div class="empty">无</div>';
-
-  const acts=(a.two_week_actions||[]).map((x,i)=>`
-    <div class="fam"><div style="font-weight:600;font-size:13.5px">
-      <span class="pill mono">${i+1}</span> ${esc(x.action)}</div>
-      <div class="muted" style="font-size:12.5px;margin-top:4px">验证什么：${esc(x.validates)}</div>
-      <div class="muted" style="font-size:11.5px;margin-top:2px">成本：${esc(x.cost)}
-        ${x.source?` · <span class="mono">${esc(x.source)}</span>`:''}</div></div>`).join('')
-    || '<div class="empty">暂无</div>';
-
-  box.innerHTML=`
-    <div class="verdict">
-      <div class="vh">求职与学习建议</div>
-      <div class="vt">${esc(a.headline||'')}</div>
-      <div class="vm">
-        <div><b>${esc(es.level||'—')}</b><span class="lbl">整体证据强度</span></div>
-        <div><b>${es.matched||0}</b><span class="lbl">有证据的能力</span></div>
-        <div><b>${es.unverified||0}</b><span class="lbl">仅自述</span></div>
-        <div><b>${es.gaps||0}</b><span class="lbl">能力缺口</span></div>
-        <div><b>${(a.positions||[]).length}</b><span class="lbl">候选方向</span></div>
-        ${nExcluded?`<div><b>${nExcluded}</b><span class="lbl">被硬约束排除</span></div>`:''}
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="eyebrow">方向结论</div>
-      <h2>按岗位族聚合 · 同族只保留证据最强的代表</h2>
-      <p class="sub">覆盖率 = 有证据的能力要求 ÷ 可比对的能力要求。同族多个岗位会触发同一条约束提示，
-        已去重；样本不足 5 条的方向标记为「样本不足」而不是给一个虚高的百分比。</p>
-      ${fams}
-    </div>
-
-    <div class="card">
-      <div class="eyebrow">学习建议</div>
-      <h2>可借培养方案弥补的硬缺口</h2>
-      <p class="sub">按「被多少个岗位要求」排序。标注「必修」的是培养方案本身已安排的课程——
-        那是既定安排，不构成额外建议，因此排在最后。</p>
-      ${hard}
-    </div>
-
-    <div class="card">
-      <div class="eyebrow">诚实的边界</div>
-      <h2>只能靠实践获得的能力</h2>
-      <p class="sub">这些能力被大量岗位要求，但培养方案内没有对应课程。把它们列出来而不是
-        硬凑一门课，是这套系统「宁可少写，不可编造」的体现。</p>
-      ${soft}
-    </div>
-
-    <div class="card">
-      <div class="eyebrow">行动</div>
-      <h2>接下来两周做什么</h2>
-      <p class="sub">每一项都说明它要验证什么假设、成本多大、依据是哪条岗位需求。</p>
-      ${acts}
-    </div>
-
-    ${(a.excluded&&a.excluded.length)?`<div class="card">
-      <div class="eyebrow">排除</div><h2>被你的硬约束排除的方向</h2>
-      <div class="note bad" style="margin-top:12px"><span class="ic">✕</span><div>${
-        a.excluded.map(e=>`<b>${esc(e.name)}</b>：${esc(e.reason)}`).join('<br>')}</div></div>
-    </div>`:''}
-
-    <div class="card">
-      <details>
-        <summary>LLM 状态与机器可读结果</summary>
-        <p class="muted" style="font-size:12.5px;margin:8px 0">
-          生成方式：${esc(a.generated_by==='llm_polished'
-            ?'确定性匹配引擎计算，LLM 仅润色措辞（引用已逐条校验）'
-            :'确定性匹配引擎生成（可复现、可逐条解释）')}
-          ${a.llm_note?`<br>${esc(a.llm_note)}`:''}</p>
-        <pre class="out">${esc(JSON.stringify(a,null,2))}</pre>
-      </details>
-    </div>`;
+  const box=document.createElement('div'); box.className='result fade';
+  const directions=(a.positions||[]).map(p=>`<div class="fam">
+    <div class="fh"><b>${esc(p.job_family)} · ${esc(p.stage)}</b><span class="tag info">${esc(p.verdict)}</span></div>
+    ${(p.why||[]).map(w=>`<p class="muted">${esc(w)}</p>`).join('')}
+    <details><summary>能力与依据</summary>${(p.matrix||[]).map(m=>`<div class="fam">
+      <b>${esc(m.capability_name)}</b> <span class="tag">${esc({matched:'提供作品引用',unverified:'课程或自述',unknown:'未知',gaps:'明确缺口'}[m.status])}</span>
+      <p class="muted">${esc(m.note||'')}</p>
+      ${(m.evidence||[]).map(e=>`<p>${esc(e.company)}：${esc(e.text)}<br><small>${esc(e.published_date)} · ${sourceLink(e.source_url)}</small></p>`).join('')}
+    </div>`).join('')}
+    <p class="muted">${esc(p.note)}</p></details>
+    ${p.scenario_specific?.length?`<details><summary>单企业场景补充</summary>${p.scenario_specific.map(m=>`<p>${esc(m.capability_name)}：${m.evidence.map(e=>esc(e.company)+' · '+esc(e.text)).join('；')}</p>`).join('')}</details>`:''}
+    ${renderOccupationalReference(p.occupational_reference)}
+    </div>`).join('');
+  const candidates=(a.candidate_families||[]).map(p=>`<div class="fam"><b>${esc(p.job_family)} · ${esc(p.stage)}</b>
+    <p class="muted">${(p.reasons||[]).map(esc).join('；')}。未进入正式匹配。</p>${renderOccupationalReference(p.occupational_reference)}</div>`).join('');
+  const actions=(a.two_week_actions||[]).map(x=>`<div class="fam"><b>${esc(x.action)}</b><p class="muted">${esc(x.validates)}</p></div>`).join('');
+  box.innerHTML=`<div class="card"><h2>岗位探索报告</h2><p>${esc(a.headline)}</p>
+    ${a.coverage_note?`<p class="muted">${esc(a.coverage_note)}</p>`:''}
+    <p class="muted">${esc(a.evidence_strength?.note||'作品引用不等于掌握，未知不等于能力不足。')}</p>
+    ${directions||'<div class="empty">当前暂无正式匹配结果</div>'}</div>
+    ${candidates?`<div class="card"><h2>证据待补充的候选方向</h2>${candidates}</div>`:''}
+    ${actions?`<div class="card"><h2>下一步补充什么</h2>${actions}</div>`:''}
+    ${(a.excluded||[]).length?`<div class="card"><h2>明确约束冲突</h2>${a.excluded.map(e=>`<p>${esc(e.name)}：${esc(e.reason)}</p>`).join('')}</div>`:''}`;
   $('card-out').appendChild(box);
-  box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function renderOccupationalReference(ref){
+  if(!ref?.available) return '';
+  return `<details><summary>美国职业参考 · O*NET ${esc(ref.version)}</summary>
+    <p class="muted">${esc(ref.limitation)}</p>
+    ${(ref.references||[]).map(r=>`<div class="fam"><b>${esc(r.title)}</b><p>${esc(r.excerpt)}</p>
+      <small>${esc(r.citation_id)} · <a href="https://www.onetonline.org/link/summary/${encodeURIComponent(r.soc)}" target="_blank" rel="noopener noreferrer">职业原文</a></small></div>`).join('')}
+    <p class="muted">${esc(ref.attribution)}</p></details>`;
+}
+
+async function explainOccupation(){
+  const question=$('knowledge-question').value.trim();
+  if(!question){$('knowledge-result').innerHTML='<p class="muted">请填写想了解的问题。</p>';return;}
+  $('knowledge-button').disabled=true;
+  $('knowledge-result').innerHTML='<p class="muted">正在查阅职业资料并核对引用…</p>';
+  try{
+    const r=await api('/api/knowledge/explain',{method:'POST',body:JSON.stringify({family:$('knowledge-family').value,question})});
+    $('knowledge-result').innerHTML=r.ok ? `<p class="muted">${esc(r.limitation||'')}</p>
+      ${(r.statements||[]).map(s=>`<p>${esc(s.text)}<br><small>${s.citation_ids.map(esc).join('；')}</small></p>`).join('')||`<p>${esc(r.reason||'暂时无法形成有依据的解释。')}</p>`}
+      ${renderOccupationalReference({available:(r.references||[]).length>0,version:'31.0',references:r.references,limitation:r.limitation,attribution:r.attribution})}`
+      : `<p class="muted">${esc(r.error||'请确认管理令牌后重试。')}</p>`;
+  }catch(e){$('knowledge-result').innerHTML='<p class="muted">请求未完成，请稍后重试。</p>';}
+  finally{$('knowledge-button').disabled=false;}
 }

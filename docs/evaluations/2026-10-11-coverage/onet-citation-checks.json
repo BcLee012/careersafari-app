@@ -1,0 +1,83 @@
+[
+  {
+    "family": "采购",
+    "citation_id": "ONET-31.0:task_statements:1263",
+    "matches_snapshot": true,
+    "scale_id": null,
+    "scale_name": null,
+    "suppressed": null,
+    "source_date": "08/2025"
+  },
+  {
+    "family": "采购",
+    "citation_id": "ONET-31.0:task_statements:1272",
+    "matches_snapshot": true,
+    "scale_id": null,
+    "scale_name": null,
+    "suppressed": null,
+    "source_date": "08/2025"
+  },
+  {
+    "family": "采购",
+    "citation_id": "ONET-31.0:task_statements:1261",
+    "matches_snapshot": true,
+    "scale_id": null,
+    "scale_name": null,
+    "suppressed": null,
+    "source_date": "08/2025"
+  },
+  {
+    "family": "数据分析",
+    "citation_id": "ONET-31.0:essential_skills:2664",
+    "matches_snapshot": true,
+    "scale_id": "IM",
+    "scale_name": "Importance",
+    "suppressed": "N",
+    "source_date": "08/2026"
+  },
+  {
+    "family": "数据分析",
+    "citation_id": "ONET-31.0:essential_skills:2665",
+    "matches_snapshot": true,
+    "scale_id": "LV",
+    "scale_name": "Level",
+    "suppressed": "N",
+    "source_date": "08/2026"
+  },
+  {
+    "family": "数据分析",
+    "citation_id": "ONET-31.0:essential_skills:2684",
+    "matches_snapshot": true,
+    "scale_id": "IM",
+    "scale_name": "Importance",
+    "suppressed": "N",
+    "source_date": "08/2024"
+  },
+  {
+    "family": "供应链计划",
+    "citation_id": "ONET-31.0:software_skills:3808",
+    "matches_snapshot": true,
+    "scale_id": null,
+    "scale_name": null,
+    "suppressed": null,
+    "source_date": null
+  },
+  {
+    "family": "供应链计划",
+    "citation_id": "ONET-31.0:software_skills:3809",
+    "matches_snapshot": true,
+    "scale_id": null,
+    "scale_name": null,
+    "suppressed": null,
+    "source_date": null
+  },
+  {
+    "family": "供应链计划",
+    "citation_id": "ONET-31.0:task_statements:1593",
+    "matches_snapshot": true,
+    "scale_id": null,
+    "scale_name": null,
+    "suppressed": null,
+    "source_date": "08/2020"
+  }
+]

@@ -150,6 +150,8 @@ def chat(system: str, user: str, *, temperature: float = 0.2,
         payload["response_format"] = {"type": "json_object"}
 
     try:
+        import time
+        started = time.monotonic()
         resp = requests.post(
             _endpoint(),
             headers={
@@ -163,14 +165,16 @@ def chat(system: str, user: str, *, temperature: float = 0.2,
         logger.error("Stepfun 请求失败：%s", exc)
         msg = "LLM 服务连接失败（网络或超时）"
         _trip(msg)
-        return {"ok": False, "content": "", "error": msg, "mock": False}
+        return {"ok": False, "content": "", "error": msg, "mock": False,
+                "http_attempts": 1, "elapsed_seconds": round(time.monotonic() - started, 3)}
 
     if resp.status_code != 200:
         logger.error("Stepfun HTTP %s：%s", resp.status_code, resp.text[:400])
         msg = classify_error(resp.status_code, resp.text)
         _trip(msg)
         return {"ok": False, "content": "", "error": msg, "mock": False,
-                "status_code": resp.status_code}
+                "status_code": resp.status_code, "http_attempts": 1,
+                "elapsed_seconds": round(time.monotonic() - started, 3)}
 
     try:
         data = resp.json()
@@ -184,17 +188,26 @@ def chat(system: str, user: str, *, temperature: float = 0.2,
             if _retry < 1:
                 base_mt = max_tokens if max_tokens is not None else \
                     int(os.environ.get("LLM_MAX_TOKENS") or 4096)
-                return chat(system, user, temperature=temperature,
+                retry = chat(system, user, temperature=temperature,
                             max_tokens=base_mt * 2, json_mode=json_mode,
                             effort=effort, _retry=_retry + 1)
+                retry["elapsed_seconds"] = round(time.monotonic() - started, 3)
+                retry["http_attempts"] = retry.get("http_attempts", 0) + 1
+                retry["usage_calls"] = [data.get("usage")] + retry.get("usage_calls", [])
+                return retry
             return {"ok": False, "content": "",
                     "error": "模型两次返回空内容（reasoning 占满 token 上限）",
-                    "mock": False, "empty_content": True}
+                    "mock": False, "empty_content": True, "model": data.get("model", ""),
+                    "http_attempts": 1, "usage_calls": [data.get("usage")],
+                    "elapsed_seconds": round(time.monotonic() - started, 3)}
     except Exception as exc:  # noqa: BLE001
-        return {"ok": False, "content": "", "error": f"响应解析失败：{exc}", "mock": False}
+        return {"ok": False, "content": "", "error": f"响应解析失败：{exc}", "mock": False,
+                "http_attempts": 1, "elapsed_seconds": round(time.monotonic() - started, 3)}
 
     return {"ok": True, "content": content, "error": "", "mock": False,
-            "model": data.get("model", "")}
+            "model": data.get("model", ""), "usage": data.get("usage"),
+            "http_attempts": 1, "usage_calls": [data.get("usage")],
+            "elapsed_seconds": round(time.monotonic() - started, 3)}
 
 
 def parse_json_loose(text: str) -> Optional[Any]:

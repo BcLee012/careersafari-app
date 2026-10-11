@@ -1,0 +1,29 @@
+{
+  "evaluated_at": "2026-10-11T07:45:24.867915+00:00",
+  "discovered_sources": 535,
+  "employers": {
+    "字节跳动": 290,
+    "京东": 28,
+    "百度": 55,
+    "美团": 162
+  },
+  "stored_source_urls": 535,
+  "source_record_states": {
+    "raw": 416,
+    "ready": 104,
+    "review": 15
+  },
+  "current_admitted_positions": 104,
+  "eligible_family_stages": 7,
+  "target_family_stages": 28,
+  "ranking_version": "content-evidence-1",
+  "onet_version": "31.0",
+  "onet_tables": 45,
+  "onet_original_records": 1120006,
+  "onet_indexed_records": 13490,
+  "limitations": [
+    "四家企业样本有互联网企业偏差，不证明市场代表性",
+    "AI检查不等于真实性/分类准确率已经验证",
+    "合成学生案例不是15人试点或推荐准确率评估"
+  ]
+}

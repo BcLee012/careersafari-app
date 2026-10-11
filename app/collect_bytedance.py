@@ -22,8 +22,8 @@ from typing import Any, Dict, List
 
 import requests
 
-from careersafari import db, extractor
-from careersafari.schema import JdRecord, Position, Requirement
+from careersafari import db, ingestion
+from careersafari.schema import JdRecord
 
 API = "https://jobs.bytedance.com/api/v1/search/job/posts"
 WEB = "https://jobs.bytedance.com/campus/position"
@@ -53,7 +53,7 @@ KEYWORDS = [
 def search(keyword: str, limit: int = 20, offset: int = 0) -> List[Dict[str, Any]]:
     body = {"keyword": keyword, "limit": limit, "offset": offset,
             "job_category_id_list": [], "portal_type": 2,
-            "job_function_id_list": [], "recruit_project_id_list": []}
+            "job_function_id_list": [], "recruit_project_id_list": [], "recruitment_id_list": ["2"]}
     r = requests.post(API, headers=HEADERS, json=body, timeout=30)
     if r.status_code != 200:
         print(f"  ! HTTP {r.status_code} keyword={keyword}")
@@ -65,9 +65,11 @@ def search(keyword: str, limit: int = 20, offset: int = 0) -> List[Dict[str, Any
 def to_raw_text(p: Dict[str, Any]) -> str:
     """把接口字段拼成 JD 原文，尽量保留原始换行与编号。"""
     city = (p.get("city_info") or {}).get("name", "")
-    rtype = (p.get("recruit_type") or {}).get("name", "")
+    from careersafari.source_adapters import byte_stage
+    rtype = byte_stage(p)
     cat = (p.get("job_category") or {}).get("name", "")
     parts = [
+        "公司名称：字节跳动",
         f"岗位名称：{p.get('title','')}",
         f"工作地点：{city}",
         f"职位类型：{rtype}",
@@ -90,21 +92,28 @@ def collect(limit_per_kw: int = 15, sleep_s: float = 0.8) -> int:
         posts = search(kw, limit=limit_per_kw)
         n_new = 0
         for p in posts:
-            jid = str(p.get("id"))
+            jid = str(p.get("id") or "")
             if not jid or jid in seen:
                 continue
             seen.add(jid)
             url = f"https://jobs.bytedance.com/campus/position/{jid}/detail"
             if db.jd_exists_by_url(url):
                 continue
-            raw = to_raw_text(p)
+            from careersafari.source_adapters import document, byte_stage
+            if byte_stage(p) not in ("实习", "校招"):
+                continue
+            doc = document({"provider": "bytedance", "record": p}, url, API)
+            raw = doc["raw_text"]
             if len(raw) < 80:
                 continue
+            jd_id = db.new_id("JD")
             db.save_jd(JdRecord(
-                jd_id=db.new_id("JD"), raw_text=raw, source_type="url_fetch",
+                jd_id=jd_id, raw_text=raw, source_type="url_fetch",
                 source_url=url, ingested_by="collector-bytedance",
                 status="raw", credibility="P1",
             ))
+            db.save_capture(url, doc)
+            db.save_source_snapshot(jd_id, raw, url, "url_fetch", document=doc)
             n_new += 1
             saved += 1
         print(f"  {kw:8} 返回 {len(posts):3} 条，新增 {n_new:3} 条")
@@ -113,76 +122,23 @@ def collect(limit_per_kw: int = 15, sleep_s: float = 0.8) -> int:
     return saved
 
 
-def _extract_one(row) -> Dict[str, Any]:
-    """单条 JD 的完整处理：LLM 拆解 → 校验 → 组装 Position。返回结果摘要。"""
-    jd_id, raw = row["jd_id"], row["raw_text"]
-    ex, meta = extractor.extract_from_jd(raw)
-    if ex is None:
-        return {"jd_id": jd_id, "ok": False, "reason": f"LLM 失败：{meta.get('error','')[:60]}"}
-    val = extractor.validate_extraction(ex, raw)
-    if val["reject_all"]:
-        return {"jd_id": jd_id, "ok": False, "reason": "全部需求无原文支撑，拒绝"}
-    pos_id = db.new_id("POS")
-    reqs = []
-    for i, q in enumerate(extractor.to_requirements(ex, pos_id, raw), start=1):
-        if not q["text"]:
-            continue
-        reqs.append(Requirement(
-            req_id=f"{pos_id}-REQ-{i:02d}", kind=q["kind"], category=q["category"],
-            text=q["text"], evidence_span=q["evidence_span"],
-            confidence=q["confidence"], team_confidence=q["team_confidence"]))
-    pos = Position(position_id=pos_id, canonical_name=ex.get("canonical_name") or "未命名岗位",
-                   industry=ex.get("industry", ""), variant_names=ex.get("variant_names", []),
-                   work_scenarios=ex.get("work_scenarios", []),
-                   stressors=ex.get("stressors", []), requirements=reqs,
-                   source_jd_ids=[jd_id])
-    return {"jd_id": jd_id, "ok": True, "position": pos, "raw": raw,
-            "passed": val["passed"], "total": val["total"]}
-
-
-def extract_and_store(n: int, workers: int = 4) -> None:
-    """对库里尚未解析的 JD 跑 LLM 拆解并入库。默认 4 并发。"""
-    import sqlite3
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-    con = sqlite3.connect(db.DB_PATH)
-    con.row_factory = sqlite3.Row
-    rows = con.execute(
-        "SELECT jd_id, raw_text, source_url FROM jd_records WHERE status='raw'"
-        " ORDER BY created_at DESC LIMIT ?", (n,)).fetchall()
-    con.close()
-    if not rows:
-        print("没有待解析的 JD。")
-        return
-    print(f"开始解析 {len(rows)} 条 JD（{workers} 并发）…")
-    done = failed = 0
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(_extract_one, r): r for r in rows}
-        for i, fut in enumerate(as_completed(futs), start=1):
-            try:
-                res = fut.result()
-            except Exception as e:  # noqa: BLE001
-                failed += 1
-                print(f"  ✗ 异常：{e}")
-                continue
-            if res["ok"]:
-                db.save_position(res["position"])
-                db.update_jd_status(res["jd_id"], "confirmed", "")
-                done += 1
-                print(f"  [{i}/{len(rows)}] ✓ {res['jd_id']} → {res['position'].canonical_name}"
-                      f"｜{len(res['position'].requirements)} 条需求"
-                      f"（校验 {res['passed']}/{res['total']}）")
-            else:
-                db.update_jd_status(res["jd_id"], "rejected", res["reason"][:200])
-                failed += 1
-                print(f"  [{i}/{len(rows)}] ✗ {res['jd_id']} {res['reason']}")
-    print(f"\n完成：成功 {done} 个，失败 {failed} 个。")
+def extract_and_store(n: int, workers: int = 1) -> None:
+    """统一自动检查。单进程顺序处理，避免重复调用和 SQLite 写入竞争。
+    不把未知来源的旧原文当成刚获取的快照：通过官方网站接口重新取证。
+    """
+    with db.connect() as con:
+        rows = con.execute("SELECT * FROM jd_records WHERE status='raw' ORDER BY created_at DESC LIMIT ?", (n,)).fetchall()
+    for row in rows:
+        result = ingestion.ingest(row["raw_text"], row["source_url"], row["source_type"],
+                                  user_id="collector-bytedance", jd_id=row["jd_id"])
+        print(f"{row['jd_id']} → {result.get('state', 'error')}：{'；'.join(result.get('reasons', []))}")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=15, help="每个关键词抓取条数")
     ap.add_argument("--extract", type=int, default=0, help="额外解析 N 条 JD 入库")
-    ap.add_argument("--workers", type=int, default=4, help="并发数")
+    ap.add_argument("--workers", type=int, default=1, help="兼容旧参数；统一检查目前顺序执行")
     a = ap.parse_args()
     collect(limit_per_kw=a.limit)
     if a.extract:

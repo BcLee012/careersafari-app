@@ -1,0 +1,530 @@
+{
+  "name": "百度：AI产品经理校招",
+  "result": {
+    "ok": true,
+    "state": "review",
+    "jd_id": "JD-76BEAA4B",
+    "position_id": null,
+    "reasons": [
+      "company 缺少内容或依据"
+    ],
+    "source_note": "服务端采集时保存的来源快照与原文一致",
+    "n_requirements": 0,
+    "cached": false
+  },
+  "audit": {
+    "jd_id": "JD-76BEAA4B",
+    "fingerprint": "6270284cbca4987a567b34cc7a1073b998a8a5f34041d85d555ac6f52875eda9",
+    "state": "review",
+    "details_json": "{\"position_id\": null, \"result\": {\"ok\": true, \"state\": \"review\", \"jd_id\": \"JD-76BEAA4B\", \"position_id\": null, \"reasons\": [\"company 缺少内容或依据\"], \"source_note\": \"服务端采集时保存的来源快照与原文一致\", \"n_requirements\": 0, \"cached\": false}, \"attempts\": [{\"extraction\": {\"company\": \"\", \"company_span\": \"\", \"title\": \"北京-AI产品经理(J100665)\", \"location\": \"北京市\", \"job_type\": \"校招\", \"job_type_span\": \"北京市校招产品42人2026-07-21\", \"published_date\": \"2026-07-21\", \"published_date_span\": \"2026-07-21\", \"canonical_name\": \"产品经理\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenarios\": [\"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"], \"family\": \"产品经理\", \"family_span\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"secondary_tags\": [\"AI\", \"大模型\", \"AIGC\", \"智能助手\"], \"stressors\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上学历\", \"evidence_span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\"}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"evidence_span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\"}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"evidence_span\": \"有AI/大模型产品相关实习经历者优先\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"evidence_span\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"evidence_span\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的跨团队沟通与推动能力\", \"evidence_span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有较强的学习能力和主动性\", \"evidence_span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\"}], \"extraction_notes\": \"原文未明确披露公司名称、所属行业；无明确工作压力相关表述\", \"_mock\": false}, \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\"}, \"check\": {\"structural\": {\"total\": 7, \"passed\": 7, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"本科及以上学历\"}, {\"idx\": 1, \"ok\": true, \"text\": \"计算机、人工智能、信息管理等相关专业优先\"}, {\"idx\": 2, \"ok\": true, \"text\": \"有AI/大模型产品相关实习经历者优先\"}, {\"idx\": 3, \"ok\": true, \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\"}, {\"idx\": 4, \"ok\": true, \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\"}, {\"idx\": 5, \"ok\": true, \"text\": \"具备良好的跨团队沟通与推动能力\"}, {\"idx\": 6, \"ok\": true, \"text\": \"有较强的学习能力和主动性\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"北京-AI产品经理(J100665)\", \"span\": \"北京-AI产品经理(J100665)\"}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"校招\", \"span\": \"北京市校招产品42人2026-07-21\"}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"产品经理\", \"span\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2026-07-21\", \"span\": \"2026-07-21\"}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"本科及以上学历\", \"span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"span\": \"有AI/大模型产品相关实习经历者优先\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"span\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"span\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"具备良好的跨团队沟通与推动能力\", \"span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-6\", \"kind\": \"requirement\", \"text\": \"有较强的学习能力和主动性\", \"span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"span\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"span\": \"结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"span\": \"跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"span\": \"深入分析用户数据与市场反馈，驱动产品关键指标增长\"}, {\"claim_id\": \"work_scenarios-4\", \"kind\": \"work_scenarios\", \"text\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"span\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"}], \"problems\": [\"company 缺少内容或依据\"], \"model\": \"\"}}, {\"extraction\": {\"company\": \"\", \"company_span\": \"\", \"title\": \"北京-AI产品经理(J100665)\", \"location\": \"北京市\", \"job_type\": \"校招\", \"job_type_span\": \"北京市校招产品42人2026-07-21\", \"published_date\": \"2026-07-21\", \"published_date_span\": \"2026-07-21\", \"canonical_name\": \"产品经理\", \"industry\": \"未知\", \"variant_names\": [\"北京-AI产品经理(J100665)\"], \"work_scenarios\": [\"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"], \"family\": \"产品经理\", \"family_span\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"secondary_tags\": [\"AI\", \"大模型\", \"AIGC\", \"智能助手\"], \"stressors\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上学历\", \"evidence_span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\"}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"evidence_span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\"}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"evidence_span\": \"有AI/大模型产品相关实习经历者优先\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"evidence_span\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"evidence_span\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的跨团队沟通与推动能力\", \"evidence_span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\"}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有较强的学习能力和主动性\", \"evidence_span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\"}], \"extraction_notes\": \"原文未明确披露公司名称、所属行业；无明确工作压力相关表述\"}, \"extraction_meta\": {}, \"check\": {\"structural\": {\"total\": 7, \"passed\": 7, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"本科及以上学历\"}, {\"idx\": 1, \"ok\": true, \"text\": \"计算机、人工智能、信息管理等相关专业优先\"}, {\"idx\": 2, \"ok\": true, \"text\": \"有AI/大模型产品相关实习经历者优先\"}, {\"idx\": 3, \"ok\": true, \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\"}, {\"idx\": 4, \"ok\": true, \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\"}, {\"idx\": 5, \"ok\": true, \"text\": \"具备良好的跨团队沟通与推动能力\"}, {\"idx\": 6, \"ok\": true, \"text\": \"有较强的学习能力和主动性\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"北京-AI产品经理(J100665)\", \"span\": \"北京-AI产品经理(J100665)\"}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"校招\", \"span\": \"北京市校招产品42人2026-07-21\"}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"产品经理\", \"span\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2026-07-21\", \"span\": \"2026-07-21\"}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"本科及以上学历\", \"span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"span\": \"本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"span\": \"有AI/大模型产品相关实习经历者优先\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"span\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"span\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"具备良好的跨团队沟通与推动能力\", \"span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-6\", \"kind\": \"requirement\", \"text\": \"有较强的学习能力和主动性\", \"span\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"span\": \"负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"span\": \"结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"span\": \"跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"span\": \"深入分析用户数据与市场反馈，驱动产品关键指标增长\"}, {\"claim_id\": \"work_scenarios-4\", \"kind\": \"work_scenarios\", \"text\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"span\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"}], \"problems\": [\"company 缺少内容或依据\"], \"model\": \"\"}}], \"source_note\": \"服务端采集时保存的来源快照与原文一致\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\", \"source_type\": \"url_fetch\", \"pipeline_version\": \"auto-evidence-1\", \"schema_version\": \"0.2.0\"}",
+    "checked_at": "2026-10-11T00:20:04",
+    "details": {
+      "position_id": null,
+      "result": {
+        "ok": true,
+        "state": "review",
+        "jd_id": "JD-76BEAA4B",
+        "position_id": null,
+        "reasons": [
+          "company 缺少内容或依据"
+        ],
+        "source_note": "服务端采集时保存的来源快照与原文一致",
+        "n_requirements": 0,
+        "cached": false
+      },
+      "attempts": [
+        {
+          "extraction": {
+            "company": "",
+            "company_span": "",
+            "title": "北京-AI产品经理(J100665)",
+            "location": "北京市",
+            "job_type": "校招",
+            "job_type_span": "北京市校招产品42人2026-07-21",
+            "published_date": "2026-07-21",
+            "published_date_span": "2026-07-21",
+            "canonical_name": "产品经理",
+            "industry": "未知",
+            "variant_names": [],
+            "work_scenarios": [
+              "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+              "结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+              "跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+              "深入分析用户数据与市场反馈，驱动产品关键指标增长",
+              "具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+            ],
+            "family": "产品经理",
+            "family_span": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+            "secondary_tags": [
+              "AI",
+              "大模型",
+              "AIGC",
+              "智能助手"
+            ],
+            "stressors": [],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "本科及以上学历",
+                "evidence_span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先"
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "计算机、人工智能、信息管理等相关专业优先",
+                "evidence_span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先"
+              },
+              {
+                "kind": "hard",
+                "category": "经验",
+                "text": "有AI/大模型产品相关实习经历者优先",
+                "evidence_span": "有AI/大模型产品相关实习经历者优先"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                "evidence_span": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                "evidence_span": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备良好的跨团队沟通与推动能力",
+                "evidence_span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "有较强的学习能力和主动性",
+                "evidence_span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性"
+              }
+            ],
+            "extraction_notes": "原文未明确披露公司名称、所属行业；无明确工作压力相关表述",
+            "_mock": false
+          },
+          "extraction_meta": {
+            "mock": false,
+            "error": "",
+            "model": "step-3.7-flash"
+          },
+          "check": {
+            "structural": {
+              "total": 7,
+              "passed": 7,
+              "failed": 0,
+              "items": [
+                {
+                  "idx": 0,
+                  "ok": true,
+                  "text": "本科及以上学历"
+                },
+                {
+                  "idx": 1,
+                  "ok": true,
+                  "text": "计算机、人工智能、信息管理等相关专业优先"
+                },
+                {
+                  "idx": 2,
+                  "ok": true,
+                  "text": "有AI/大模型产品相关实习经历者优先"
+                },
+                {
+                  "idx": 3,
+                  "ok": true,
+                  "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣"
+                },
+                {
+                  "idx": 4,
+                  "ok": true,
+                  "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力"
+                },
+                {
+                  "idx": 5,
+                  "ok": true,
+                  "text": "具备良好的跨团队沟通与推动能力"
+                },
+                {
+                  "idx": 6,
+                  "ok": true,
+                  "text": "有较强的学习能力和主动性"
+                }
+              ],
+              "reject_all": false,
+              "note": ""
+            },
+            "claims": [
+              {
+                "claim_id": "title",
+                "kind": "title",
+                "text": "北京-AI产品经理(J100665)",
+                "span": "北京-AI产品经理(J100665)"
+              },
+              {
+                "claim_id": "stage",
+                "kind": "stage",
+                "text": "校招",
+                "span": "北京市校招产品42人2026-07-21"
+              },
+              {
+                "claim_id": "family",
+                "kind": "family",
+                "text": "产品经理",
+                "span": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验"
+              },
+              {
+                "claim_id": "date",
+                "kind": "published_date",
+                "text": "2026-07-21",
+                "span": "2026-07-21"
+              },
+              {
+                "claim_id": "req-0",
+                "kind": "requirement",
+                "text": "本科及以上学历",
+                "span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                "category": "学历",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-1",
+                "kind": "requirement",
+                "text": "计算机、人工智能、信息管理等相关专业优先",
+                "span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                "category": "专业",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-2",
+                "kind": "requirement",
+                "text": "有AI/大模型产品相关实习经历者优先",
+                "span": "有AI/大模型产品相关实习经历者优先",
+                "category": "经验",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-3",
+                "kind": "requirement",
+                "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                "span": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-4",
+                "kind": "requirement",
+                "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                "span": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-5",
+                "kind": "requirement",
+                "text": "具备良好的跨团队沟通与推动能力",
+                "span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-6",
+                "kind": "requirement",
+                "text": "有较强的学习能力和主动性",
+                "span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "work_scenarios-0",
+                "kind": "work_scenarios",
+                "text": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                "span": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验"
+              },
+              {
+                "claim_id": "work_scenarios-1",
+                "kind": "work_scenarios",
+                "text": "结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+                "span": "结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式"
+              },
+              {
+                "claim_id": "work_scenarios-2",
+                "kind": "work_scenarios",
+                "text": "跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                "span": "跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化"
+              },
+              {
+                "claim_id": "work_scenarios-3",
+                "kind": "work_scenarios",
+                "text": "深入分析用户数据与市场反馈，驱动产品关键指标增长",
+                "span": "深入分析用户数据与市场反馈，驱动产品关键指标增长"
+              },
+              {
+                "claim_id": "work_scenarios-4",
+                "kind": "work_scenarios",
+                "text": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                "span": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+              }
+            ],
+            "problems": [
+              "company 缺少内容或依据"
+            ],
+            "model": ""
+          }
+        },
+        {
+          "extraction": {
+            "company": "",
+            "company_span": "",
+            "title": "北京-AI产品经理(J100665)",
+            "location": "北京市",
+            "job_type": "校招",
+            "job_type_span": "北京市校招产品42人2026-07-21",
+            "published_date": "2026-07-21",
+            "published_date_span": "2026-07-21",
+            "canonical_name": "产品经理",
+            "industry": "未知",
+            "variant_names": [
+              "北京-AI产品经理(J100665)"
+            ],
+            "work_scenarios": [
+              "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+              "结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+              "跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+              "深入分析用户数据与市场反馈，驱动产品关键指标增长",
+              "具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+            ],
+            "family": "产品经理",
+            "family_span": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+            "secondary_tags": [
+              "AI",
+              "大模型",
+              "AIGC",
+              "智能助手"
+            ],
+            "stressors": [],
+            "requirements": [
+              {
+                "kind": "hard",
+                "category": "学历",
+                "text": "本科及以上学历",
+                "evidence_span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先"
+              },
+              {
+                "kind": "hard",
+                "category": "专业",
+                "text": "计算机、人工智能、信息管理等相关专业优先",
+                "evidence_span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先"
+              },
+              {
+                "kind": "hard",
+                "category": "经验",
+                "text": "有AI/大模型产品相关实习经历者优先",
+                "evidence_span": "有AI/大模型产品相关实习经历者优先"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                "evidence_span": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                "evidence_span": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "具备良好的跨团队沟通与推动能力",
+                "evidence_span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性"
+              },
+              {
+                "kind": "soft",
+                "category": "软能力",
+                "text": "有较强的学习能力和主动性",
+                "evidence_span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性"
+              }
+            ],
+            "extraction_notes": "原文未明确披露公司名称、所属行业；无明确工作压力相关表述"
+          },
+          "extraction_meta": {},
+          "check": {
+            "structural": {
+              "total": 7,
+              "passed": 7,
+              "failed": 0,
+              "items": [
+                {
+                  "idx": 0,
+                  "ok": true,
+                  "text": "本科及以上学历"
+                },
+                {
+                  "idx": 1,
+                  "ok": true,
+                  "text": "计算机、人工智能、信息管理等相关专业优先"
+                },
+                {
+                  "idx": 2,
+                  "ok": true,
+                  "text": "有AI/大模型产品相关实习经历者优先"
+                },
+                {
+                  "idx": 3,
+                  "ok": true,
+                  "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣"
+                },
+                {
+                  "idx": 4,
+                  "ok": true,
+                  "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力"
+                },
+                {
+                  "idx": 5,
+                  "ok": true,
+                  "text": "具备良好的跨团队沟通与推动能力"
+                },
+                {
+                  "idx": 6,
+                  "ok": true,
+                  "text": "有较强的学习能力和主动性"
+                }
+              ],
+              "reject_all": false,
+              "note": ""
+            },
+            "claims": [
+              {
+                "claim_id": "title",
+                "kind": "title",
+                "text": "北京-AI产品经理(J100665)",
+                "span": "北京-AI产品经理(J100665)"
+              },
+              {
+                "claim_id": "stage",
+                "kind": "stage",
+                "text": "校招",
+                "span": "北京市校招产品42人2026-07-21"
+              },
+              {
+                "claim_id": "family",
+                "kind": "family",
+                "text": "产品经理",
+                "span": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验"
+              },
+              {
+                "claim_id": "date",
+                "kind": "published_date",
+                "text": "2026-07-21",
+                "span": "2026-07-21"
+              },
+              {
+                "claim_id": "req-0",
+                "kind": "requirement",
+                "text": "本科及以上学历",
+                "span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                "category": "学历",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-1",
+                "kind": "requirement",
+                "text": "计算机、人工智能、信息管理等相关专业优先",
+                "span": "本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                "category": "专业",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-2",
+                "kind": "requirement",
+                "text": "有AI/大模型产品相关实习经历者优先",
+                "span": "有AI/大模型产品相关实习经历者优先",
+                "category": "经验",
+                "requirement_kind": "hard"
+              },
+              {
+                "claim_id": "req-3",
+                "kind": "requirement",
+                "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                "span": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-4",
+                "kind": "requirement",
+                "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                "span": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-5",
+                "kind": "requirement",
+                "text": "具备良好的跨团队沟通与推动能力",
+                "span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "req-6",
+                "kind": "requirement",
+                "text": "有较强的学习能力和主动性",
+                "span": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                "category": "软能力",
+                "requirement_kind": "soft"
+              },
+              {
+                "claim_id": "work_scenarios-0",
+                "kind": "work_scenarios",
+                "text": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                "span": "负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验"
+              },
+              {
+                "claim_id": "work_scenarios-1",
+                "kind": "work_scenarios",
+                "text": "结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+                "span": "结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式"
+              },
+              {
+                "claim_id": "work_scenarios-2",
+                "kind": "work_scenarios",
+                "text": "跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                "span": "跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化"
+              },
+              {
+                "claim_id": "work_scenarios-3",
+                "kind": "work_scenarios",
+                "text": "深入分析用户数据与市场反馈，驱动产品关键指标增长",
+                "span": "深入分析用户数据与市场反馈，驱动产品关键指标增长"
+              },
+              {
+                "claim_id": "work_scenarios-4",
+                "kind": "work_scenarios",
+                "text": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                "span": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+              }
+            ],
+            "problems": [
+              "company 缺少内容或依据"
+            ],
+            "model": ""
+          }
+        }
+      ],
+      "source_note": "服务端采集时保存的来源快照与原文一致",
+      "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79",
+      "source_type": "url_fetch",
+      "pipeline_version": "auto-evidence-1",
+      "schema_version": "0.2.0"
+    }
+  },
+  "elapsed_seconds": 41.55
+}

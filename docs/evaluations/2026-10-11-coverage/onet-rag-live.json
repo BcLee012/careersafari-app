@@ -1,0 +1,207 @@
+{
+  "family": "采购",
+  "question": "采购相关职业通常怎样选择和评估供应商？",
+  "references": [
+    {
+      "citation_id": "ONET-31.0:task_statements:1263",
+      "version": "31.0",
+      "table": "task_statements",
+      "row_number": 1263,
+      "soc": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "excerpt": "Title: Purchasing Agents, Except Wholesale, Retail, and Farm Products | Task: Negotiate, renegotiate, and administer contracts with suppliers, vendors, and other representatives.",
+      "raw": {
+        "O*NET-SOC Code": "13-1023.00",
+        "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "Task ID": "1147",
+        "Task": "Negotiate, renegotiate, and administer contracts with suppliers, vendors, and other representatives.",
+        "Task Type": "Core",
+        "Incumbents Responding": "20",
+        "Date": "08/2025",
+        "Domain Source": "Occupational Expert"
+      },
+      "source_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-1023.00"
+    },
+    {
+      "citation_id": "ONET-31.0:task_statements:1272",
+      "version": "31.0",
+      "table": "task_statements",
+      "row_number": 1272,
+      "soc": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "excerpt": "Title: Purchasing Agents, Except Wholesale, Retail, and Farm Products | Task: Interview vendors and visit suppliers' plants and distribution centers to examine and learn about products, services, and prices.",
+      "raw": {
+        "O*NET-SOC Code": "13-1023.00",
+        "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "Task ID": "1154",
+        "Task": "Interview vendors and visit suppliers' plants and distribution centers to examine and learn about products, services, and prices.",
+        "Task Type": "Supplemental",
+        "Incumbents Responding": "20",
+        "Date": "08/2025",
+        "Domain Source": "Occupational Expert"
+      },
+      "source_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-1023.00"
+    },
+    {
+      "citation_id": "ONET-31.0:task_statements:1261",
+      "version": "31.0",
+      "table": "task_statements",
+      "row_number": 1261,
+      "soc": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "excerpt": "Title: Purchasing Agents, Except Wholesale, Retail, and Farm Products | Task: Research and evaluate suppliers, based on price, quality, selection, service, support, availability, reliability, production and distribution capabilities, and the supplier's reputation and history.",
+      "raw": {
+        "O*NET-SOC Code": "13-1023.00",
+        "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "Task ID": "1144",
+        "Task": "Research and evaluate suppliers, based on price, quality, selection, service, support, availability, reliability, production and distribution capabilities, and the supplier's reputation and history.",
+        "Task Type": "Core",
+        "Incumbents Responding": "20",
+        "Date": "08/2025",
+        "Domain Source": "Occupational Expert"
+      },
+      "source_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-1023.00"
+    },
+    {
+      "citation_id": "ONET-31.0:task_statements:1260",
+      "version": "31.0",
+      "table": "task_statements",
+      "row_number": 1260,
+      "soc": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "excerpt": "Title: Purchasing Agents, Except Wholesale, Retail, and Farm Products | Task: Hire, train, or supervise purchasing clerks, buyers, and expediters.",
+      "raw": {
+        "O*NET-SOC Code": "13-1023.00",
+        "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "Task ID": "1156",
+        "Task": "Hire, train, or supervise purchasing clerks, buyers, and expediters.",
+        "Task Type": "Core",
+        "Incumbents Responding": "20",
+        "Date": "08/2025",
+        "Domain Source": "Occupational Expert"
+      },
+      "source_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-1023.00"
+    },
+    {
+      "citation_id": "ONET-31.0:task_statements:1270",
+      "version": "31.0",
+      "table": "task_statements",
+      "row_number": 1270,
+      "soc": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "excerpt": "Title: Purchasing Agents, Except Wholesale, Retail, and Farm Products | Task: Attend meetings, trade shows, conferences, conventions, and seminars to network with people in other purchasing departments.",
+      "raw": {
+        "O*NET-SOC Code": "13-1023.00",
+        "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "Task ID": "1160",
+        "Task": "Attend meetings, trade shows, conferences, conventions, and seminars to network with people in other purchasing departments.",
+        "Task Type": "Core",
+        "Incumbents Responding": "20",
+        "Date": "08/2025",
+        "Domain Source": "Occupational Expert"
+      },
+      "source_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-1023.00"
+    },
+    {
+      "citation_id": "ONET-31.0:task_statements:1264",
+      "version": "31.0",
+      "table": "task_statements",
+      "row_number": 1264,
+      "soc": "13-1023.00",
+      "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "excerpt": "Title: Purchasing Agents, Except Wholesale, Retail, and Farm Products | Task: Study sales records and inventory levels of current stock to develop strategic purchasing programs that facilitate employee access to supplies.",
+      "raw": {
+        "O*NET-SOC Code": "13-1023.00",
+        "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "Task ID": "1153",
+        "Task": "Study sales records and inventory levels of current stock to develop strategic purchasing programs that facilitate employee access to supplies.",
+        "Task Type": "Core",
+        "Incumbents Responding": "20",
+        "Date": "08/2025",
+        "Domain Source": "Occupational Expert"
+      },
+      "source_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-1023.00"
+    }
+  ],
+  "limitation": "美国职业参考；岗位族对应为本地候选映射，尚未验证适用于国内实习/校招，不参与录用条件或能力得分。",
+  "attribution": "包含 O*NET 31.0 Database 信息，来源：U.S. Department of Labor, Employment and Training Administration (USDOL/ETA)，CC BY 4.0。CareerSafari 对数据作了筛选、索引与候选映射；USDOL/ETA 未批准、认可或测试这些改动。",
+  "ranking_use": false,
+  "statements": [
+    {
+      "text": "采购代理（批发、零售和农产品除外）会基于价格、质量、选择范围、服务、支持、可用性、可靠性、生产和分销能力、供应商声誉及历史来研究和评估供应商。",
+      "citation_ids": [
+        "ONET-31.0:task_statements:1261"
+      ]
+    },
+    {
+      "text": "采购代理（批发、零售和农产品除外）会与供应商谈判、重新谈判并管理相关合同。",
+      "citation_ids": [
+        "ONET-31.0:task_statements:1263"
+      ]
+    },
+    {
+      "text": "采购代理（批发、零售和农产品除外）会采访供应商，参观供应商的工厂和配送中心，以了解产品、服务和价格相关信息。",
+      "citation_ids": [
+        "ONET-31.0:task_statements:1272"
+      ]
+    }
+  ],
+  "status": "supported",
+  "cached": false,
+  "audit": {
+    "generation": {
+      "model": "step-3.7-flash",
+      "usage": {
+        "prompt_tokens": 1890,
+        "completion_tokens": 693,
+        "total_tokens": 2583,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_seconds": 4.542
+    },
+    "verification": {
+      "model": "step-3.7-flash",
+      "usage": {
+        "prompt_tokens": 1994,
+        "completion_tokens": 666,
+        "total_tokens": 2660,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_seconds": 3.921
+    },
+    "items": [
+      {
+        "index": 0,
+        "verdict": "supported",
+        "reason": "该陈述内容与指定引用ONET-31.0:task_statements:1261的原文直接一致，原文明确采购代理（批发、零售和农产品除外）会基于价格、质量、选择范围、服务、支持、可用性、可靠性、生产和分销能力、供应商声誉及历史来研究和评估供应商。"
+      },
+      {
+        "index": 1,
+        "verdict": "supported",
+        "reason": "该陈述内容与指定引用ONET-31.0:task_statements:1263的原文直接一致，原文明确采购代理（批发、零售和农产品除外）会与供应商谈判、重新谈判并管理相关合同。"
+      },
+      {
+        "index": 2,
+        "verdict": "supported",
+        "reason": "该陈述内容与指定引用ONET-31.0:task_statements:1272的原文直接一致，原文明确采购代理（批发、零售和农产品除外）会采访供应商，参观供应商的工厂和配送中心，以了解产品、服务和价格相关信息。"
+      }
+    ]
+  },
+  "review_note": "AI语义检查通过，未经过职场专家核验，不证明跨国岗位映射准确。"
+}

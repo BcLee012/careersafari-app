@@ -21,6 +21,8 @@ ANSWERS = {
     "persona": "研一 · 方向未定型",
     "major": "管理科学与工程",
     "grade": "研一",
+    "target_stage": "实习",
+    "attained_degree": "本科",
     "direction_interest": "大数据分析与决策",
     "region": "上海",
     "timeline": "明年暑期实习前",
@@ -28,9 +30,9 @@ ANSWERS = {
     "intern_goal": "金融行业商业分析",
     "skills": [
         {"name": "Excel 与数据透视表", "column": "transferable", "self_rating": 4,
-         "verified": True, "evidence_text": "本科《统计学》课程大作业：用透视表完成区域销售结构分析"},
+         "verified": False, "evidence_source": "practical", "artifact_reference": "虚构演示材料-1", "evidence_text": "本科《统计学》课程大作业：用透视表完成区域销售结构分析"},
         {"name": "Python / R 数据处理", "column": "transferable", "self_rating": 3,
-         "verified": True, "evidence_text": "《大数据分析技术与应用》课程项目：爬取并清洗 3 万条评论数据"},
+         "verified": False, "evidence_source": "practical", "artifact_reference": "虚构演示材料-2", "evidence_text": "《大数据分析技术与应用》课程项目：爬取并清洗 3 万条评论数据"},
         {"name": "SQL 取数（多表 JOIN）", "column": "transferable", "self_rating": 3,
          "verified": False, "evidence_text": ""},
         {"name": "统计分析与建模", "column": "transferable", "self_rating": 3,
@@ -60,6 +62,7 @@ def bar(v, width=22):
 
 
 def main() -> None:
+    db.init_db()
     print("=" * 78)
     print("CareerSafari 端到端演示")
     print("=" * 78)
@@ -80,14 +83,14 @@ def main() -> None:
     for s in card["skills"]["verified"]:
         print(f"   ✓ {s['name']:<18} 证据：{s['evidence']}")
     for s in card["skills"]["unverified"]:
-        print(f"   ○ {s['name']:<18} 仅自述，自评 {s['rating']}/5，无证据")
+        print(f"   ○ {s['name']:<18} 课程或自述，自评 {s['rating']}/5，无证据")
     print("\n显式未知（系统不猜）：")
     for u in card["unknowns"]:
         print(f"   ? {u['field']}")
 
     # ---------- 第 2 步：匹配 ----------
-    positions = db.list_positions(limit=300)
-    print(f"\n\n【第 2 步】与岗位知识库匹配（{len(positions)} 个真实 JD 沉淀的岗位）")
+    positions = db.list_positions(limit=None)
+    print(f"\n\n【第 2 步】与岗位知识库匹配（{len(positions)} 条派生岗位记录，只有通过新检查的参与匹配）")
     print("-" * 78)
     report = match_mod.match_all(positions, prof, ANSWERS)
 
@@ -101,12 +104,11 @@ def main() -> None:
     print()
     es = adv["evidence_strength"]
     print(f"整体证据强度：{es['level']} —— {es['note']}")
-    print(f"（匹配 {es['matched']} · 仅自述 {es['unverified']} · 缺口 {es['gaps']}，按能力去重）")
-    print("\n方向结论（按岗位族聚合，同族只保留代表）：")
+    print(f"（作品引用 {es['matched']} · 课程或自述 {es['unverified']} · 缺口 {es['gaps']} · 未知 {es['unknown']}，按能力去重）")
+    print("\n方向结论（按岗位族和招聘阶段汇总多个企业）：")
     for p in adv["positions"]:
         print(f"  {p['rank']:>2}. {p['job_family']:<12} {p['verdict']:<8}"
-              f" {bar(p['verified_coverage'])} {p['verified_coverage']}"
-              f"  (库内 {p['family_size']} 个同族岗位)")
+              f"  ({p['family_size']} 份有效JD，{p['employer_count']} 家企业)")
         for w in p["why"]:
             print(f"      · {w}")
 

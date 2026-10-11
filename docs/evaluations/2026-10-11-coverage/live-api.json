@@ -1,0 +1,49 @@
+[
+  {
+    "route": "/api/health",
+    "http_status": 200,
+    "version": null,
+    "eligible_count": null,
+    "references": 0
+  },
+  {
+    "route": "/api/knowledge/onet",
+    "http_status": 200,
+    "version": "31.0",
+    "eligible_count": null,
+    "references": 0
+  },
+  {
+    "route": "/api/knowledge/search?family=采购&q=采购供应商",
+    "http_status": 200,
+    "version": null,
+    "eligible_count": null,
+    "references": 4
+  },
+  {
+    "route": "/api/library/coverage",
+    "http_status": 200,
+    "version": null,
+    "eligible_count": 7,
+    "references": 0
+  },
+  {
+    "route": "/api/knowledge/explain",
+    "http_status": 200,
+    "status": "supported",
+    "cached": true,
+    "statement_count": 3
+  },
+  {
+    "route": "/api/advice",
+    "http_status": 200,
+    "synthetic": true,
+    "top_direction": "数据分析",
+    "coverage_note_visible": true
+  },
+  {
+    "route": "/api/questionnaire",
+    "http_status": 200,
+    "professional_options_present": true
+  }
+]

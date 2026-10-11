@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-11",
+  "scope": "Diagnostic run; not representative evaluation",
+  "real_sources": true,
+  "fixed_model_responses": false,
+  "production_database_used": false,
+  "selected_urls": 6,
+  "fetched_jds": 5,
+  "states": {
+    "review": 5,
+    "fetch_failed": 1,
+    "ready": 0,
+    "excluded": 0
+  },
+  "extraction_and_repair_attempts": 10,
+  "semantic_verification_count": 0,
+  "samples": [
+    {
+      "key": "baidu-growth",
+      "name": "百度：用户增长数据分析实习",
+      "url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d",
+      "source_chars": 324,
+      "state": "review",
+      "reasons": [
+        "company 缺少内容或依据"
+      ],
+      "attempt_count": 2,
+      "semantic_verification_count": 0,
+      "elapsed_seconds": null
+    },
+    {
+      "key": "baidu-content",
+      "name": "百度：内容生态数据分析实习",
+      "url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c",
+      "source_chars": 360,
+      "state": "review",
+      "reasons": [
+        "company 缺少内容或依据"
+      ],
+      "attempt_count": 2,
+      "semantic_verification_count": 0,
+      "elapsed_seconds": 40.09
+    },
+    {
+      "key": "baidu-ai-data",
+      "name": "百度：AI数据产品实习（语音方向）",
+      "url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46",
+      "source_chars": 549,
+      "state": "review",
+      "reasons": [
+        "company 缺少内容或依据",
+        "family 引用不在原文"
+      ],
+      "attempt_count": 2,
+      "semantic_verification_count": 0,
+      "elapsed_seconds": 116.64
+    },
+    {
+      "key": "baidu-ai-campus",
+      "name": "百度：AI产品经理校招",
+      "url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79",
+      "source_chars": 403,
+      "state": "review",
+      "reasons": [
+        "company 缺少内容或依据"
+      ],
+      "attempt_count": 2,
+      "semantic_verification_count": 0,
+      "elapsed_seconds": 41.55
+    },
+    {
+      "key": "baidu-supplier-social",
+      "name": "百度：服务商质量管理（社招边界）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900",
+      "source_chars": 742,
+      "state": "review",
+      "reasons": [
+        "stage 缺少内容或依据",
+        "招聘阶段未知",
+        "主岗位族待分类",
+        "family 引用不在原文"
+      ],
+      "attempt_count": 2,
+      "semantic_verification_count": 0,
+      "elapsed_seconds": 67.78
+    },
+    {
+      "key": "dell-supply-campus",
+      "name": "戴尔：全球供应链管理校招",
+      "url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/job/D12257",
+      "source_chars": 0,
+      "state": "fetch_failed",
+      "reasons": [
+        "正文抽取失败或过短（4 字符）。该页可能是 JS 渲染的 SPA——请改用「手动粘贴」或「文件导入」。"
+      ],
+      "attempt_count": 0,
+      "semantic_verification_count": 0,
+      "elapsed_seconds": 0
+    }
+  ]
+}

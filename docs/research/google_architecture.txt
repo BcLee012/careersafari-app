@@ -1,0 +1,19 @@
+Source: https://developers.google.com/machine-learning/recommendation/overview/types
+Fetched: 2026-10-11
+
+Home Products Machine Learning Advanced courses Recommendation Systems Send feedback Recommendation systems overview Stay organized with collections Save and categorize content based on your preferences. Page Summary outlined_flag Recommendation systems often use a three-stage architecture: candidate generation, scoring, and re-ranking. Candidate generation narrows down a large pool of potential recommendations to a smaller subset for further evaluation. Scoring assigns relevance scores to the candidates and ranks them to identify the top recommendations. Re-ranking adjusts the initial ranking to address additional factors like user preferences, diversity, and content freshness. One common architecture for recommendation systems consists of the
+following components: candidate generation scoring re-ranking Candidate generation In this first stage, the system starts from a potentially huge corpus and
+generates a much smaller subset of candidates. For example, the candidate
+generator in YouTube reduces billions of videos down to hundreds or thousands.
+The model needs to evaluate queries quickly given the enormous size of the
+corpus. A given model may provide multiple candidate generators, each nominating
+a different subset of candidates. Scoring Next, another model scores and ranks the candidates in order to select
+the set of items (on the order of 10) to display to the user. Since this
+model evaluates a relatively small subset of items, the system can use
+a more precise model relying on additional queries. Re-ranking Finally, the system must take into account additional constraints for the
+final ranking. For example, the system removes items that the user
+explicitly disliked or boosts the score of fresher content. Re-ranking
+can also help ensure diversity, freshness, and fairness. We will discuss each of these stages over the course of the class and
+give examples from different recommendation systems, such as YouTube. Extra Resource: For a more comprehensive account of the
+technology, architecture, and models used in YouTube, see Covington
+et al., Deep Neural Networks for YouTube Recommendations. Previous arrow_back Terminology Next Check your understanding arrow_forward Send feedback

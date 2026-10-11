@@ -1,0 +1,89 @@
+{
+  "evaluated_at": "2026-10-11T09:47:47.360266+00:00",
+  "new_source_urls": 371,
+  "employers": {
+    "中信证券": {
+      "sources": 15,
+      "dated": 0,
+      "recent": 0,
+      "states": {
+        "ready": 5,
+        "raw": 7,
+        "review": 3
+      }
+    },
+    "顺丰集团": {
+      "sources": 65,
+      "dated": 0,
+      "recent": 0,
+      "states": {
+        "raw": 57,
+        "review": 2,
+        "ready": 6
+      }
+    },
+    "美的集团": {
+      "sources": 95,
+      "dated": 0,
+      "recent": 0,
+      "states": {
+        "raw": 79,
+        "review": 7,
+        "ready": 9
+      }
+    },
+    "中金公司": {
+      "sources": 173,
+      "dated": 173,
+      "recent": 173,
+      "states": {
+        "raw": 157,
+        "ready": 14,
+        "review": 2
+      }
+    },
+    "国投证券": {
+      "sources": 10,
+      "dated": 10,
+      "recent": 7,
+      "states": {
+        "raw": 10
+      }
+    },
+    "开源证券": {
+      "sources": 13,
+      "dated": 13,
+      "recent": 13,
+      "states": {
+        "raw": 13
+      }
+    }
+  },
+  "source_record_states": {
+    "raw": 323,
+    "ready": 34,
+    "review": 14
+  },
+  "stored_source_urls": 371,
+  "new_current_admitted_positions": 34,
+  "new_ready_with_unknown_publication": 20,
+  "current_admitted_positions": 138,
+  "previous_eligible_family_stages": 7,
+  "eligible_family_stages": 7,
+  "target_family_stages": 28,
+  "discovery_errors": [
+    {
+      "provider": "中金公司",
+      "id": "bdcf4558-f837-43d3-839b-a66280dde5de",
+      "error": "Industry source identity/stage could not be bound"
+    }
+  ],
+  "ai_check_count": 48,
+  "source_adapters_rechecked": 371,
+  "scope_review_candidates": 1,
+  "limitations": [
+    "本轮金融机构集中于证券，未证明行业代表性",
+    "供应链新增企业发布日期缺失，不能计入近期覆盖门槛",
+    "AI 检查不等于员工核验或真实学生匹配质量验证"
+  ]
+}

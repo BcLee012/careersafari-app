@@ -1,0 +1,124 @@
+{
+  "key": "baidu-supplier-social",
+  "name": "百度：服务商质量管理（社招边界）",
+  "url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900",
+  "collection_seconds": 0.304,
+  "warnings": [
+    "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+  ],
+  "source_metadata": {
+    "adapter": "source-2",
+    "facts": {
+      "company": {
+        "value": "百度",
+        "span": "百度校园招聘",
+        "locator": "HTML title + verified official host",
+        "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+      },
+      "job_type": {
+        "value": "社招",
+        "span": "SOCIAL",
+        "locator": "detailData.recruitType + URL route",
+        "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+      },
+      "title": {
+        "value": "服务商质量管理（J106271）",
+        "span": "服务商质量管理（J106271）",
+        "locator": "detailData.postInfo.name",
+        "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+      },
+      "published_date": {
+        "value": "2026-09-28",
+        "span": "2026-09-28",
+        "locator": "detailData.postInfo.publishDate",
+        "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+      },
+      "updated_date": {
+        "value": "2026-09-28",
+        "span": "2026-09-28",
+        "locator": "detailData.postInfo.updateDate",
+        "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+      }
+    },
+    "conflicts": []
+  },
+  "result": {
+    "ok": true,
+    "state": "excluded",
+    "jd_id": "JD-2B436C7C",
+    "position_id": null,
+    "reasons": [
+      "官方来源明确为社招，不在首批范围"
+    ],
+    "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+    "n_requirements": 0,
+    "cached": false,
+    "elapsed_seconds": 0.007
+  },
+  "audit": {
+    "jd_id": "JD-2B436C7C",
+    "fingerprint": "3b8c3f5edaf5f5ba51bb653bd2df8adf8e40d01abff3926661c757eb8b7a7bde",
+    "state": "excluded",
+    "details_json": "{\"position_id\": null, \"result\": {\"ok\": true, \"state\": \"excluded\", \"jd_id\": \"JD-2B436C7C\", \"position_id\": null, \"reasons\": [\"官方来源明确为社招，不在首批范围\"], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 0, \"cached\": false, \"elapsed_seconds\": 0.007}, \"attempts\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"job_type\": {\"value\": \"社招\", \"span\": \"SOCIAL\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"title\": {\"value\": \"服务商质量管理（J106271）\", \"span\": \"服务商质量管理（J106271）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"published_date\": {\"value\": \"2026-09-28\", \"span\": \"2026-09-28\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"updated_date\": {\"value\": \"2026-09-28\", \"span\": \"2026-09-28\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+    "checked_at": "2026-10-11T10:57:11",
+    "details": {
+      "position_id": null,
+      "result": {
+        "ok": true,
+        "state": "excluded",
+        "jd_id": "JD-2B436C7C",
+        "position_id": null,
+        "reasons": [
+          "官方来源明确为社招，不在首批范围"
+        ],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "n_requirements": 0,
+        "cached": false,
+        "elapsed_seconds": 0.007
+      },
+      "attempts": [],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900",
+      "source_type": "url_fetch",
+      "source_metadata": {
+        "adapter": "source-2",
+        "facts": {
+          "company": {
+            "value": "百度",
+            "span": "百度校园招聘",
+            "locator": "HTML title + verified official host",
+            "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+          },
+          "job_type": {
+            "value": "社招",
+            "span": "SOCIAL",
+            "locator": "detailData.recruitType + URL route",
+            "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+          },
+          "title": {
+            "value": "服务商质量管理（J106271）",
+            "span": "服务商质量管理（J106271）",
+            "locator": "detailData.postInfo.name",
+            "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+          },
+          "published_date": {
+            "value": "2026-09-28",
+            "span": "2026-09-28",
+            "locator": "detailData.postInfo.publishDate",
+            "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+          },
+          "updated_date": {
+            "value": "2026-09-28",
+            "span": "2026-09-28",
+            "locator": "detailData.postInfo.updateDate",
+            "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+          }
+        },
+        "conflicts": []
+      },
+      "repair_meta": null,
+      "pipeline_version": "auto-evidence-3",
+      "schema_version": "0.3.0"
+    }
+  }
+}

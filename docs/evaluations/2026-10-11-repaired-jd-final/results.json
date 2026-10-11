@@ -1,0 +1,3434 @@
+[
+  {
+    "key": "baidu-growth",
+    "name": "百度：用户增长数据分析实习",
+    "url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d",
+    "collection_seconds": 0.73,
+    "warnings": [
+      "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+    ],
+    "source_metadata": {
+      "adapter": "source-2",
+      "facts": {
+        "company": {
+          "value": "百度",
+          "span": "百度校园招聘",
+          "locator": "HTML title + verified official host",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+        },
+        "job_type": {
+          "value": "实习",
+          "span": "INTERN",
+          "locator": "detailData.recruitType + URL route",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+        },
+        "title": {
+          "value": "数据分析实习生（J98221）",
+          "span": "数据分析实习生（J98221）",
+          "locator": "detailData.postInfo.name",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+        },
+        "published_date": {
+          "value": "2026-03-12",
+          "span": "2026-03-12",
+          "locator": "detailData.postInfo.publishDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+        },
+        "updated_date": {
+          "value": "2026-07-21",
+          "span": "2026-07-21",
+          "locator": "detailData.postInfo.updateDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+        }
+      },
+      "conflicts": []
+    },
+    "result": {
+      "ok": true,
+      "state": "ready",
+      "jd_id": "JD-CFDD1B9E",
+      "position_id": "POS-31A1CF0D",
+      "reasons": [],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "n_requirements": 9,
+      "cached": false,
+      "elapsed_seconds": 43.689
+    },
+    "audit": {
+      "jd_id": "JD-CFDD1B9E",
+      "fingerprint": "88897711ed5fe72a54df9beef5ea42d9087974d330bbcf326a6d327bd259dd5a",
+      "state": "ready",
+      "details_json": "{\"position_id\": \"POS-31A1CF0D\", \"result\": {\"ok\": true, \"state\": \"ready\", \"jd_id\": \"JD-CFDD1B9E\", \"position_id\": \"POS-31A1CF0D\", \"reasons\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 9, \"cached\": false, \"elapsed_seconds\": 43.689}, \"attempts\": [{\"extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析实习生（J98221）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2026-03-12\", \"published_date_span\": \"2026-03-12\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"数据分析\", \"family_evidence_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"secondary_tags\": [\"用户增长业务数据分析\", \"DAU/新增/调起/留存等指标监控\", \"日常业务监控分析\", \"专题分析报告产出\"], \"stressor_ids\": [\"S14\"], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"研究生及以上学历\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-研究生及以上学历，统计、数学相关专业优先\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"统计、数学相关专业优先\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-研究生及以上学历，统计、数学相关专业优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通SQL/Excel\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-精通SQL/Excel，熟悉python/R语言数据处理优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"熟悉python/R语言数据处理优先\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-精通SQL/Excel，熟悉python/R语言数据处理优先\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\", \"evidence_ids\": [\"S15\"], \"evidence_spans\": [\"-每周可保持至少4天在岗，实习时长不少于六个月\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\", \"evidence_ids\": [\"S13\"], \"evidence_spans\": [\"-对数据敏感，善于从数据中发现异常和潜在机会点\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具有强自主性、自驱力、责任心\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"优秀的逻辑思维和沟通协调能力\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"勇于承担工作压力并面对挑战\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"]}], \"extraction_notes\": \"原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取\", \"_mock\": false, \"family_spans\": [\"-负责支持分析用户增长相关业务数据分析工作\", \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"-快速响应业务分析需求，提供用户数据、统计数据\", \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\"], \"work_scenarios\": [\"-负责支持分析用户增长相关业务数据分析工作\", \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"-快速响应业务分析需求，提供用户数据、统计数据\", \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\"], \"stressors\": [\"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\"], \"_reference_errors\": []}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析实习生（J98221）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2026-03-12\", \"published_date_span\": \"2026-03-12\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"数据分析\", \"family_evidence_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"secondary_tags\": [\"用户增长业务数据分析\", \"DAU/新增/调起/留存等指标监控\", \"日常业务监控分析\", \"专题分析报告产出\"], \"stressor_ids\": [\"S14\"], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"研究生及以上学历\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"统计、数学相关专业优先\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通SQL/Excel\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"熟悉python/R语言数据处理优先\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\", \"evidence_ids\": [\"S15\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\", \"evidence_ids\": [\"S13\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具有强自主性、自驱力、责任心\", \"evidence_ids\": [\"S14\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"优秀的逻辑思维和沟通协调能力\", \"evidence_ids\": [\"S14\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"勇于承担工作压力并面对挑战\", \"evidence_ids\": [\"S14\"]}], \"extraction_notes\": \"原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取\", \"_mock\": false}, \"source_overrides\": [], \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 64, \"prompt_tokens\": 1761, \"completion_tokens\": 4476, \"total_tokens\": 6237, \"prompt_tokens_details\": {\"cached_tokens\": 64}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 26.625}, \"check\": {\"structural\": {\"total\": 9, \"passed\": 9, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"研究生及以上学历\"}, {\"idx\": 1, \"ok\": true, \"text\": \"统计、数学相关专业优先\"}, {\"idx\": 2, \"ok\": true, \"text\": \"精通SQL/Excel\"}, {\"idx\": 3, \"ok\": true, \"text\": \"熟悉python/R语言数据处理优先\"}, {\"idx\": 4, \"ok\": true, \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\"}, {\"idx\": 5, \"ok\": true, \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\"}, {\"idx\": 6, \"ok\": true, \"text\": \"具有强自主性、自驱力、责任心\"}, {\"idx\": 7, \"ok\": true, \"text\": \"优秀的逻辑思维和沟通协调能力\"}, {\"idx\": 8, \"ok\": true, \"text\": \"勇于承担工作压力并面对挑战\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"数据分析实习生（J98221）\", \"span\": \"数据分析实习生（J98221）\", \"spans\": [{\"text\": \"数据分析实习生（J98221）\", \"raw_start\": 3, \"raw_end\": 18, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"实习\", \"span\": \"INTERN\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"数据分析\", \"span\": \"-负责支持分析用户增长相关业务数据分析工作\\n-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\\n-快速响应业务分析需求，提供用户数据、统计数据\\n-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"spans\": [{\"text\": \"-负责支持分析用户增长相关业务数据分析工作\", \"raw_start\": 56, \"raw_end\": 77, \"normalized_start\": 51}, {\"text\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"raw_start\": 78, \"raw_end\": 112, \"normalized_start\": 72}, {\"text\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"raw_start\": 113, \"raw_end\": 136, \"normalized_start\": 106}, {\"text\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"raw_start\": 137, \"raw_end\": 169, \"normalized_start\": 129}], \"basis\": \"body\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2026-03-12\", \"span\": \"2026-03-12\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2026-03-12\", \"span\": \"2026-03-12\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"研究生及以上学历\", \"span\": \"-研究生及以上学历，统计、数学相关专业优先\", \"spans\": [{\"text\": \"-研究生及以上学历，统计、数学相关专业优先\", \"raw_start\": 176, \"raw_end\": 197, \"normalized_start\": 166}], \"basis\": \"body\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"统计、数学相关专业优先\", \"span\": \"-研究生及以上学历，统计、数学相关专业优先\", \"spans\": [{\"text\": \"-研究生及以上学历，统计、数学相关专业优先\", \"raw_start\": 176, \"raw_end\": 197, \"normalized_start\": 166}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"精通SQL/Excel\", \"span\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"spans\": [{\"text\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"raw_start\": 198, \"raw_end\": 229, \"normalized_start\": 187}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"熟悉python/R语言数据处理优先\", \"span\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"spans\": [{\"text\": \"-精通SQL/Excel，熟悉python/R语言数据处理优先\", \"raw_start\": 198, \"raw_end\": 229, \"normalized_start\": 187}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"每周可保持至少4天在岗，实习时长不少于六个月\", \"span\": \"-每周可保持至少4天在岗，实习时长不少于六个月\", \"spans\": [{\"text\": \"-每周可保持至少4天在岗，实习时长不少于六个月\", \"raw_start\": 301, \"raw_end\": 324, \"normalized_start\": 287}], \"basis\": \"body\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"对数据敏感，善于从数据中发现异常和潜在机会点\", \"span\": \"-对数据敏感，善于从数据中发现异常和潜在机会点\", \"spans\": [{\"text\": \"-对数据敏感，善于从数据中发现异常和潜在机会点\", \"raw_start\": 230, \"raw_end\": 253, \"normalized_start\": 218}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-6\", \"kind\": \"requirement\", \"text\": \"具有强自主性、自驱力、责任心\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-7\", \"kind\": \"requirement\", \"text\": \"优秀的逻辑思维和沟通协调能力\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-8\", \"kind\": \"requirement\", \"text\": \"勇于承担工作压力并面对挑战\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"-负责支持分析用户增长相关业务数据分析工作\", \"span\": \"-负责支持分析用户增长相关业务数据分析工作\", \"spans\": [{\"text\": \"-负责支持分析用户增长相关业务数据分析工作\", \"raw_start\": 56, \"raw_end\": 77, \"normalized_start\": 51}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"span\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"spans\": [{\"text\": \"-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\", \"raw_start\": 78, \"raw_end\": 112, \"normalized_start\": 72}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"span\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"spans\": [{\"text\": \"-快速响应业务分析需求，提供用户数据、统计数据\", \"raw_start\": 113, \"raw_end\": 136, \"normalized_start\": 106}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"span\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"spans\": [{\"text\": \"-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告\", \"raw_start\": 137, \"raw_end\": 169, \"normalized_start\": 129}], \"basis\": \"body\"}, {\"claim_id\": \"stressors-0\", \"kind\": \"stressors\", \"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"span\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"spans\": [{\"text\": \"-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战\", \"raw_start\": 254, \"raw_end\": 300, \"normalized_start\": 241}], \"basis\": \"body\"}], \"problems\": [], \"model\": \"step-3.7-flash\", \"elapsed_seconds\": 17.048, \"usage\": {\"prompt_tokens\": 3320, \"completion_tokens\": 3017, \"total_tokens\": 6337, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"semantic\": [{\"claim_id\": \"title\", \"verdict\": \"supported\", \"reason\": \"原文明确包含岗位名称“数据分析实习生（J98221）”，与声明一致\"}, {\"claim_id\": \"company\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘企业为百度，与声明一致\"}, {\"claim_id\": \"stage\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘类型为实习，与声明一致\"}, {\"claim_id\": \"family\", \"verdict\": \"supported\", \"reason\": \"原文工作职责均围绕数据分析相关任务展开，支持该岗位属于数据分析类\"}, {\"claim_id\": \"date\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的岗位发布日期为2026-03-12，与声明一致\"}, {\"claim_id\": \"req-0\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确要求研究生及以上学历，与声明一致\"}, {\"claim_id\": \"req-1\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确统计、数学相关专业优先，与声明一致\"}, {\"claim_id\": \"req-2\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确要求精通SQL/Excel，与声明一致\"}, {\"claim_id\": \"req-3\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确熟悉python/R语言数据处理优先，与声明一致\"}, {\"claim_id\": \"req-4\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确每周至少4天在岗、实习时长不少于六个月，与声明一致\"}, {\"claim_id\": \"req-5\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确对数据敏感、善于从数据中发现异常和潜在机会点，与声明一致\"}, {\"claim_id\": \"req-6\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确具备强自主性、自驱力、责任心，与声明一致\"}, {\"claim_id\": \"req-7\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确具备优秀的逻辑思维和沟通协调能力，与声明一致\"}, {\"claim_id\": \"req-8\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确勇于承担工作压力并面对挑战，与声明一致\"}, {\"claim_id\": \"work_scenarios-0\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含负责支持分析用户增长相关业务数据分析工作，与声明一致\"}, {\"claim_id\": \"work_scenarios-1\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含理解业务、协助完成日常监控分析（含DAU、新增、调起、留存等方向），与声明一致\"}, {\"claim_id\": \"work_scenarios-2\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含快速响应业务分析需求、提供用户数据和统计数据，与声明一致\"}, {\"claim_id\": \"work_scenarios-3\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含结合业务场景进行分析解读、洞察业务机会、辅助产出专题分析报告，与声明一致\"}, {\"claim_id\": \"stressors-0\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确提及勇于承担工作压力并面对挑战，与声明一致\"}]}}], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"job_type\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"title\": {\"value\": \"数据分析实习生（J98221）\", \"span\": \"数据分析实习生（J98221）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"published_date\": {\"value\": \"2026-03-12\", \"span\": \"2026-03-12\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}, \"updated_date\": {\"value\": \"2026-07-21\", \"span\": \"2026-07-21\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+      "checked_at": "2026-10-11T10:55:03",
+      "details": {
+        "position_id": "POS-31A1CF0D",
+        "result": {
+          "ok": true,
+          "state": "ready",
+          "jd_id": "JD-CFDD1B9E",
+          "position_id": "POS-31A1CF0D",
+          "reasons": [],
+          "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+          "n_requirements": 9,
+          "cached": false,
+          "elapsed_seconds": 43.689
+        },
+        "attempts": [
+          {
+            "extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "数据分析实习生（J98221）",
+              "location": "北京市",
+              "job_type": "实习",
+              "job_type_span": "INTERN",
+              "published_date": "2026-03-12",
+              "published_date_span": "2026-03-12",
+              "canonical_name": "数据分析师",
+              "industry": "未知",
+              "variant_names": [],
+              "work_scenario_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "数据分析",
+              "family_evidence_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "secondary_tags": [
+                "用户增长业务数据分析",
+                "DAU/新增/调起/留存等指标监控",
+                "日常业务监控分析",
+                "专题分析报告产出"
+              ],
+              "stressor_ids": [
+                "S14"
+              ],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "学历",
+                  "text": "研究生及以上学历",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-研究生及以上学历，统计、数学相关专业优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "统计、数学相关专业优先",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-研究生及以上学历，统计、数学相关专业优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "精通SQL/Excel",
+                  "evidence_ids": [
+                    "S12"
+                  ],
+                  "evidence_spans": [
+                    "-精通SQL/Excel，熟悉python/R语言数据处理优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "熟悉python/R语言数据处理优先",
+                  "evidence_ids": [
+                    "S12"
+                  ],
+                  "evidence_spans": [
+                    "-精通SQL/Excel，熟悉python/R语言数据处理优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "每周可保持至少4天在岗，实习时长不少于六个月",
+                  "evidence_ids": [
+                    "S15"
+                  ],
+                  "evidence_spans": [
+                    "-每周可保持至少4天在岗，实习时长不少于六个月"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "对数据敏感，善于从数据中发现异常和潜在机会点",
+                  "evidence_ids": [
+                    "S13"
+                  ],
+                  "evidence_spans": [
+                    "-对数据敏感，善于从数据中发现异常和潜在机会点"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具有强自主性、自驱力、责任心",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "优秀的逻辑思维和沟通协调能力",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "勇于承担工作压力并面对挑战",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+                  ]
+                }
+              ],
+              "extraction_notes": "原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取",
+              "_mock": false,
+              "family_spans": [
+                "-负责支持分析用户增长相关业务数据分析工作",
+                "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                "-快速响应业务分析需求，提供用户数据、统计数据",
+                "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告"
+              ],
+              "work_scenarios": [
+                "-负责支持分析用户增长相关业务数据分析工作",
+                "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                "-快速响应业务分析需求，提供用户数据、统计数据",
+                "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告"
+              ],
+              "stressors": [
+                "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战"
+              ],
+              "_reference_errors": []
+            },
+            "model_extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "数据分析实习生（J98221）",
+              "location": "北京市",
+              "job_type": "实习",
+              "job_type_span": "INTERN",
+              "published_date": "2026-03-12",
+              "published_date_span": "2026-03-12",
+              "canonical_name": "数据分析师",
+              "industry": "未知",
+              "variant_names": [],
+              "work_scenario_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "数据分析",
+              "family_evidence_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "secondary_tags": [
+                "用户增长业务数据分析",
+                "DAU/新增/调起/留存等指标监控",
+                "日常业务监控分析",
+                "专题分析报告产出"
+              ],
+              "stressor_ids": [
+                "S14"
+              ],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "学历",
+                  "text": "研究生及以上学历",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "统计、数学相关专业优先",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "精通SQL/Excel",
+                  "evidence_ids": [
+                    "S12"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "熟悉python/R语言数据处理优先",
+                  "evidence_ids": [
+                    "S12"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "每周可保持至少4天在岗，实习时长不少于六个月",
+                  "evidence_ids": [
+                    "S15"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "对数据敏感，善于从数据中发现异常和潜在机会点",
+                  "evidence_ids": [
+                    "S13"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具有强自主性、自驱力、责任心",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "优秀的逻辑思维和沟通协调能力",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "勇于承担工作压力并面对挑战",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                }
+              ],
+              "extraction_notes": "原文未明确提及所属行业；工作地点依据片段S4中的「北京市」提取",
+              "_mock": false
+            },
+            "source_overrides": [],
+            "extraction_meta": {
+              "mock": false,
+              "error": "",
+              "model": "step-3.7-flash",
+              "usage": {
+                "cached_tokens": 64,
+                "prompt_tokens": 1761,
+                "completion_tokens": 4476,
+                "total_tokens": 6237,
+                "prompt_tokens_details": {
+                  "cached_tokens": 64
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "elapsed_seconds": 26.625
+            },
+            "check": {
+              "structural": {
+                "total": 9,
+                "passed": 9,
+                "failed": 0,
+                "items": [
+                  {
+                    "idx": 0,
+                    "ok": true,
+                    "text": "研究生及以上学历"
+                  },
+                  {
+                    "idx": 1,
+                    "ok": true,
+                    "text": "统计、数学相关专业优先"
+                  },
+                  {
+                    "idx": 2,
+                    "ok": true,
+                    "text": "精通SQL/Excel"
+                  },
+                  {
+                    "idx": 3,
+                    "ok": true,
+                    "text": "熟悉python/R语言数据处理优先"
+                  },
+                  {
+                    "idx": 4,
+                    "ok": true,
+                    "text": "每周可保持至少4天在岗，实习时长不少于六个月"
+                  },
+                  {
+                    "idx": 5,
+                    "ok": true,
+                    "text": "对数据敏感，善于从数据中发现异常和潜在机会点"
+                  },
+                  {
+                    "idx": 6,
+                    "ok": true,
+                    "text": "具有强自主性、自驱力、责任心"
+                  },
+                  {
+                    "idx": 7,
+                    "ok": true,
+                    "text": "优秀的逻辑思维和沟通协调能力"
+                  },
+                  {
+                    "idx": 8,
+                    "ok": true,
+                    "text": "勇于承担工作压力并面对挑战"
+                  }
+                ],
+                "reject_all": false,
+                "note": ""
+              },
+              "claims": [
+                {
+                  "claim_id": "title",
+                  "kind": "title",
+                  "text": "数据分析实习生（J98221）",
+                  "span": "数据分析实习生（J98221）",
+                  "spans": [
+                    {
+                      "text": "数据分析实习生（J98221）",
+                      "raw_start": 3,
+                      "raw_end": 18,
+                      "normalized_start": 2
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "company",
+                  "kind": "company",
+                  "text": "百度",
+                  "span": "百度校园招聘",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "百度",
+                    "span": "百度校园招聘",
+                    "locator": "HTML title + verified official host",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+                  }
+                },
+                {
+                  "claim_id": "stage",
+                  "kind": "stage",
+                  "text": "实习",
+                  "span": "INTERN",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "实习",
+                    "span": "INTERN",
+                    "locator": "detailData.recruitType + URL route",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+                  }
+                },
+                {
+                  "claim_id": "family",
+                  "kind": "family",
+                  "text": "数据分析",
+                  "span": "-负责支持分析用户增长相关业务数据分析工作\n-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向\n-快速响应业务分析需求，提供用户数据、统计数据\n-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                  "spans": [
+                    {
+                      "text": "-负责支持分析用户增长相关业务数据分析工作",
+                      "raw_start": 56,
+                      "raw_end": 77,
+                      "normalized_start": 51
+                    },
+                    {
+                      "text": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                      "raw_start": 78,
+                      "raw_end": 112,
+                      "normalized_start": 72
+                    },
+                    {
+                      "text": "-快速响应业务分析需求，提供用户数据、统计数据",
+                      "raw_start": 113,
+                      "raw_end": 136,
+                      "normalized_start": 106
+                    },
+                    {
+                      "text": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                      "raw_start": 137,
+                      "raw_end": 169,
+                      "normalized_start": 129
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "date",
+                  "kind": "published_date",
+                  "text": "2026-03-12",
+                  "span": "2026-03-12",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "2026-03-12",
+                    "span": "2026-03-12",
+                    "locator": "detailData.postInfo.publishDate",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+                  }
+                },
+                {
+                  "claim_id": "req-0",
+                  "kind": "requirement",
+                  "text": "研究生及以上学历",
+                  "span": "-研究生及以上学历，统计、数学相关专业优先",
+                  "spans": [
+                    {
+                      "text": "-研究生及以上学历，统计、数学相关专业优先",
+                      "raw_start": 176,
+                      "raw_end": 197,
+                      "normalized_start": 166
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "学历",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-1",
+                  "kind": "requirement",
+                  "text": "统计、数学相关专业优先",
+                  "span": "-研究生及以上学历，统计、数学相关专业优先",
+                  "spans": [
+                    {
+                      "text": "-研究生及以上学历，统计、数学相关专业优先",
+                      "raw_start": 176,
+                      "raw_end": 197,
+                      "normalized_start": 166
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "专业",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-2",
+                  "kind": "requirement",
+                  "text": "精通SQL/Excel",
+                  "span": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                  "spans": [
+                    {
+                      "text": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                      "raw_start": 198,
+                      "raw_end": 229,
+                      "normalized_start": 187
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "技能",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-3",
+                  "kind": "requirement",
+                  "text": "熟悉python/R语言数据处理优先",
+                  "span": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                  "spans": [
+                    {
+                      "text": "-精通SQL/Excel，熟悉python/R语言数据处理优先",
+                      "raw_start": 198,
+                      "raw_end": 229,
+                      "normalized_start": 187
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "技能",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-4",
+                  "kind": "requirement",
+                  "text": "每周可保持至少4天在岗，实习时长不少于六个月",
+                  "span": "-每周可保持至少4天在岗，实习时长不少于六个月",
+                  "spans": [
+                    {
+                      "text": "-每周可保持至少4天在岗，实习时长不少于六个月",
+                      "raw_start": 301,
+                      "raw_end": 324,
+                      "normalized_start": 287
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "经验",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-5",
+                  "kind": "requirement",
+                  "text": "对数据敏感，善于从数据中发现异常和潜在机会点",
+                  "span": "-对数据敏感，善于从数据中发现异常和潜在机会点",
+                  "spans": [
+                    {
+                      "text": "-对数据敏感，善于从数据中发现异常和潜在机会点",
+                      "raw_start": 230,
+                      "raw_end": 253,
+                      "normalized_start": 218
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-6",
+                  "kind": "requirement",
+                  "text": "具有强自主性、自驱力、责任心",
+                  "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                  "spans": [
+                    {
+                      "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                      "raw_start": 254,
+                      "raw_end": 300,
+                      "normalized_start": 241
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-7",
+                  "kind": "requirement",
+                  "text": "优秀的逻辑思维和沟通协调能力",
+                  "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                  "spans": [
+                    {
+                      "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                      "raw_start": 254,
+                      "raw_end": 300,
+                      "normalized_start": 241
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-8",
+                  "kind": "requirement",
+                  "text": "勇于承担工作压力并面对挑战",
+                  "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                  "spans": [
+                    {
+                      "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                      "raw_start": 254,
+                      "raw_end": 300,
+                      "normalized_start": 241
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "kind": "work_scenarios",
+                  "text": "-负责支持分析用户增长相关业务数据分析工作",
+                  "span": "-负责支持分析用户增长相关业务数据分析工作",
+                  "spans": [
+                    {
+                      "text": "-负责支持分析用户增长相关业务数据分析工作",
+                      "raw_start": 56,
+                      "raw_end": 77,
+                      "normalized_start": 51
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "kind": "work_scenarios",
+                  "text": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                  "span": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                  "spans": [
+                    {
+                      "text": "-理解业务，协助完成日常监控分析，包括DAU、新增、调起、留存等方向",
+                      "raw_start": 78,
+                      "raw_end": 112,
+                      "normalized_start": 72
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "kind": "work_scenarios",
+                  "text": "-快速响应业务分析需求，提供用户数据、统计数据",
+                  "span": "-快速响应业务分析需求，提供用户数据、统计数据",
+                  "spans": [
+                    {
+                      "text": "-快速响应业务分析需求，提供用户数据、统计数据",
+                      "raw_start": 113,
+                      "raw_end": 136,
+                      "normalized_start": 106
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "kind": "work_scenarios",
+                  "text": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                  "span": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                  "spans": [
+                    {
+                      "text": "-结合业务场景进行分析与解读，洞察业务机会，辅助产出专题分析报告",
+                      "raw_start": 137,
+                      "raw_end": 169,
+                      "normalized_start": 129
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "stressors-0",
+                  "kind": "stressors",
+                  "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                  "span": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                  "spans": [
+                    {
+                      "text": "-具有强自主性、自驱力、责任心、以及优秀的逻辑思维和沟通协调能力，勇于承担工作压力并面对挑战",
+                      "raw_start": 254,
+                      "raw_end": 300,
+                      "normalized_start": 241
+                    }
+                  ],
+                  "basis": "body"
+                }
+              ],
+              "problems": [],
+              "model": "step-3.7-flash",
+              "elapsed_seconds": 17.048,
+              "usage": {
+                "prompt_tokens": 3320,
+                "completion_tokens": 3017,
+                "total_tokens": 6337,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "semantic": [
+                {
+                  "claim_id": "title",
+                  "verdict": "supported",
+                  "reason": "原文明确包含岗位名称“数据分析实习生（J98221）”，与声明一致"
+                },
+                {
+                  "claim_id": "company",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的招聘企业为百度，与声明一致"
+                },
+                {
+                  "claim_id": "stage",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的招聘类型为实习，与声明一致"
+                },
+                {
+                  "claim_id": "family",
+                  "verdict": "supported",
+                  "reason": "原文工作职责均围绕数据分析相关任务展开，支持该岗位属于数据分析类"
+                },
+                {
+                  "claim_id": "date",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的岗位发布日期为2026-03-12，与声明一致"
+                },
+                {
+                  "claim_id": "req-0",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确要求研究生及以上学历，与声明一致"
+                },
+                {
+                  "claim_id": "req-1",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确统计、数学相关专业优先，与声明一致"
+                },
+                {
+                  "claim_id": "req-2",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确要求精通SQL/Excel，与声明一致"
+                },
+                {
+                  "claim_id": "req-3",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确熟悉python/R语言数据处理优先，与声明一致"
+                },
+                {
+                  "claim_id": "req-4",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确每周至少4天在岗、实习时长不少于六个月，与声明一致"
+                },
+                {
+                  "claim_id": "req-5",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确对数据敏感、善于从数据中发现异常和潜在机会点，与声明一致"
+                },
+                {
+                  "claim_id": "req-6",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确具备强自主性、自驱力、责任心，与声明一致"
+                },
+                {
+                  "claim_id": "req-7",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确具备优秀的逻辑思维和沟通协调能力，与声明一致"
+                },
+                {
+                  "claim_id": "req-8",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确勇于承担工作压力并面对挑战，与声明一致"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含负责支持分析用户增长相关业务数据分析工作，与声明一致"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含理解业务、协助完成日常监控分析（含DAU、新增、调起、留存等方向），与声明一致"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含快速响应业务分析需求、提供用户数据和统计数据，与声明一致"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含结合业务场景进行分析解读、洞察业务机会、辅助产出专题分析报告，与声明一致"
+                },
+                {
+                  "claim_id": "stressors-0",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确提及勇于承担工作压力并面对挑战，与声明一致"
+                }
+              ]
+            }
+          }
+        ],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d",
+        "source_type": "url_fetch",
+        "source_metadata": {
+          "adapter": "source-2",
+          "facts": {
+            "company": {
+              "value": "百度",
+              "span": "百度校园招聘",
+              "locator": "HTML title + verified official host",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+            },
+            "job_type": {
+              "value": "实习",
+              "span": "INTERN",
+              "locator": "detailData.recruitType + URL route",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+            },
+            "title": {
+              "value": "数据分析实习生（J98221）",
+              "span": "数据分析实习生（J98221）",
+              "locator": "detailData.postInfo.name",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+            },
+            "published_date": {
+              "value": "2026-03-12",
+              "span": "2026-03-12",
+              "locator": "detailData.postInfo.publishDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+            },
+            "updated_date": {
+              "value": "2026-07-21",
+              "span": "2026-07-21",
+              "locator": "detailData.postInfo.updateDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d"
+            }
+          },
+          "conflicts": []
+        },
+        "repair_meta": null,
+        "pipeline_version": "auto-evidence-3",
+        "schema_version": "0.3.0"
+      }
+    }
+  },
+  {
+    "key": "baidu-content",
+    "name": "百度：内容生态数据分析实习",
+    "url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c",
+    "collection_seconds": 0.73,
+    "warnings": [
+      "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+    ],
+    "source_metadata": {
+      "adapter": "source-2",
+      "facts": {
+        "company": {
+          "value": "百度",
+          "span": "百度校园招聘",
+          "locator": "HTML title + verified official host",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+        },
+        "job_type": {
+          "value": "实习",
+          "span": "INTERN",
+          "locator": "detailData.recruitType + URL route",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+        },
+        "title": {
+          "value": "数据分析师实习生（J75756）",
+          "span": "数据分析师实习生（J75756）",
+          "locator": "detailData.postInfo.name",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+        },
+        "published_date": {
+          "value": "2024-07-08",
+          "span": "2024-07-08",
+          "locator": "detailData.postInfo.publishDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+        },
+        "updated_date": {
+          "value": "2026-07-21",
+          "span": "2026-07-21",
+          "locator": "detailData.postInfo.updateDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+        }
+      },
+      "conflicts": []
+    },
+    "result": {
+      "ok": true,
+      "state": "ready",
+      "jd_id": "JD-A91FC9A7",
+      "position_id": "POS-7B28EB93",
+      "reasons": [],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "n_requirements": 6,
+      "cached": false,
+      "elapsed_seconds": 40.129
+    },
+    "audit": {
+      "jd_id": "JD-A91FC9A7",
+      "fingerprint": "b03bf4e5161c3639caefec50c1095596deb13134f2565327f011d13472f1950f",
+      "state": "ready",
+      "details_json": "{\"position_id\": \"POS-7B28EB93\", \"result\": {\"ok\": true, \"state\": \"ready\", \"jd_id\": \"JD-A91FC9A7\", \"position_id\": \"POS-7B28EB93\", \"reasons\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 6, \"cached\": false, \"elapsed_seconds\": 40.129}, \"attempts\": [{\"extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析师实习生（J75756）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2024-07-08\", \"published_date_span\": \"2024-07-08\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"数据分析\", \"family_evidence_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"secondary_tags\": [\"内容生态指标搭建\", \"异动归因分析\", \"看板线上化\", \"运营策略优化\", \"分析方法论沉淀\", \"自动化数据分析工具构建\"], \"stressor_ids\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上，硕士及以上优先\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"具备数学、统计、计算机等相关专业\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"evidence_ids\": [\"S13\"], \"evidence_spans\": [\"-精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有主人翁意识、积极上进\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"]}], \"extraction_notes\": \"原文未提及公司所属行业，故industry字段填未知；无明确压力相关表述，stressor_ids为空。\", \"_mock\": false, \"family_spans\": [\"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"-沉淀分析方法论，构建自动化数据分析工具\"], \"work_scenarios\": [\"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"-沉淀分析方法论，构建自动化数据分析工具\"], \"stressors\": [], \"_reference_errors\": []}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"数据分析师实习生（J75756）\", \"location\": \"北京市\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2024-07-08\", \"published_date_span\": \"2024-07-08\", \"canonical_name\": \"数据分析师\", \"industry\": \"未知\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"数据分析\", \"family_evidence_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"secondary_tags\": [\"内容生态指标搭建\", \"异动归因分析\", \"看板线上化\", \"运营策略优化\", \"分析方法论沉淀\", \"自动化数据分析工具构建\"], \"stressor_ids\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上，硕士及以上优先\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"具备数学、统计、计算机等相关专业\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"evidence_ids\": [\"S13\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有主人翁意识、积极上进\", \"evidence_ids\": [\"S14\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"evidence_ids\": [\"S14\"]}], \"extraction_notes\": \"原文未提及公司所属行业，故industry字段填未知；无明确压力相关表述，stressor_ids为空。\", \"_mock\": false}, \"source_overrides\": [], \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 832, \"prompt_tokens\": 1742, \"completion_tokens\": 3939, \"total_tokens\": 5681, \"prompt_tokens_details\": {\"cached_tokens\": 832}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 26.342}, \"check\": {\"structural\": {\"total\": 6, \"passed\": 6, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"本科及以上，硕士及以上优先\"}, {\"idx\": 1, \"ok\": true, \"text\": \"具备数学、统计、计算机等相关专业\"}, {\"idx\": 2, \"ok\": true, \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\"}, {\"idx\": 3, \"ok\": true, \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\"}, {\"idx\": 4, \"ok\": true, \"text\": \"有主人翁意识、积极上进\"}, {\"idx\": 5, \"ok\": true, \"text\": \"具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"数据分析师实习生（J75756）\", \"span\": \"数据分析师实习生（J75756）\", \"spans\": [{\"text\": \"数据分析师实习生（J75756）\", \"raw_start\": 3, \"raw_end\": 19, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"实习\", \"span\": \"INTERN\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"数据分析\", \"span\": \"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\\n-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\\n-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\\n-沉淀分析方法论，构建自动化数据分析工具\", \"spans\": [{\"text\": \"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"raw_start\": 57, \"raw_end\": 97, \"normalized_start\": 52}, {\"text\": \"-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"raw_start\": 98, \"raw_end\": 127, \"normalized_start\": 92}, {\"text\": \"-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"raw_start\": 128, \"raw_end\": 163, \"normalized_start\": 121}, {\"text\": \"-沉淀分析方法论，构建自动化数据分析工具\", \"raw_start\": 164, \"raw_end\": 184, \"normalized_start\": 156}], \"basis\": \"body\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2024-07-08\", \"span\": \"2024-07-08\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2024-07-08\", \"span\": \"2024-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"本科及以上，硕士及以上优先\", \"span\": \"-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"spans\": [{\"text\": \"-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"raw_start\": 191, \"raw_end\": 222, \"normalized_start\": 181}], \"basis\": \"body\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"具备数学、统计、计算机等相关专业\", \"span\": \"-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"spans\": [{\"text\": \"-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先\", \"raw_start\": 191, \"raw_end\": 222, \"normalized_start\": 181}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"span\": \"-精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"spans\": [{\"text\": \"-精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法\", \"raw_start\": 255, \"raw_end\": 314, \"normalized_start\": 243}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"span\": \"-具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"spans\": [{\"text\": \"-具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架\", \"raw_start\": 223, \"raw_end\": 254, \"normalized_start\": 212}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"有主人翁意识、积极上进\", \"span\": \"-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"spans\": [{\"text\": \"-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"raw_start\": 315, \"raw_end\": 360, \"normalized_start\": 302}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"span\": \"-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"spans\": [{\"text\": \"-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地\", \"raw_start\": 315, \"raw_end\": 360, \"normalized_start\": 302}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"span\": \"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"spans\": [{\"text\": \"-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\", \"raw_start\": 57, \"raw_end\": 97, \"normalized_start\": 52}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"span\": \"-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"spans\": [{\"text\": \"-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\", \"raw_start\": 98, \"raw_end\": 127, \"normalized_start\": 92}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"span\": \"-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"spans\": [{\"text\": \"-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\", \"raw_start\": 128, \"raw_end\": 163, \"normalized_start\": 121}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"-沉淀分析方法论，构建自动化数据分析工具\", \"span\": \"-沉淀分析方法论，构建自动化数据分析工具\", \"spans\": [{\"text\": \"-沉淀分析方法论，构建自动化数据分析工具\", \"raw_start\": 164, \"raw_end\": 184, \"normalized_start\": 156}], \"basis\": \"body\"}], \"problems\": [], \"model\": \"step-3.7-flash\", \"elapsed_seconds\": 13.772, \"usage\": {\"cached_tokens\": 320, \"prompt_tokens\": 2911, \"completion_tokens\": 2410, \"total_tokens\": 5321, \"prompt_tokens_details\": {\"cached_tokens\": 320}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"semantic\": [{\"claim_id\": \"title\", \"verdict\": \"supported\", \"reason\": \"原文明确包含岗位名称“数据分析师实习生（J75756）”，与声明内容一致\"}, {\"claim_id\": \"company\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘企业为百度，与声明内容一致\"}, {\"claim_id\": \"stage\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘类型为实习，与声明内容一致\"}, {\"claim_id\": \"family\", \"verdict\": \"supported\", \"reason\": \"工作职责内容均围绕数据分析相关任务与产出，支持该岗位属于数据分析序列\"}, {\"claim_id\": \"date\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的岗位发布日期为2024-07-08，与声明内容一致\"}, {\"claim_id\": \"req-0\", \"verdict\": \"supported\", \"reason\": \"原文明确将本科及以上作为学历要求，硕士及以上为优先条件，属于学历类硬性要求\"}, {\"claim_id\": \"req-1\", \"verdict\": \"supported\", \"reason\": \"原文明确要求数学、统计、计算机等相关专业，属于专业类硬性要求\"}, {\"claim_id\": \"req-2\", \"verdict\": \"supported\", \"reason\": \"原文明确列出SQL、Excel、R/Python等工具及常见数据分析方法的要求，属于技能类硬性要求\"}, {\"claim_id\": \"req-3\", \"verdict\": \"supported\", \"reason\": \"原文明确要求业务理解、结构化思维等能力，属于软能力类要求\"}, {\"claim_id\": \"req-4\", \"verdict\": \"supported\", \"reason\": \"原文明确要求主人翁意识、积极上进等职业素养，属于软能力类要求\"}, {\"claim_id\": \"req-5\", \"verdict\": \"supported\", \"reason\": \"原文明确要求结论呈现、沟通表达等能力，属于软能力类要求\"}, {\"claim_id\": \"work_scenarios-0\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该条描述内容\"}, {\"claim_id\": \"work_scenarios-1\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该条描述内容\"}, {\"claim_id\": \"work_scenarios-2\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该条描述内容\"}, {\"claim_id\": \"work_scenarios-3\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该条描述内容\"}]}}], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"job_type\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"title\": {\"value\": \"数据分析师实习生（J75756）\", \"span\": \"数据分析师实习生（J75756）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"published_date\": {\"value\": \"2024-07-08\", \"span\": \"2024-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}, \"updated_date\": {\"value\": \"2026-07-21\", \"span\": \"2026-07-21\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+      "checked_at": "2026-10-11T10:55:43",
+      "details": {
+        "position_id": "POS-7B28EB93",
+        "result": {
+          "ok": true,
+          "state": "ready",
+          "jd_id": "JD-A91FC9A7",
+          "position_id": "POS-7B28EB93",
+          "reasons": [],
+          "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+          "n_requirements": 6,
+          "cached": false,
+          "elapsed_seconds": 40.129
+        },
+        "attempts": [
+          {
+            "extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "数据分析师实习生（J75756）",
+              "location": "北京市",
+              "job_type": "实习",
+              "job_type_span": "INTERN",
+              "published_date": "2024-07-08",
+              "published_date_span": "2024-07-08",
+              "canonical_name": "数据分析师",
+              "industry": "未知",
+              "variant_names": [],
+              "work_scenario_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "数据分析",
+              "family_evidence_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "secondary_tags": [
+                "内容生态指标搭建",
+                "异动归因分析",
+                "看板线上化",
+                "运营策略优化",
+                "分析方法论沉淀",
+                "自动化数据分析工具构建"
+              ],
+              "stressor_ids": [],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "学历",
+                  "text": "本科及以上，硕士及以上优先",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "具备数学、统计、计算机等相关专业",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                  "evidence_ids": [
+                    "S13"
+                  ],
+                  "evidence_spans": [
+                    "-精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                  "evidence_ids": [
+                    "S12"
+                  ],
+                  "evidence_spans": [
+                    "-具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "有主人翁意识、积极上进",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+                  ]
+                }
+              ],
+              "extraction_notes": "原文未提及公司所属行业，故industry字段填未知；无明确压力相关表述，stressor_ids为空。",
+              "_mock": false,
+              "family_spans": [
+                "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                "-针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                "-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                "-沉淀分析方法论，构建自动化数据分析工具"
+              ],
+              "work_scenarios": [
+                "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                "-针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                "-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                "-沉淀分析方法论，构建自动化数据分析工具"
+              ],
+              "stressors": [],
+              "_reference_errors": []
+            },
+            "model_extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "数据分析师实习生（J75756）",
+              "location": "北京市",
+              "job_type": "实习",
+              "job_type_span": "INTERN",
+              "published_date": "2024-07-08",
+              "published_date_span": "2024-07-08",
+              "canonical_name": "数据分析师",
+              "industry": "未知",
+              "variant_names": [],
+              "work_scenario_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "数据分析",
+              "family_evidence_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "secondary_tags": [
+                "内容生态指标搭建",
+                "异动归因分析",
+                "看板线上化",
+                "运营策略优化",
+                "分析方法论沉淀",
+                "自动化数据分析工具构建"
+              ],
+              "stressor_ids": [],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "学历",
+                  "text": "本科及以上，硕士及以上优先",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "具备数学、统计、计算机等相关专业",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                  "evidence_ids": [
+                    "S13"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                  "evidence_ids": [
+                    "S12"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "有主人翁意识、积极上进",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                }
+              ],
+              "extraction_notes": "原文未提及公司所属行业，故industry字段填未知；无明确压力相关表述，stressor_ids为空。",
+              "_mock": false
+            },
+            "source_overrides": [],
+            "extraction_meta": {
+              "mock": false,
+              "error": "",
+              "model": "step-3.7-flash",
+              "usage": {
+                "cached_tokens": 832,
+                "prompt_tokens": 1742,
+                "completion_tokens": 3939,
+                "total_tokens": 5681,
+                "prompt_tokens_details": {
+                  "cached_tokens": 832
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "elapsed_seconds": 26.342
+            },
+            "check": {
+              "structural": {
+                "total": 6,
+                "passed": 6,
+                "failed": 0,
+                "items": [
+                  {
+                    "idx": 0,
+                    "ok": true,
+                    "text": "本科及以上，硕士及以上优先"
+                  },
+                  {
+                    "idx": 1,
+                    "ok": true,
+                    "text": "具备数学、统计、计算机等相关专业"
+                  },
+                  {
+                    "idx": 2,
+                    "ok": true,
+                    "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法"
+                  },
+                  {
+                    "idx": 3,
+                    "ok": true,
+                    "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架"
+                  },
+                  {
+                    "idx": 4,
+                    "ok": true,
+                    "text": "有主人翁意识、积极上进"
+                  },
+                  {
+                    "idx": 5,
+                    "ok": true,
+                    "text": "具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地"
+                  }
+                ],
+                "reject_all": false,
+                "note": ""
+              },
+              "claims": [
+                {
+                  "claim_id": "title",
+                  "kind": "title",
+                  "text": "数据分析师实习生（J75756）",
+                  "span": "数据分析师实习生（J75756）",
+                  "spans": [
+                    {
+                      "text": "数据分析师实习生（J75756）",
+                      "raw_start": 3,
+                      "raw_end": 19,
+                      "normalized_start": 2
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "company",
+                  "kind": "company",
+                  "text": "百度",
+                  "span": "百度校园招聘",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "百度",
+                    "span": "百度校园招聘",
+                    "locator": "HTML title + verified official host",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                  }
+                },
+                {
+                  "claim_id": "stage",
+                  "kind": "stage",
+                  "text": "实习",
+                  "span": "INTERN",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "实习",
+                    "span": "INTERN",
+                    "locator": "detailData.recruitType + URL route",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                  }
+                },
+                {
+                  "claim_id": "family",
+                  "kind": "family",
+                  "text": "数据分析",
+                  "span": "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会\n-针对核心指标及业务高频需求，推动看板线上化，提升工作效率\n-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长\n-沉淀分析方法论，构建自动化数据分析工具",
+                  "spans": [
+                    {
+                      "text": "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                      "raw_start": 57,
+                      "raw_end": 97,
+                      "normalized_start": 52
+                    },
+                    {
+                      "text": "-针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                      "raw_start": 98,
+                      "raw_end": 127,
+                      "normalized_start": 92
+                    },
+                    {
+                      "text": "-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                      "raw_start": 128,
+                      "raw_end": 163,
+                      "normalized_start": 121
+                    },
+                    {
+                      "text": "-沉淀分析方法论，构建自动化数据分析工具",
+                      "raw_start": 164,
+                      "raw_end": 184,
+                      "normalized_start": 156
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "date",
+                  "kind": "published_date",
+                  "text": "2024-07-08",
+                  "span": "2024-07-08",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "2024-07-08",
+                    "span": "2024-07-08",
+                    "locator": "detailData.postInfo.publishDate",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+                  }
+                },
+                {
+                  "claim_id": "req-0",
+                  "kind": "requirement",
+                  "text": "本科及以上，硕士及以上优先",
+                  "span": "-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                  "spans": [
+                    {
+                      "text": "-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                      "raw_start": 191,
+                      "raw_end": 222,
+                      "normalized_start": 181
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "学历",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-1",
+                  "kind": "requirement",
+                  "text": "具备数学、统计、计算机等相关专业",
+                  "span": "-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                  "spans": [
+                    {
+                      "text": "-本科及以上，具备数学、统计、计算机等相关专业，硕士及以上优先",
+                      "raw_start": 191,
+                      "raw_end": 222,
+                      "normalized_start": 181
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "专业",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-2",
+                  "kind": "requirement",
+                  "text": "精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                  "span": "-精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                  "spans": [
+                    {
+                      "text": "-精通sql/excel，熟悉R/python等数据分析工具，能高效的获取及预处理数据，熟悉主成分等常见的数据分析方法",
+                      "raw_start": 255,
+                      "raw_end": 314,
+                      "normalized_start": 243
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "技能",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-3",
+                  "kind": "requirement",
+                  "text": "具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                  "span": "-具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                  "spans": [
+                    {
+                      "text": "-具备较强的业务理解及结构化思维能力，能独立搭建体系化分析框架",
+                      "raw_start": 223,
+                      "raw_end": 254,
+                      "normalized_start": 212
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-4",
+                  "kind": "requirement",
+                  "text": "有主人翁意识、积极上进",
+                  "span": "-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                  "spans": [
+                    {
+                      "text": "-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                      "raw_start": 315,
+                      "raw_end": 360,
+                      "normalized_start": 302
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-5",
+                  "kind": "requirement",
+                  "text": "具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                  "span": "-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                  "spans": [
+                    {
+                      "text": "-有主人翁意识、积极上进，具备良好的结论呈现和沟通表达能力，能有效的影响业务，推动建议落地",
+                      "raw_start": 315,
+                      "raw_end": 360,
+                      "normalized_start": 302
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "kind": "work_scenarios",
+                  "text": "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                  "span": "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                  "spans": [
+                    {
+                      "text": "-围绕内容生态搭建指标体系，例行开展异动归因分析。及时预警风险，协同业务发现机会",
+                      "raw_start": 57,
+                      "raw_end": 97,
+                      "normalized_start": 52
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "kind": "work_scenarios",
+                  "text": "-针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                  "span": "-针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                  "spans": [
+                    {
+                      "text": "-针对核心指标及业务高频需求，推动看板线上化，提升工作效率",
+                      "raw_start": 98,
+                      "raw_end": 127,
+                      "normalized_start": 92
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "kind": "work_scenarios",
+                  "text": "-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                  "span": "-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                  "spans": [
+                    {
+                      "text": "-支持业务分析需求，通过数据分析手段牵引运营策略优化，助力业务规模增长",
+                      "raw_start": 128,
+                      "raw_end": 163,
+                      "normalized_start": 121
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "kind": "work_scenarios",
+                  "text": "-沉淀分析方法论，构建自动化数据分析工具",
+                  "span": "-沉淀分析方法论，构建自动化数据分析工具",
+                  "spans": [
+                    {
+                      "text": "-沉淀分析方法论，构建自动化数据分析工具",
+                      "raw_start": 164,
+                      "raw_end": 184,
+                      "normalized_start": 156
+                    }
+                  ],
+                  "basis": "body"
+                }
+              ],
+              "problems": [],
+              "model": "step-3.7-flash",
+              "elapsed_seconds": 13.772,
+              "usage": {
+                "cached_tokens": 320,
+                "prompt_tokens": 2911,
+                "completion_tokens": 2410,
+                "total_tokens": 5321,
+                "prompt_tokens_details": {
+                  "cached_tokens": 320
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "semantic": [
+                {
+                  "claim_id": "title",
+                  "verdict": "supported",
+                  "reason": "原文明确包含岗位名称“数据分析师实习生（J75756）”，与声明内容一致"
+                },
+                {
+                  "claim_id": "company",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的招聘企业为百度，与声明内容一致"
+                },
+                {
+                  "claim_id": "stage",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的招聘类型为实习，与声明内容一致"
+                },
+                {
+                  "claim_id": "family",
+                  "verdict": "supported",
+                  "reason": "工作职责内容均围绕数据分析相关任务与产出，支持该岗位属于数据分析序列"
+                },
+                {
+                  "claim_id": "date",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的岗位发布日期为2024-07-08，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-0",
+                  "verdict": "supported",
+                  "reason": "原文明确将本科及以上作为学历要求，硕士及以上为优先条件，属于学历类硬性要求"
+                },
+                {
+                  "claim_id": "req-1",
+                  "verdict": "supported",
+                  "reason": "原文明确要求数学、统计、计算机等相关专业，属于专业类硬性要求"
+                },
+                {
+                  "claim_id": "req-2",
+                  "verdict": "supported",
+                  "reason": "原文明确列出SQL、Excel、R/Python等工具及常见数据分析方法的要求，属于技能类硬性要求"
+                },
+                {
+                  "claim_id": "req-3",
+                  "verdict": "supported",
+                  "reason": "原文明确要求业务理解、结构化思维等能力，属于软能力类要求"
+                },
+                {
+                  "claim_id": "req-4",
+                  "verdict": "supported",
+                  "reason": "原文明确要求主人翁意识、积极上进等职业素养，属于软能力类要求"
+                },
+                {
+                  "claim_id": "req-5",
+                  "verdict": "supported",
+                  "reason": "原文明确要求结论呈现、沟通表达等能力，属于软能力类要求"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该条描述内容"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该条描述内容"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该条描述内容"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该条描述内容"
+                }
+              ]
+            }
+          }
+        ],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c",
+        "source_type": "url_fetch",
+        "source_metadata": {
+          "adapter": "source-2",
+          "facts": {
+            "company": {
+              "value": "百度",
+              "span": "百度校园招聘",
+              "locator": "HTML title + verified official host",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+            },
+            "job_type": {
+              "value": "实习",
+              "span": "INTERN",
+              "locator": "detailData.recruitType + URL route",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+            },
+            "title": {
+              "value": "数据分析师实习生（J75756）",
+              "span": "数据分析师实习生（J75756）",
+              "locator": "detailData.postInfo.name",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+            },
+            "published_date": {
+              "value": "2024-07-08",
+              "span": "2024-07-08",
+              "locator": "detailData.postInfo.publishDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+            },
+            "updated_date": {
+              "value": "2026-07-21",
+              "span": "2026-07-21",
+              "locator": "detailData.postInfo.updateDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c"
+            }
+          },
+          "conflicts": []
+        },
+        "repair_meta": null,
+        "pipeline_version": "auto-evidence-3",
+        "schema_version": "0.3.0"
+      }
+    }
+  },
+  {
+    "key": "baidu-ai-data",
+    "name": "百度：AI数据产品实习（语音方向）",
+    "url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46",
+    "collection_seconds": 0.731,
+    "warnings": [
+      "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+    ],
+    "source_metadata": {
+      "adapter": "source-2",
+      "facts": {
+        "company": {
+          "value": "百度",
+          "span": "百度校园招聘",
+          "locator": "HTML title + verified official host",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+        },
+        "job_type": {
+          "value": "实习",
+          "span": "INTERN",
+          "locator": "detailData.recruitType + URL route",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+        },
+        "title": {
+          "value": "AI 数据产品实习生（语音方向）（J102273）",
+          "span": "AI 数据产品实习生（语音方向）（J102273）",
+          "locator": "detailData.postInfo.name",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+        },
+        "published_date": {
+          "value": "2026-07-09",
+          "span": "2026-07-09",
+          "locator": "detailData.postInfo.publishDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+        },
+        "updated_date": {
+          "value": "2026-07-21",
+          "span": "2026-07-21",
+          "locator": "detailData.postInfo.updateDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+        }
+      },
+      "conflicts": []
+    },
+    "result": {
+      "ok": true,
+      "state": "ready",
+      "jd_id": "JD-52C8E046",
+      "position_id": "POS-B7F289E8",
+      "reasons": [],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "n_requirements": 9,
+      "cached": false,
+      "elapsed_seconds": 49.795
+    },
+    "audit": {
+      "jd_id": "JD-52C8E046",
+      "fingerprint": "1eca1159caa2d785c8ba93953350864893c20be4a1e984254a2a98a208a28b93",
+      "state": "ready",
+      "details_json": "{\"position_id\": \"POS-B7F289E8\", \"result\": {\"ok\": true, \"state\": \"ready\", \"jd_id\": \"JD-52C8E046\", \"position_id\": \"POS-B7F289E8\", \"reasons\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 9, \"cached\": false, \"elapsed_seconds\": 49.795}, \"attempts\": [{\"extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"AI 数据产品实习生（语音方向）（J102273）\", \"location\": \"北京\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2026-07-09\", \"published_date_span\": \"2026-07-09\", \"canonical_name\": \"AI数据产品实习生\", \"industry\": \"互联网\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"产品经理\", \"family_evidence_ids\": [\"S6\", \"S8\", \"S9\"], \"secondary_tags\": [\"语音数据项目执行\", \"数据质量检查\", \"标注规则优化\", \"竞品分析\", \"效果评估\"], \"stressor_ids\": [\"S14\"], \"requirements\": [{\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"在校学生，能稳定实习不少于6个月\", \"evidence_ids\": [\"S16\"], \"evidence_spans\": [\"-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"专业不限，用户研究、计算机、人工智能等相关专业优先\", \"evidence_ids\": [\"S16\"], \"evidence_spans\": [\"-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月\"]}, {\"kind\": \"hard\", \"category\": \"工具\", \"text\": \"熟练使用Excel等办公工具\", \"evidence_ids\": [\"S15\"], \"evidence_spans\": [\"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"具备基础数据分析能力者优先\", \"evidence_ids\": [\"S15\"], \"evidence_spans\": [\"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"evidence_ids\": [\"S15\"], \"evidence_spans\": [\"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\", \"evidence_ids\": [\"S13\"], \"evidence_spans\": [\"-工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\"]}], \"extraction_notes\": \"该岗位职责同时覆盖数据产品规则制定、数据质量管控及竞品分析，在候选岗位族中产品经理与数据分析均存在匹配度，结合岗位名称中的‘产品’属性，归类为产品经理\", \"_mock\": false, \"family_spans\": [\"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\", \"-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\", \"-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\"], \"work_scenarios\": [\"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\", \"-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升\", \"-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\", \"-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\"], \"stressors\": [\"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\"], \"_reference_errors\": []}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"AI 数据产品实习生（语音方向）（J102273）\", \"location\": \"北京\", \"job_type\": \"实习\", \"job_type_span\": \"INTERN\", \"published_date\": \"2026-07-09\", \"published_date_span\": \"2026-07-09\", \"canonical_name\": \"AI数据产品实习生\", \"industry\": \"互联网\", \"variant_names\": [], \"work_scenario_ids\": [\"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"产品经理\", \"family_evidence_ids\": [\"S6\", \"S8\", \"S9\"], \"secondary_tags\": [\"语音数据项目执行\", \"数据质量检查\", \"标注规则优化\", \"竞品分析\", \"效果评估\"], \"stressor_ids\": [\"S14\"], \"requirements\": [{\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"在校学生，能稳定实习不少于6个月\", \"evidence_ids\": [\"S16\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"专业不限，用户研究、计算机、人工智能等相关专业优先\", \"evidence_ids\": [\"S16\"]}, {\"kind\": \"hard\", \"category\": \"工具\", \"text\": \"熟练使用Excel等办公工具\", \"evidence_ids\": [\"S15\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"具备基础数据分析能力者优先\", \"evidence_ids\": [\"S15\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"evidence_ids\": [\"S15\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\", \"evidence_ids\": [\"S13\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"evidence_ids\": [\"S14\"]}], \"extraction_notes\": \"该岗位职责同时覆盖数据产品规则制定、数据质量管控及竞品分析，在候选岗位族中产品经理与数据分析均存在匹配度，结合岗位名称中的‘产品’属性，归类为产品经理\", \"_mock\": false}, \"source_overrides\": [], \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 832, \"prompt_tokens\": 1912, \"completion_tokens\": 4517, \"total_tokens\": 6429, \"prompt_tokens_details\": {\"cached_tokens\": 832}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 29.876}, \"check\": {\"structural\": {\"total\": 9, \"passed\": 9, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"在校学生，能稳定实习不少于6个月\"}, {\"idx\": 1, \"ok\": true, \"text\": \"专业不限，用户研究、计算机、人工智能等相关专业优先\"}, {\"idx\": 2, \"ok\": true, \"text\": \"熟练使用Excel等办公工具\"}, {\"idx\": 3, \"ok\": true, \"text\": \"具备基础数据分析能力者优先\"}, {\"idx\": 4, \"ok\": true, \"text\": \"有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\"}, {\"idx\": 5, \"ok\": true, \"text\": \"有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\"}, {\"idx\": 6, \"ok\": true, \"text\": \"对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\"}, {\"idx\": 7, \"ok\": true, \"text\": \"工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\"}, {\"idx\": 8, \"ok\": true, \"text\": \"具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"AI 数据产品实习生（语音方向）（J102273）\", \"span\": \"AI 数据产品实习生（语音方向）（J102273）\", \"spans\": [{\"text\": \"AI 数据产品实习生（语音方向）（J102273）\", \"raw_start\": 3, \"raw_end\": 28, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"实习\", \"span\": \"INTERN\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"产品经理\", \"span\": \"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\\n-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\\n-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\", \"spans\": [{\"text\": \"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\", \"raw_start\": 74, \"raw_end\": 124, \"normalized_start\": 68}, {\"text\": \"-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\", \"raw_start\": 176, \"raw_end\": 217, \"normalized_start\": 168}, {\"text\": \"-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\", \"raw_start\": 218, \"raw_end\": 262, \"normalized_start\": 209}], \"basis\": \"body\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2026-07-09\", \"span\": \"2026-07-09\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2026-07-09\", \"span\": \"2026-07-09\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"在校学生，能稳定实习不少于6个月\", \"span\": \"-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月\", \"spans\": [{\"text\": \"-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月\", \"raw_start\": 504, \"raw_end\": 549, \"normalized_start\": 486}], \"basis\": \"body\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"专业不限，用户研究、计算机、人工智能等相关专业优先\", \"span\": \"-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月\", \"spans\": [{\"text\": \"-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月\", \"raw_start\": 504, \"raw_end\": 549, \"normalized_start\": 486}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"熟练使用Excel等办公工具\", \"span\": \"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"spans\": [{\"text\": \"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"raw_start\": 429, \"raw_end\": 503, \"normalized_start\": 414}], \"basis\": \"body\", \"category\": \"工具\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"具备基础数据分析能力者优先\", \"span\": \"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"spans\": [{\"text\": \"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"raw_start\": 429, \"raw_end\": 503, \"normalized_start\": 414}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"span\": \"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"spans\": [{\"text\": \"-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先\", \"raw_start\": 429, \"raw_end\": 503, \"normalized_start\": 414}], \"basis\": \"body\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\", \"span\": \"-有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\", \"spans\": [{\"text\": \"-有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准\", \"raw_start\": 269, \"raw_end\": 313, \"normalized_start\": 258}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-6\", \"kind\": \"requirement\", \"text\": \"对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\", \"span\": \"-对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\", \"spans\": [{\"text\": \"-对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力\", \"raw_start\": 314, \"raw_end\": 355, \"normalized_start\": 302}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-7\", \"kind\": \"requirement\", \"text\": \"工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\", \"span\": \"-工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\", \"spans\": [{\"text\": \"-工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识\", \"raw_start\": 356, \"raw_end\": 389, \"normalized_start\": 343}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-8\", \"kind\": \"requirement\", \"text\": \"具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"span\": \"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"spans\": [{\"text\": \"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"raw_start\": 390, \"raw_end\": 428, \"normalized_start\": 376}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\", \"span\": \"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\", \"spans\": [{\"text\": \"-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\", \"raw_start\": 74, \"raw_end\": 124, \"normalized_start\": 68}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升\", \"span\": \"-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升\", \"spans\": [{\"text\": \"-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升\", \"raw_start\": 125, \"raw_end\": 175, \"normalized_start\": 118}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\", \"span\": \"-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\", \"spans\": [{\"text\": \"-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\", \"raw_start\": 176, \"raw_end\": 217, \"normalized_start\": 168}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\", \"span\": \"-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\", \"spans\": [{\"text\": \"-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀\", \"raw_start\": 218, \"raw_end\": 262, \"normalized_start\": 209}], \"basis\": \"body\"}, {\"claim_id\": \"stressors-0\", \"kind\": \"stressors\", \"text\": \"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"span\": \"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"spans\": [{\"text\": \"-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式\", \"raw_start\": 390, \"raw_end\": 428, \"normalized_start\": 376}], \"basis\": \"body\"}], \"problems\": [], \"model\": \"step-3.7-flash\", \"elapsed_seconds\": 19.898, \"usage\": {\"cached_tokens\": 320, \"prompt_tokens\": 3843, \"completion_tokens\": 3515, \"total_tokens\": 7358, \"prompt_tokens_details\": {\"cached_tokens\": 320}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"semantic\": [{\"claim_id\": \"title\", \"verdict\": \"supported\", \"reason\": \"原文明确包含该岗位名称，与声明内容一致\"}, {\"claim_id\": \"company\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的招聘企业为百度，与声明内容一致\"}, {\"claim_id\": \"stage\", \"verdict\": \"supported\", \"reason\": \"官方来源标注招聘类型为实习，与声明内容一致\"}, {\"claim_id\": \"family\", \"verdict\": \"supported\", \"reason\": \"岗位工作职责包含项目跟进、规则制定、竞品分析等产品经理典型工作内容，支持该岗位属于产品经理序列\"}, {\"claim_id\": \"date\", \"verdict\": \"supported\", \"reason\": \"官方来源解析的岗位发布日期为2026-07-09，与声明内容一致\"}, {\"claim_id\": \"req-0\", \"verdict\": \"supported\", \"reason\": \"原文明确要求应聘者为在校学生且能稳定实习不少于6个月，支持该结论\"}, {\"claim_id\": \"req-1\", \"verdict\": \"supported\", \"reason\": \"原文明确表述专业不限，用户研究、计算机、人工智能等相关专业优先，支持该结论\"}, {\"claim_id\": \"req-2\", \"verdict\": \"supported\", \"reason\": \"原文明确要求熟练使用Excel等办公工具，支持该结论\"}, {\"claim_id\": \"req-3\", \"verdict\": \"supported\", \"reason\": \"原文明确将具备基础数据分析能力列为优先条件，支持该结论\"}, {\"claim_id\": \"req-4\", \"verdict\": \"supported\", \"reason\": \"原文明确将互联网产品、大模型数据、评测相关实习或项目经验，以及语音/多模态方向经验列为优先条件，支持该结论\"}, {\"claim_id\": \"req-5\", \"verdict\": \"supported\", \"reason\": \"原文明确要求具备个人主观能动性、对语音大模型技术及产品应用有兴趣，且愿意深入理解业务逻辑和数据质量标准，支持该结论\"}, {\"claim_id\": \"req-6\", \"verdict\": \"supported\", \"reason\": \"原文明确要求对大模型、数据、评测有理解和认知，且具备较强的信息整理、逻辑分析和问题归纳能力，支持该结论\"}, {\"claim_id\": \"req-7\", \"verdict\": \"supported\", \"reason\": \"原文明确要求工作认真细致、对数据质量敏感，具备较强的责任心、主动性和风险意识，支持该结论\"}, {\"claim_id\": \"req-8\", \"verdict\": \"supported\", \"reason\": \"原文明确要求具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式，支持该结论\"}, {\"claim_id\": \"work_scenarios-0\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含负责语音数据项目执行跟进、对接团队推动各环节按期交付的内容，支持该结论\"}, {\"claim_id\": \"work_scenarios-1\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含参与语音数据质量检查与问题分析，通过抽检等方式定位问题推动质量提升的内容，支持该结论\"}, {\"claim_id\": \"work_scenarios-2\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含协助制定和优化标注规则、质检标准及作业流程，提升生产效率与交付一致性的内容，支持该结论\"}, {\"claim_id\": \"work_scenarios-3\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含参与相关场景竞品分析、效果评估和案例沉淀的内容，支持该结论\"}, {\"claim_id\": \"stressors-0\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确包含具备沟通协调和团队协作意识、适应快节奏多任务并行工作模式的内容，支持该结论\"}]}}], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}, \"job_type\": {\"value\": \"实习\", \"span\": \"INTERN\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}, \"title\": {\"value\": \"AI 数据产品实习生（语音方向）（J102273）\", \"span\": \"AI 数据产品实习生（语音方向）（J102273）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}, \"published_date\": {\"value\": \"2026-07-09\", \"span\": \"2026-07-09\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}, \"updated_date\": {\"value\": \"2026-07-21\", \"span\": \"2026-07-21\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+      "checked_at": "2026-10-11T10:56:33",
+      "details": {
+        "position_id": "POS-B7F289E8",
+        "result": {
+          "ok": true,
+          "state": "ready",
+          "jd_id": "JD-52C8E046",
+          "position_id": "POS-B7F289E8",
+          "reasons": [],
+          "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+          "n_requirements": 9,
+          "cached": false,
+          "elapsed_seconds": 49.795
+        },
+        "attempts": [
+          {
+            "extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "AI 数据产品实习生（语音方向）（J102273）",
+              "location": "北京",
+              "job_type": "实习",
+              "job_type_span": "INTERN",
+              "published_date": "2026-07-09",
+              "published_date_span": "2026-07-09",
+              "canonical_name": "AI数据产品实习生",
+              "industry": "互联网",
+              "variant_names": [],
+              "work_scenario_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "产品经理",
+              "family_evidence_ids": [
+                "S6",
+                "S8",
+                "S9"
+              ],
+              "secondary_tags": [
+                "语音数据项目执行",
+                "数据质量检查",
+                "标注规则优化",
+                "竞品分析",
+                "效果评估"
+              ],
+              "stressor_ids": [
+                "S14"
+              ],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "在校学生，能稳定实习不少于6个月",
+                  "evidence_ids": [
+                    "S16"
+                  ],
+                  "evidence_spans": [
+                    "-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "专业不限，用户研究、计算机、人工智能等相关专业优先",
+                  "evidence_ids": [
+                    "S16"
+                  ],
+                  "evidence_spans": [
+                    "-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "工具",
+                  "text": "熟练使用Excel等办公工具",
+                  "evidence_ids": [
+                    "S15"
+                  ],
+                  "evidence_spans": [
+                    "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "具备基础数据分析能力者优先",
+                  "evidence_ids": [
+                    "S15"
+                  ],
+                  "evidence_spans": [
+                    "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                  "evidence_ids": [
+                    "S15"
+                  ],
+                  "evidence_spans": [
+                    "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力",
+                  "evidence_ids": [
+                    "S12"
+                  ],
+                  "evidence_spans": [
+                    "-对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识",
+                  "evidence_ids": [
+                    "S13"
+                  ],
+                  "evidence_spans": [
+                    "-工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式"
+                  ]
+                }
+              ],
+              "extraction_notes": "该岗位职责同时覆盖数据产品规则制定、数据质量管控及竞品分析，在候选岗位族中产品经理与数据分析均存在匹配度，结合岗位名称中的‘产品’属性，归类为产品经理",
+              "_mock": false,
+              "family_spans": [
+                "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付",
+                "-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性",
+                "-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀"
+              ],
+              "work_scenarios": [
+                "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付",
+                "-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升",
+                "-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性",
+                "-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀"
+              ],
+              "stressors": [
+                "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式"
+              ],
+              "_reference_errors": []
+            },
+            "model_extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "AI 数据产品实习生（语音方向）（J102273）",
+              "location": "北京",
+              "job_type": "实习",
+              "job_type_span": "INTERN",
+              "published_date": "2026-07-09",
+              "published_date_span": "2026-07-09",
+              "canonical_name": "AI数据产品实习生",
+              "industry": "互联网",
+              "variant_names": [],
+              "work_scenario_ids": [
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "产品经理",
+              "family_evidence_ids": [
+                "S6",
+                "S8",
+                "S9"
+              ],
+              "secondary_tags": [
+                "语音数据项目执行",
+                "数据质量检查",
+                "标注规则优化",
+                "竞品分析",
+                "效果评估"
+              ],
+              "stressor_ids": [
+                "S14"
+              ],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "在校学生，能稳定实习不少于6个月",
+                  "evidence_ids": [
+                    "S16"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "专业不限，用户研究、计算机、人工智能等相关专业优先",
+                  "evidence_ids": [
+                    "S16"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "工具",
+                  "text": "熟练使用Excel等办公工具",
+                  "evidence_ids": [
+                    "S15"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "具备基础数据分析能力者优先",
+                  "evidence_ids": [
+                    "S15"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                  "evidence_ids": [
+                    "S15"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力",
+                  "evidence_ids": [
+                    "S12"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识",
+                  "evidence_ids": [
+                    "S13"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                }
+              ],
+              "extraction_notes": "该岗位职责同时覆盖数据产品规则制定、数据质量管控及竞品分析，在候选岗位族中产品经理与数据分析均存在匹配度，结合岗位名称中的‘产品’属性，归类为产品经理",
+              "_mock": false
+            },
+            "source_overrides": [],
+            "extraction_meta": {
+              "mock": false,
+              "error": "",
+              "model": "step-3.7-flash",
+              "usage": {
+                "cached_tokens": 832,
+                "prompt_tokens": 1912,
+                "completion_tokens": 4517,
+                "total_tokens": 6429,
+                "prompt_tokens_details": {
+                  "cached_tokens": 832
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "elapsed_seconds": 29.876
+            },
+            "check": {
+              "structural": {
+                "total": 9,
+                "passed": 9,
+                "failed": 0,
+                "items": [
+                  {
+                    "idx": 0,
+                    "ok": true,
+                    "text": "在校学生，能稳定实习不少于6个月"
+                  },
+                  {
+                    "idx": 1,
+                    "ok": true,
+                    "text": "专业不限，用户研究、计算机、人工智能等相关专业优先"
+                  },
+                  {
+                    "idx": 2,
+                    "ok": true,
+                    "text": "熟练使用Excel等办公工具"
+                  },
+                  {
+                    "idx": 3,
+                    "ok": true,
+                    "text": "具备基础数据分析能力者优先"
+                  },
+                  {
+                    "idx": 4,
+                    "ok": true,
+                    "text": "有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先"
+                  },
+                  {
+                    "idx": 5,
+                    "ok": true,
+                    "text": "有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准"
+                  },
+                  {
+                    "idx": 6,
+                    "ok": true,
+                    "text": "对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力"
+                  },
+                  {
+                    "idx": 7,
+                    "ok": true,
+                    "text": "工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识"
+                  },
+                  {
+                    "idx": 8,
+                    "ok": true,
+                    "text": "具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式"
+                  }
+                ],
+                "reject_all": false,
+                "note": ""
+              },
+              "claims": [
+                {
+                  "claim_id": "title",
+                  "kind": "title",
+                  "text": "AI 数据产品实习生（语音方向）（J102273）",
+                  "span": "AI 数据产品实习生（语音方向）（J102273）",
+                  "spans": [
+                    {
+                      "text": "AI 数据产品实习生（语音方向）（J102273）",
+                      "raw_start": 3,
+                      "raw_end": 28,
+                      "normalized_start": 2
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "company",
+                  "kind": "company",
+                  "text": "百度",
+                  "span": "百度校园招聘",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "百度",
+                    "span": "百度校园招聘",
+                    "locator": "HTML title + verified official host",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+                  }
+                },
+                {
+                  "claim_id": "stage",
+                  "kind": "stage",
+                  "text": "实习",
+                  "span": "INTERN",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "实习",
+                    "span": "INTERN",
+                    "locator": "detailData.recruitType + URL route",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+                  }
+                },
+                {
+                  "claim_id": "family",
+                  "kind": "family",
+                  "text": "产品经理",
+                  "span": "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付\n-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性\n-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀",
+                  "spans": [
+                    {
+                      "text": "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付",
+                      "raw_start": 74,
+                      "raw_end": 124,
+                      "normalized_start": 68
+                    },
+                    {
+                      "text": "-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性",
+                      "raw_start": 176,
+                      "raw_end": 217,
+                      "normalized_start": 168
+                    },
+                    {
+                      "text": "-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀",
+                      "raw_start": 218,
+                      "raw_end": 262,
+                      "normalized_start": 209
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "date",
+                  "kind": "published_date",
+                  "text": "2026-07-09",
+                  "span": "2026-07-09",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "2026-07-09",
+                    "span": "2026-07-09",
+                    "locator": "detailData.postInfo.publishDate",
+                    "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+                  }
+                },
+                {
+                  "claim_id": "req-0",
+                  "kind": "requirement",
+                  "text": "在校学生，能稳定实习不少于6个月",
+                  "span": "-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月",
+                  "spans": [
+                    {
+                      "text": "-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月",
+                      "raw_start": 504,
+                      "raw_end": 549,
+                      "normalized_start": 486
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "经验",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-1",
+                  "kind": "requirement",
+                  "text": "专业不限，用户研究、计算机、人工智能等相关专业优先",
+                  "span": "-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月",
+                  "spans": [
+                    {
+                      "text": "-专业不限，用户研究、计算机、人工智能等相关专业优先，在校学生，能稳定实习不少于 6 个月",
+                      "raw_start": 504,
+                      "raw_end": 549,
+                      "normalized_start": 486
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "专业",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-2",
+                  "kind": "requirement",
+                  "text": "熟练使用Excel等办公工具",
+                  "span": "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                  "spans": [
+                    {
+                      "text": "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                      "raw_start": 429,
+                      "raw_end": 503,
+                      "normalized_start": 414
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "工具",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-3",
+                  "kind": "requirement",
+                  "text": "具备基础数据分析能力者优先",
+                  "span": "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                  "spans": [
+                    {
+                      "text": "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                      "raw_start": 429,
+                      "raw_end": 503,
+                      "normalized_start": 414
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "技能",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-4",
+                  "kind": "requirement",
+                  "text": "有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                  "span": "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                  "spans": [
+                    {
+                      "text": "-熟练使用 Excel 等办公工具，具备基础数据分析能力者优先；有互联网产品、大模型数据、评测相关实习或项目经验者优先，语音方向或多模态方向经验优先",
+                      "raw_start": 429,
+                      "raw_end": 503,
+                      "normalized_start": 414
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "经验",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-5",
+                  "kind": "requirement",
+                  "text": "有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准",
+                  "span": "-有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准",
+                  "spans": [
+                    {
+                      "text": "-有个人主观能动性，对语音大模型技术及产品应用有兴趣，愿意深入理解业务逻辑和数据质量标准",
+                      "raw_start": 269,
+                      "raw_end": 313,
+                      "normalized_start": 258
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-6",
+                  "kind": "requirement",
+                  "text": "对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力",
+                  "span": "-对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力",
+                  "spans": [
+                    {
+                      "text": "-对大模型、数据、评测有理解和认知，并且具备较强的信息整理、逻辑分析和问题归纳能力",
+                      "raw_start": 314,
+                      "raw_end": 355,
+                      "normalized_start": 302
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-7",
+                  "kind": "requirement",
+                  "text": "工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识",
+                  "span": "-工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识",
+                  "spans": [
+                    {
+                      "text": "-工作认真细致，对数据质量敏感，具备较强的责任心、主动性和风险意识",
+                      "raw_start": 356,
+                      "raw_end": 389,
+                      "normalized_start": 343
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-8",
+                  "kind": "requirement",
+                  "text": "具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                  "span": "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                  "spans": [
+                    {
+                      "text": "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                      "raw_start": 390,
+                      "raw_end": 428,
+                      "normalized_start": 376
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "kind": "work_scenarios",
+                  "text": "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付",
+                  "span": "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付",
+                  "spans": [
+                    {
+                      "text": "-负责语音数据项目的执行跟进，对接产品、研发、数据团队，推动数据采集、标注、质检、评测等环节按期交付",
+                      "raw_start": 74,
+                      "raw_end": 124,
+                      "normalized_start": 68
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "kind": "work_scenarios",
+                  "text": "-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升",
+                  "span": "-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升",
+                  "spans": [
+                    {
+                      "text": "-参与语音数据质量检查与问题分析，通过抽检、复核、数据整理等方式发现并定位数据问题，推动质量持续提升",
+                      "raw_start": 125,
+                      "raw_end": 175,
+                      "normalized_start": 118
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "kind": "work_scenarios",
+                  "text": "-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性",
+                  "span": "-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性",
+                  "spans": [
+                    {
+                      "text": "-协助制定和优化语音数据标注规则、质检标准及作业流程，提升数据生产效率与交付一致性",
+                      "raw_start": 176,
+                      "raw_end": 217,
+                      "normalized_start": 168
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "kind": "work_scenarios",
+                  "text": "-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀",
+                  "span": "-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀",
+                  "spans": [
+                    {
+                      "text": "-参与语音识别、语音合成、数字人、大模型语音交互等相关场景的竞品分析、效果评估和案例沉淀",
+                      "raw_start": 218,
+                      "raw_end": 262,
+                      "normalized_start": 209
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "stressors-0",
+                  "kind": "stressors",
+                  "text": "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                  "span": "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                  "spans": [
+                    {
+                      "text": "-具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式",
+                      "raw_start": 390,
+                      "raw_end": 428,
+                      "normalized_start": 376
+                    }
+                  ],
+                  "basis": "body"
+                }
+              ],
+              "problems": [],
+              "model": "step-3.7-flash",
+              "elapsed_seconds": 19.898,
+              "usage": {
+                "cached_tokens": 320,
+                "prompt_tokens": 3843,
+                "completion_tokens": 3515,
+                "total_tokens": 7358,
+                "prompt_tokens_details": {
+                  "cached_tokens": 320
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "semantic": [
+                {
+                  "claim_id": "title",
+                  "verdict": "supported",
+                  "reason": "原文明确包含该岗位名称，与声明内容一致"
+                },
+                {
+                  "claim_id": "company",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的招聘企业为百度，与声明内容一致"
+                },
+                {
+                  "claim_id": "stage",
+                  "verdict": "supported",
+                  "reason": "官方来源标注招聘类型为实习，与声明内容一致"
+                },
+                {
+                  "claim_id": "family",
+                  "verdict": "supported",
+                  "reason": "岗位工作职责包含项目跟进、规则制定、竞品分析等产品经理典型工作内容，支持该岗位属于产品经理序列"
+                },
+                {
+                  "claim_id": "date",
+                  "verdict": "supported",
+                  "reason": "官方来源解析的岗位发布日期为2026-07-09，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-0",
+                  "verdict": "supported",
+                  "reason": "原文明确要求应聘者为在校学生且能稳定实习不少于6个月，支持该结论"
+                },
+                {
+                  "claim_id": "req-1",
+                  "verdict": "supported",
+                  "reason": "原文明确表述专业不限，用户研究、计算机、人工智能等相关专业优先，支持该结论"
+                },
+                {
+                  "claim_id": "req-2",
+                  "verdict": "supported",
+                  "reason": "原文明确要求熟练使用Excel等办公工具，支持该结论"
+                },
+                {
+                  "claim_id": "req-3",
+                  "verdict": "supported",
+                  "reason": "原文明确将具备基础数据分析能力列为优先条件，支持该结论"
+                },
+                {
+                  "claim_id": "req-4",
+                  "verdict": "supported",
+                  "reason": "原文明确将互联网产品、大模型数据、评测相关实习或项目经验，以及语音/多模态方向经验列为优先条件，支持该结论"
+                },
+                {
+                  "claim_id": "req-5",
+                  "verdict": "supported",
+                  "reason": "原文明确要求具备个人主观能动性、对语音大模型技术及产品应用有兴趣，且愿意深入理解业务逻辑和数据质量标准，支持该结论"
+                },
+                {
+                  "claim_id": "req-6",
+                  "verdict": "supported",
+                  "reason": "原文明确要求对大模型、数据、评测有理解和认知，且具备较强的信息整理、逻辑分析和问题归纳能力，支持该结论"
+                },
+                {
+                  "claim_id": "req-7",
+                  "verdict": "supported",
+                  "reason": "原文明确要求工作认真细致、对数据质量敏感，具备较强的责任心、主动性和风险意识，支持该结论"
+                },
+                {
+                  "claim_id": "req-8",
+                  "verdict": "supported",
+                  "reason": "原文明确要求具备良好的沟通协调能力和团队协作意识，能够适应快节奏、多任务并行的工作模式，支持该结论"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含负责语音数据项目执行跟进、对接团队推动各环节按期交付的内容，支持该结论"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含参与语音数据质量检查与问题分析，通过抽检等方式定位问题推动质量提升的内容，支持该结论"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含协助制定和优化标注规则、质检标准及作业流程，提升生产效率与交付一致性的内容，支持该结论"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含参与相关场景竞品分析、效果评估和案例沉淀的内容，支持该结论"
+                },
+                {
+                  "claim_id": "stressors-0",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确包含具备沟通协调和团队协作意识、适应快节奏多任务并行工作模式的内容，支持该结论"
+                }
+              ]
+            }
+          }
+        ],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46",
+        "source_type": "url_fetch",
+        "source_metadata": {
+          "adapter": "source-2",
+          "facts": {
+            "company": {
+              "value": "百度",
+              "span": "百度校园招聘",
+              "locator": "HTML title + verified official host",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+            },
+            "job_type": {
+              "value": "实习",
+              "span": "INTERN",
+              "locator": "detailData.recruitType + URL route",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+            },
+            "title": {
+              "value": "AI 数据产品实习生（语音方向）（J102273）",
+              "span": "AI 数据产品实习生（语音方向）（J102273）",
+              "locator": "detailData.postInfo.name",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+            },
+            "published_date": {
+              "value": "2026-07-09",
+              "span": "2026-07-09",
+              "locator": "detailData.postInfo.publishDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+            },
+            "updated_date": {
+              "value": "2026-07-21",
+              "span": "2026-07-21",
+              "locator": "detailData.postInfo.updateDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46"
+            }
+          },
+          "conflicts": []
+        },
+        "repair_meta": null,
+        "pipeline_version": "auto-evidence-3",
+        "schema_version": "0.3.0"
+      }
+    }
+  },
+  {
+    "key": "baidu-ai-campus",
+    "name": "百度：AI产品经理校招",
+    "url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79",
+    "collection_seconds": 0.269,
+    "warnings": [
+      "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+    ],
+    "source_metadata": {
+      "adapter": "source-2",
+      "facts": {
+        "company": {
+          "value": "百度",
+          "span": "百度校园招聘",
+          "locator": "HTML title + verified official host",
+          "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+        },
+        "job_type": {
+          "value": "校招",
+          "span": "GRADUATE",
+          "locator": "detailData.recruitType + URL route",
+          "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+        },
+        "title": {
+          "value": "北京-AI产品经理(J100665)",
+          "span": "北京-AI产品经理(J100665)",
+          "locator": "detailData.postInfo.name",
+          "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+        },
+        "published_date": {
+          "value": "2026-07-08",
+          "span": "2026-07-08",
+          "locator": "detailData.postInfo.publishDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+        },
+        "updated_date": {
+          "value": "2026-07-21",
+          "span": "2026-07-21",
+          "locator": "detailData.postInfo.updateDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+        }
+      },
+      "conflicts": []
+    },
+    "result": {
+      "ok": true,
+      "state": "ready",
+      "jd_id": "JD-CF503C01",
+      "position_id": "POS-BE7AD83E",
+      "reasons": [],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "n_requirements": 7,
+      "cached": false,
+      "elapsed_seconds": 38.675
+    },
+    "audit": {
+      "jd_id": "JD-CF503C01",
+      "fingerprint": "95114f7a499e1c11062db056d529d8ff78b142bed8fa2a8c9cabed226ee27fd5",
+      "state": "ready",
+      "details_json": "{\"position_id\": \"POS-BE7AD83E\", \"result\": {\"ok\": true, \"state\": \"ready\", \"jd_id\": \"JD-CF503C01\", \"position_id\": \"POS-BE7AD83E\", \"reasons\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 7, \"cached\": false, \"elapsed_seconds\": 38.675}, \"attempts\": [{\"extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"北京-AI产品经理(J100665)\", \"location\": \"北京\", \"job_type\": \"校招\", \"job_type_span\": \"GRADUATE\", \"published_date\": \"2026-07-08\", \"published_date_span\": \"2026-07-08\", \"canonical_name\": \"产品经理\", \"industry\": \"未知\", \"variant_names\": [\"AI产品经理\"], \"work_scenario_ids\": [\"S5\", \"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"产品经理\", \"family_evidence_ids\": [\"S5\", \"S7\"], \"secondary_tags\": [\"AI产品规划\", \"大模型落地\", \"用户数据分析\", \"跨团队协作\"], \"stressor_ids\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上学历\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-本科及以上学历，计算机、人工智能、信息管理等相关专业优先\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"evidence_ids\": [\"S11\"], \"evidence_spans\": [\"-本科及以上学历，计算机、人工智能、信息管理等相关专业优先\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"evidence_ids\": [\"S12\"], \"evidence_spans\": [\"-对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"evidence_ids\": [\"S9\"], \"evidence_spans\": [\"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"evidence_ids\": [\"S15\"], \"evidence_spans\": [\"-有AI/大模型产品相关实习经历者优先\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"evidence_ids\": [\"S13\"], \"evidence_spans\": [\"-逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"evidence_ids\": [\"S14\"], \"evidence_spans\": [\"-具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\"]}], \"extraction_notes\": \"部分能力要求（如‘深入理解’‘强烈兴趣’）未明确验证标准；职责要求中提到的‘相关专业’未明确具体范围；岗位所属行业原文未提及，故标注为未知\", \"_mock\": false, \"family_spans\": [\"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\"], \"work_scenarios\": [\"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"-深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"], \"stressors\": [], \"_reference_errors\": []}, \"model_extraction\": {\"company\": \"百度\", \"company_span\": \"百度校园招聘\", \"title\": \"北京-AI产品经理(J100665)\", \"location\": \"北京\", \"job_type\": \"校招\", \"job_type_span\": \"GRADUATE\", \"published_date\": \"2026-07-08\", \"published_date_span\": \"2026-07-08\", \"canonical_name\": \"产品经理\", \"industry\": \"未知\", \"variant_names\": [\"AI产品经理\"], \"work_scenario_ids\": [\"S5\", \"S6\", \"S7\", \"S8\", \"S9\"], \"family\": \"产品经理\", \"family_evidence_ids\": [\"S5\", \"S7\"], \"secondary_tags\": [\"AI产品规划\", \"大模型落地\", \"用户数据分析\", \"跨团队协作\"], \"stressor_ids\": [], \"requirements\": [{\"kind\": \"hard\", \"category\": \"学历\", \"text\": \"本科及以上学历\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"专业\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"evidence_ids\": [\"S11\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"evidence_ids\": [\"S12\"]}, {\"kind\": \"hard\", \"category\": \"技能\", \"text\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"evidence_ids\": [\"S9\"]}, {\"kind\": \"hard\", \"category\": \"经验\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"evidence_ids\": [\"S15\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"evidence_ids\": [\"S13\"]}, {\"kind\": \"soft\", \"category\": \"软能力\", \"text\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"evidence_ids\": [\"S14\"]}], \"extraction_notes\": \"部分能力要求（如‘深入理解’‘强烈兴趣’）未明确验证标准；职责要求中提到的‘相关专业’未明确具体范围；岗位所属行业原文未提及，故标注为未知\", \"_mock\": false}, \"source_overrides\": [], \"extraction_meta\": {\"mock\": false, \"error\": \"\", \"model\": \"step-3.7-flash\", \"usage\": {\"cached_tokens\": 832, \"prompt_tokens\": 1836, \"completion_tokens\": 3981, \"total_tokens\": 5817, \"prompt_tokens_details\": {\"cached_tokens\": 832}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"elapsed_seconds\": 24.069}, \"check\": {\"structural\": {\"total\": 7, \"passed\": 7, \"failed\": 0, \"items\": [{\"idx\": 0, \"ok\": true, \"text\": \"本科及以上学历\"}, {\"idx\": 1, \"ok\": true, \"text\": \"计算机、人工智能、信息管理等相关专业优先\"}, {\"idx\": 2, \"ok\": true, \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\"}, {\"idx\": 3, \"ok\": true, \"text\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\"}, {\"idx\": 4, \"ok\": true, \"text\": \"有AI/大模型产品相关实习经历者优先\"}, {\"idx\": 5, \"ok\": true, \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\"}, {\"idx\": 6, \"ok\": true, \"text\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\"}], \"reject_all\": false, \"note\": \"\"}, \"claims\": [{\"claim_id\": \"title\", \"kind\": \"title\", \"text\": \"北京-AI产品经理(J100665)\", \"span\": \"北京-AI产品经理(J100665)\", \"spans\": [{\"text\": \"北京-AI产品经理(J100665)\", \"raw_start\": 3, \"raw_end\": 21, \"normalized_start\": 2}], \"basis\": \"body\"}, {\"claim_id\": \"company\", \"kind\": \"company\", \"text\": \"百度\", \"span\": \"百度校园招聘\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}}, {\"claim_id\": \"stage\", \"kind\": \"stage\", \"text\": \"校招\", \"span\": \"GRADUATE\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"校招\", \"span\": \"GRADUATE\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}}, {\"claim_id\": \"family\", \"kind\": \"family\", \"text\": \"产品经理\", \"span\": \"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\\n-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"spans\": [{\"text\": \"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"raw_start\": 49, \"raw_end\": 92, \"normalized_start\": 45}, {\"text\": \"-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"raw_start\": 134, \"raw_end\": 172, \"normalized_start\": 128}], \"basis\": \"body\"}, {\"claim_id\": \"date\", \"kind\": \"published_date\", \"text\": \"2026-07-08\", \"span\": \"2026-07-08\", \"basis\": \"source\", \"source_evidence\": {\"value\": \"2026-07-08\", \"span\": \"2026-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}}, {\"claim_id\": \"req-0\", \"kind\": \"requirement\", \"text\": \"本科及以上学历\", \"span\": \"-本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"spans\": [{\"text\": \"-本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"raw_start\": 235, \"raw_end\": 264, \"normalized_start\": 225}], \"basis\": \"body\", \"category\": \"学历\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-1\", \"kind\": \"requirement\", \"text\": \"计算机、人工智能、信息管理等相关专业优先\", \"span\": \"-本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"spans\": [{\"text\": \"-本科及以上学历，计算机、人工智能、信息管理等相关专业优先\", \"raw_start\": 235, \"raw_end\": 264, \"normalized_start\": 225}], \"basis\": \"body\", \"category\": \"专业\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-2\", \"kind\": \"requirement\", \"text\": \"对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"span\": \"-对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"spans\": [{\"text\": \"-对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣\", \"raw_start\": 265, \"raw_end\": 295, \"normalized_start\": 254}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-3\", \"kind\": \"requirement\", \"text\": \"具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"span\": \"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"spans\": [{\"text\": \"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"raw_start\": 199, \"raw_end\": 228, \"normalized_start\": 191}], \"basis\": \"body\", \"category\": \"技能\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-4\", \"kind\": \"requirement\", \"text\": \"有AI/大模型产品相关实习经历者优先\", \"span\": \"-有AI/大模型产品相关实习经历者优先\", \"spans\": [{\"text\": \"-有AI/大模型产品相关实习经历者优先\", \"raw_start\": 354, \"raw_end\": 373, \"normalized_start\": 340}], \"basis\": \"body\", \"category\": \"经验\", \"requirement_kind\": \"hard\"}, {\"claim_id\": \"req-5\", \"kind\": \"requirement\", \"text\": \"逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"span\": \"-逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"spans\": [{\"text\": \"-逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力\", \"raw_start\": 296, \"raw_end\": 323, \"normalized_start\": 284}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"req-6\", \"kind\": \"requirement\", \"text\": \"具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"span\": \"-具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"spans\": [{\"text\": \"-具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性\", \"raw_start\": 324, \"raw_end\": 353, \"normalized_start\": 311}], \"basis\": \"body\", \"category\": \"软能力\", \"requirement_kind\": \"soft\"}, {\"claim_id\": \"work_scenarios-0\", \"kind\": \"work_scenarios\", \"text\": \"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"span\": \"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"spans\": [{\"text\": \"-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\", \"raw_start\": 49, \"raw_end\": 92, \"normalized_start\": 45}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-1\", \"kind\": \"work_scenarios\", \"text\": \"-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"span\": \"-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"spans\": [{\"text\": \"-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式\", \"raw_start\": 93, \"raw_end\": 133, \"normalized_start\": 88}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-2\", \"kind\": \"work_scenarios\", \"text\": \"-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"span\": \"-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"spans\": [{\"text\": \"-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化\", \"raw_start\": 134, \"raw_end\": 172, \"normalized_start\": 128}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-3\", \"kind\": \"work_scenarios\", \"text\": \"-深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"span\": \"-深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"spans\": [{\"text\": \"-深入分析用户数据与市场反馈，驱动产品关键指标增长\", \"raw_start\": 173, \"raw_end\": 198, \"normalized_start\": 166}], \"basis\": \"body\"}, {\"claim_id\": \"work_scenarios-4\", \"kind\": \"work_scenarios\", \"text\": \"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"span\": \"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"spans\": [{\"text\": \"-具备AI产品思维，善用AI工具提升工作效率与产品创新能力\", \"raw_start\": 199, \"raw_end\": 228, \"normalized_start\": 191}], \"basis\": \"body\"}], \"problems\": [], \"model\": \"step-3.7-flash\", \"elapsed_seconds\": 14.59, \"usage\": {\"cached_tokens\": 320, \"prompt_tokens\": 3088, \"completion_tokens\": 2768, \"total_tokens\": 5856, \"prompt_tokens_details\": {\"cached_tokens\": 320}, \"completion_tokens_details\": {\"reasoning_tokens\": 0}}, \"semantic\": [{\"claim_id\": \"title\", \"verdict\": \"supported\", \"reason\": \"原文明确包含该岗位名称，与声明内容一致\"}, {\"claim_id\": \"company\", \"verdict\": \"supported\", \"reason\": \"官方来源解析该岗位所属招聘企业为百度，与声明内容一致\"}, {\"claim_id\": \"stage\", \"verdict\": \"supported\", \"reason\": \"官方来源明确该岗位为校招类型，与声明内容一致\"}, {\"claim_id\": \"family\", \"verdict\": \"supported\", \"reason\": \"原文工作职责内容符合产品经理岗位的核心工作范畴，可支撑该岗位家族判定\"}, {\"claim_id\": \"date\", \"verdict\": \"supported\", \"reason\": \"官方来源明确该岗位发布日期为2026-07-08，与声明内容一致\"}, {\"claim_id\": \"req-0\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确要求本科及以上学历，与声明内容一致\"}, {\"claim_id\": \"req-1\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确计算机、人工智能、信息管理等相关专业优先，与声明内容一致\"}, {\"claim_id\": \"req-2\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣，与声明内容一致\"}, {\"claim_id\": \"req-3\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确具备AI产品思维，善用AI工具提升工作效率与产品创新能力，与声明内容一致\"}, {\"claim_id\": \"req-4\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确有AI/大模型产品相关实习经历者优先，与声明内容一致\"}, {\"claim_id\": \"req-5\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力，与声明内容一致\"}, {\"claim_id\": \"req-6\", \"verdict\": \"supported\", \"reason\": \"原文职责要求明确具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性，与声明内容一致\"}, {\"claim_id\": \"work_scenarios-0\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该工作内容描述，与声明内容一致\"}, {\"claim_id\": \"work_scenarios-1\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该工作内容描述，与声明内容一致\"}, {\"claim_id\": \"work_scenarios-2\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该工作内容描述，与声明内容一致\"}, {\"claim_id\": \"work_scenarios-3\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该工作内容描述，与声明内容一致\"}, {\"claim_id\": \"work_scenarios-4\", \"verdict\": \"supported\", \"reason\": \"原文工作职责明确包含该工作内容描述，与声明内容一致\"}]}}], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}, \"job_type\": {\"value\": \"校招\", \"span\": \"GRADUATE\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}, \"title\": {\"value\": \"北京-AI产品经理(J100665)\", \"span\": \"北京-AI产品经理(J100665)\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}, \"published_date\": {\"value\": \"2026-07-08\", \"span\": \"2026-07-08\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}, \"updated_date\": {\"value\": \"2026-07-21\", \"span\": \"2026-07-21\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+      "checked_at": "2026-10-11T10:57:11",
+      "details": {
+        "position_id": "POS-BE7AD83E",
+        "result": {
+          "ok": true,
+          "state": "ready",
+          "jd_id": "JD-CF503C01",
+          "position_id": "POS-BE7AD83E",
+          "reasons": [],
+          "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+          "n_requirements": 7,
+          "cached": false,
+          "elapsed_seconds": 38.675
+        },
+        "attempts": [
+          {
+            "extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "北京-AI产品经理(J100665)",
+              "location": "北京",
+              "job_type": "校招",
+              "job_type_span": "GRADUATE",
+              "published_date": "2026-07-08",
+              "published_date_span": "2026-07-08",
+              "canonical_name": "产品经理",
+              "industry": "未知",
+              "variant_names": [
+                "AI产品经理"
+              ],
+              "work_scenario_ids": [
+                "S5",
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "产品经理",
+              "family_evidence_ids": [
+                "S5",
+                "S7"
+              ],
+              "secondary_tags": [
+                "AI产品规划",
+                "大模型落地",
+                "用户数据分析",
+                "跨团队协作"
+              ],
+              "stressor_ids": [],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "学历",
+                  "text": "本科及以上学历",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-本科及以上学历，计算机、人工智能、信息管理等相关专业优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "计算机、人工智能、信息管理等相关专业优先",
+                  "evidence_ids": [
+                    "S11"
+                  ],
+                  "evidence_spans": [
+                    "-本科及以上学历，计算机、人工智能、信息管理等相关专业优先"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                  "evidence_ids": [
+                    "S12"
+                  ],
+                  "evidence_spans": [
+                    "-对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                  "evidence_ids": [
+                    "S9"
+                  ],
+                  "evidence_spans": [
+                    "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "有AI/大模型产品相关实习经历者优先",
+                  "evidence_ids": [
+                    "S15"
+                  ],
+                  "evidence_spans": [
+                    "-有AI/大模型产品相关实习经历者优先"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                  "evidence_ids": [
+                    "S13"
+                  ],
+                  "evidence_spans": [
+                    "-逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                  "evidence_ids": [
+                    "S14"
+                  ],
+                  "evidence_spans": [
+                    "-具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性"
+                  ]
+                }
+              ],
+              "extraction_notes": "部分能力要求（如‘深入理解’‘强烈兴趣’）未明确验证标准；职责要求中提到的‘相关专业’未明确具体范围；岗位所属行业原文未提及，故标注为未知",
+              "_mock": false,
+              "family_spans": [
+                "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                "-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化"
+              ],
+              "work_scenarios": [
+                "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                "-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+                "-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                "-深入分析用户数据与市场反馈，驱动产品关键指标增长",
+                "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+              ],
+              "stressors": [],
+              "_reference_errors": []
+            },
+            "model_extraction": {
+              "company": "百度",
+              "company_span": "百度校园招聘",
+              "title": "北京-AI产品经理(J100665)",
+              "location": "北京",
+              "job_type": "校招",
+              "job_type_span": "GRADUATE",
+              "published_date": "2026-07-08",
+              "published_date_span": "2026-07-08",
+              "canonical_name": "产品经理",
+              "industry": "未知",
+              "variant_names": [
+                "AI产品经理"
+              ],
+              "work_scenario_ids": [
+                "S5",
+                "S6",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "family": "产品经理",
+              "family_evidence_ids": [
+                "S5",
+                "S7"
+              ],
+              "secondary_tags": [
+                "AI产品规划",
+                "大模型落地",
+                "用户数据分析",
+                "跨团队协作"
+              ],
+              "stressor_ids": [],
+              "requirements": [
+                {
+                  "kind": "hard",
+                  "category": "学历",
+                  "text": "本科及以上学历",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "专业",
+                  "text": "计算机、人工智能、信息管理等相关专业优先",
+                  "evidence_ids": [
+                    "S11"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                  "evidence_ids": [
+                    "S12"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "技能",
+                  "text": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                  "evidence_ids": [
+                    "S9"
+                  ]
+                },
+                {
+                  "kind": "hard",
+                  "category": "经验",
+                  "text": "有AI/大模型产品相关实习经历者优先",
+                  "evidence_ids": [
+                    "S15"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                  "evidence_ids": [
+                    "S13"
+                  ]
+                },
+                {
+                  "kind": "soft",
+                  "category": "软能力",
+                  "text": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                  "evidence_ids": [
+                    "S14"
+                  ]
+                }
+              ],
+              "extraction_notes": "部分能力要求（如‘深入理解’‘强烈兴趣’）未明确验证标准；职责要求中提到的‘相关专业’未明确具体范围；岗位所属行业原文未提及，故标注为未知",
+              "_mock": false
+            },
+            "source_overrides": [],
+            "extraction_meta": {
+              "mock": false,
+              "error": "",
+              "model": "step-3.7-flash",
+              "usage": {
+                "cached_tokens": 832,
+                "prompt_tokens": 1836,
+                "completion_tokens": 3981,
+                "total_tokens": 5817,
+                "prompt_tokens_details": {
+                  "cached_tokens": 832
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "elapsed_seconds": 24.069
+            },
+            "check": {
+              "structural": {
+                "total": 7,
+                "passed": 7,
+                "failed": 0,
+                "items": [
+                  {
+                    "idx": 0,
+                    "ok": true,
+                    "text": "本科及以上学历"
+                  },
+                  {
+                    "idx": 1,
+                    "ok": true,
+                    "text": "计算机、人工智能、信息管理等相关专业优先"
+                  },
+                  {
+                    "idx": 2,
+                    "ok": true,
+                    "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣"
+                  },
+                  {
+                    "idx": 3,
+                    "ok": true,
+                    "text": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力"
+                  },
+                  {
+                    "idx": 4,
+                    "ok": true,
+                    "text": "有AI/大模型产品相关实习经历者优先"
+                  },
+                  {
+                    "idx": 5,
+                    "ok": true,
+                    "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力"
+                  },
+                  {
+                    "idx": 6,
+                    "ok": true,
+                    "text": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性"
+                  }
+                ],
+                "reject_all": false,
+                "note": ""
+              },
+              "claims": [
+                {
+                  "claim_id": "title",
+                  "kind": "title",
+                  "text": "北京-AI产品经理(J100665)",
+                  "span": "北京-AI产品经理(J100665)",
+                  "spans": [
+                    {
+                      "text": "北京-AI产品经理(J100665)",
+                      "raw_start": 3,
+                      "raw_end": 21,
+                      "normalized_start": 2
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "company",
+                  "kind": "company",
+                  "text": "百度",
+                  "span": "百度校园招聘",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "百度",
+                    "span": "百度校园招聘",
+                    "locator": "HTML title + verified official host",
+                    "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+                  }
+                },
+                {
+                  "claim_id": "stage",
+                  "kind": "stage",
+                  "text": "校招",
+                  "span": "GRADUATE",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "校招",
+                    "span": "GRADUATE",
+                    "locator": "detailData.recruitType + URL route",
+                    "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+                  }
+                },
+                {
+                  "claim_id": "family",
+                  "kind": "family",
+                  "text": "产品经理",
+                  "span": "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验\n-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                  "spans": [
+                    {
+                      "text": "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                      "raw_start": 49,
+                      "raw_end": 92,
+                      "normalized_start": 45
+                    },
+                    {
+                      "text": "-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                      "raw_start": 134,
+                      "raw_end": 172,
+                      "normalized_start": 128
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "date",
+                  "kind": "published_date",
+                  "text": "2026-07-08",
+                  "span": "2026-07-08",
+                  "basis": "source",
+                  "source_evidence": {
+                    "value": "2026-07-08",
+                    "span": "2026-07-08",
+                    "locator": "detailData.postInfo.publishDate",
+                    "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+                  }
+                },
+                {
+                  "claim_id": "req-0",
+                  "kind": "requirement",
+                  "text": "本科及以上学历",
+                  "span": "-本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                  "spans": [
+                    {
+                      "text": "-本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                      "raw_start": 235,
+                      "raw_end": 264,
+                      "normalized_start": 225
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "学历",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-1",
+                  "kind": "requirement",
+                  "text": "计算机、人工智能、信息管理等相关专业优先",
+                  "span": "-本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                  "spans": [
+                    {
+                      "text": "-本科及以上学历，计算机、人工智能、信息管理等相关专业优先",
+                      "raw_start": 235,
+                      "raw_end": 264,
+                      "normalized_start": 225
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "专业",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-2",
+                  "kind": "requirement",
+                  "text": "对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                  "span": "-对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                  "spans": [
+                    {
+                      "text": "-对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣",
+                      "raw_start": 265,
+                      "raw_end": 295,
+                      "normalized_start": 254
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "技能",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-3",
+                  "kind": "requirement",
+                  "text": "具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                  "span": "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                  "spans": [
+                    {
+                      "text": "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                      "raw_start": 199,
+                      "raw_end": 228,
+                      "normalized_start": 191
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "技能",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-4",
+                  "kind": "requirement",
+                  "text": "有AI/大模型产品相关实习经历者优先",
+                  "span": "-有AI/大模型产品相关实习经历者优先",
+                  "spans": [
+                    {
+                      "text": "-有AI/大模型产品相关实习经历者优先",
+                      "raw_start": 354,
+                      "raw_end": 373,
+                      "normalized_start": 340
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "经验",
+                  "requirement_kind": "hard"
+                },
+                {
+                  "claim_id": "req-5",
+                  "kind": "requirement",
+                  "text": "逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                  "span": "-逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                  "spans": [
+                    {
+                      "text": "-逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力",
+                      "raw_start": 296,
+                      "raw_end": 323,
+                      "normalized_start": 284
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "req-6",
+                  "kind": "requirement",
+                  "text": "具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                  "span": "-具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                  "spans": [
+                    {
+                      "text": "-具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性",
+                      "raw_start": 324,
+                      "raw_end": 353,
+                      "normalized_start": 311
+                    }
+                  ],
+                  "basis": "body",
+                  "category": "软能力",
+                  "requirement_kind": "soft"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "kind": "work_scenarios",
+                  "text": "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                  "span": "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                  "spans": [
+                    {
+                      "text": "-负责AI/大模型方向产品的规划、设计与迭代，深入理解用户需求，定义产品核心功能与体验",
+                      "raw_start": 49,
+                      "raw_end": 92,
+                      "normalized_start": 45
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "kind": "work_scenarios",
+                  "text": "-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+                  "span": "-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+                  "spans": [
+                    {
+                      "text": "-结合大模型能力演进趋势，推动AI能力在产品中的落地，探索人机协作的最优交互模式",
+                      "raw_start": 93,
+                      "raw_end": 133,
+                      "normalized_start": 88
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "kind": "work_scenarios",
+                  "text": "-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                  "span": "-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                  "spans": [
+                    {
+                      "text": "-跨团队协作，与算法、研发、设计团队紧密配合，推动产品从0到1落地并持续优化",
+                      "raw_start": 134,
+                      "raw_end": 172,
+                      "normalized_start": 128
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "kind": "work_scenarios",
+                  "text": "-深入分析用户数据与市场反馈，驱动产品关键指标增长",
+                  "span": "-深入分析用户数据与市场反馈，驱动产品关键指标增长",
+                  "spans": [
+                    {
+                      "text": "-深入分析用户数据与市场反馈，驱动产品关键指标增长",
+                      "raw_start": 173,
+                      "raw_end": 198,
+                      "normalized_start": 166
+                    }
+                  ],
+                  "basis": "body"
+                },
+                {
+                  "claim_id": "work_scenarios-4",
+                  "kind": "work_scenarios",
+                  "text": "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                  "span": "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                  "spans": [
+                    {
+                      "text": "-具备AI产品思维，善用AI工具提升工作效率与产品创新能力",
+                      "raw_start": 199,
+                      "raw_end": 228,
+                      "normalized_start": 191
+                    }
+                  ],
+                  "basis": "body"
+                }
+              ],
+              "problems": [],
+              "model": "step-3.7-flash",
+              "elapsed_seconds": 14.59,
+              "usage": {
+                "cached_tokens": 320,
+                "prompt_tokens": 3088,
+                "completion_tokens": 2768,
+                "total_tokens": 5856,
+                "prompt_tokens_details": {
+                  "cached_tokens": 320
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              },
+              "semantic": [
+                {
+                  "claim_id": "title",
+                  "verdict": "supported",
+                  "reason": "原文明确包含该岗位名称，与声明内容一致"
+                },
+                {
+                  "claim_id": "company",
+                  "verdict": "supported",
+                  "reason": "官方来源解析该岗位所属招聘企业为百度，与声明内容一致"
+                },
+                {
+                  "claim_id": "stage",
+                  "verdict": "supported",
+                  "reason": "官方来源明确该岗位为校招类型，与声明内容一致"
+                },
+                {
+                  "claim_id": "family",
+                  "verdict": "supported",
+                  "reason": "原文工作职责内容符合产品经理岗位的核心工作范畴，可支撑该岗位家族判定"
+                },
+                {
+                  "claim_id": "date",
+                  "verdict": "supported",
+                  "reason": "官方来源明确该岗位发布日期为2026-07-08，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-0",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确要求本科及以上学历，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-1",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确计算机、人工智能、信息管理等相关专业优先，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-2",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确对大模型、AIGC、智能助手等AI产品有深入理解和强烈兴趣，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-3",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确具备AI产品思维，善用AI工具提升工作效率与产品创新能力，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-4",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确有AI/大模型产品相关实习经历者优先，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-5",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确逻辑思维清晰，具备从用户需求出发拆解和定义产品的能力，与声明内容一致"
+                },
+                {
+                  "claim_id": "req-6",
+                  "verdict": "supported",
+                  "reason": "原文职责要求明确具备良好的跨团队沟通与推动能力，有较强的学习能力和主动性，与声明内容一致"
+                },
+                {
+                  "claim_id": "work_scenarios-0",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该工作内容描述，与声明内容一致"
+                },
+                {
+                  "claim_id": "work_scenarios-1",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该工作内容描述，与声明内容一致"
+                },
+                {
+                  "claim_id": "work_scenarios-2",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该工作内容描述，与声明内容一致"
+                },
+                {
+                  "claim_id": "work_scenarios-3",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该工作内容描述，与声明内容一致"
+                },
+                {
+                  "claim_id": "work_scenarios-4",
+                  "verdict": "supported",
+                  "reason": "原文工作职责明确包含该工作内容描述，与声明内容一致"
+                }
+              ]
+            }
+          }
+        ],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79",
+        "source_type": "url_fetch",
+        "source_metadata": {
+          "adapter": "source-2",
+          "facts": {
+            "company": {
+              "value": "百度",
+              "span": "百度校园招聘",
+              "locator": "HTML title + verified official host",
+              "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+            },
+            "job_type": {
+              "value": "校招",
+              "span": "GRADUATE",
+              "locator": "detailData.recruitType + URL route",
+              "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+            },
+            "title": {
+              "value": "北京-AI产品经理(J100665)",
+              "span": "北京-AI产品经理(J100665)",
+              "locator": "detailData.postInfo.name",
+              "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+            },
+            "published_date": {
+              "value": "2026-07-08",
+              "span": "2026-07-08",
+              "locator": "detailData.postInfo.publishDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+            },
+            "updated_date": {
+              "value": "2026-07-21",
+              "span": "2026-07-21",
+              "locator": "detailData.postInfo.updateDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79"
+            }
+          },
+          "conflicts": []
+        },
+        "repair_meta": null,
+        "pipeline_version": "auto-evidence-3",
+        "schema_version": "0.3.0"
+      }
+    }
+  },
+  {
+    "key": "baidu-supplier-social",
+    "name": "百度：服务商质量管理（社招边界）",
+    "url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900",
+    "collection_seconds": 0.304,
+    "warnings": [
+      "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+    ],
+    "source_metadata": {
+      "adapter": "source-2",
+      "facts": {
+        "company": {
+          "value": "百度",
+          "span": "百度校园招聘",
+          "locator": "HTML title + verified official host",
+          "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+        },
+        "job_type": {
+          "value": "社招",
+          "span": "SOCIAL",
+          "locator": "detailData.recruitType + URL route",
+          "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+        },
+        "title": {
+          "value": "服务商质量管理（J106271）",
+          "span": "服务商质量管理（J106271）",
+          "locator": "detailData.postInfo.name",
+          "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+        },
+        "published_date": {
+          "value": "2026-09-28",
+          "span": "2026-09-28",
+          "locator": "detailData.postInfo.publishDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+        },
+        "updated_date": {
+          "value": "2026-09-28",
+          "span": "2026-09-28",
+          "locator": "detailData.postInfo.updateDate",
+          "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+        }
+      },
+      "conflicts": []
+    },
+    "result": {
+      "ok": true,
+      "state": "excluded",
+      "jd_id": "JD-2B436C7C",
+      "position_id": null,
+      "reasons": [
+        "官方来源明确为社招，不在首批范围"
+      ],
+      "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+      "n_requirements": 0,
+      "cached": false,
+      "elapsed_seconds": 0.007
+    },
+    "audit": {
+      "jd_id": "JD-2B436C7C",
+      "fingerprint": "3b8c3f5edaf5f5ba51bb653bd2df8adf8e40d01abff3926661c757eb8b7a7bde",
+      "state": "excluded",
+      "details_json": "{\"position_id\": null, \"result\": {\"ok\": true, \"state\": \"excluded\", \"jd_id\": \"JD-2B436C7C\", \"position_id\": null, \"reasons\": [\"官方来源明确为社招，不在首批范围\"], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"n_requirements\": 0, \"cached\": false, \"elapsed_seconds\": 0.007}, \"attempts\": [], \"source_note\": \"提交原文与来源正文一致；不表示现实工作已核实\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\", \"source_type\": \"url_fetch\", \"source_metadata\": {\"adapter\": \"source-2\", \"facts\": {\"company\": {\"value\": \"百度\", \"span\": \"百度校园招聘\", \"locator\": \"HTML title + verified official host\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"job_type\": {\"value\": \"社招\", \"span\": \"SOCIAL\", \"locator\": \"detailData.recruitType + URL route\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"title\": {\"value\": \"服务商质量管理（J106271）\", \"span\": \"服务商质量管理（J106271）\", \"locator\": \"detailData.postInfo.name\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"published_date\": {\"value\": \"2026-09-28\", \"span\": \"2026-09-28\", \"locator\": \"detailData.postInfo.publishDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}, \"updated_date\": {\"value\": \"2026-09-28\", \"span\": \"2026-09-28\", \"locator\": \"detailData.postInfo.updateDate\", \"source_url\": \"https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900\"}}, \"conflicts\": []}, \"repair_meta\": null, \"pipeline_version\": \"auto-evidence-3\", \"schema_version\": \"0.3.0\"}",
+      "checked_at": "2026-10-11T10:57:11",
+      "details": {
+        "position_id": null,
+        "result": {
+          "ok": true,
+          "state": "excluded",
+          "jd_id": "JD-2B436C7C",
+          "position_id": null,
+          "reasons": [
+            "官方来源明确为社招，不在首批范围"
+          ],
+          "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+          "n_requirements": 0,
+          "cached": false,
+          "elapsed_seconds": 0.007
+        },
+        "attempts": [],
+        "source_note": "提交原文与来源正文一致；不表示现实工作已核实",
+        "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900",
+        "source_type": "url_fetch",
+        "source_metadata": {
+          "adapter": "source-2",
+          "facts": {
+            "company": {
+              "value": "百度",
+              "span": "百度校园招聘",
+              "locator": "HTML title + verified official host",
+              "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+            },
+            "job_type": {
+              "value": "社招",
+              "span": "SOCIAL",
+              "locator": "detailData.recruitType + URL route",
+              "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+            },
+            "title": {
+              "value": "服务商质量管理（J106271）",
+              "span": "服务商质量管理（J106271）",
+              "locator": "detailData.postInfo.name",
+              "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+            },
+            "published_date": {
+              "value": "2026-09-28",
+              "span": "2026-09-28",
+              "locator": "detailData.postInfo.publishDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+            },
+            "updated_date": {
+              "value": "2026-09-28",
+              "span": "2026-09-28",
+              "locator": "detailData.postInfo.updateDate",
+              "source_url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900"
+            }
+          },
+          "conflicts": []
+        },
+        "repair_meta": null,
+        "pipeline_version": "auto-evidence-3",
+        "schema_version": "0.3.0"
+      }
+    }
+  },
+  {
+    "key": "dell-supply-campus",
+    "name": "戴尔：全球供应链管理校招",
+    "url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/job/D12257",
+    "collection_seconds": 31.826,
+    "warnings": [
+      "白名单提示：不在受控采集白名单内。白名单只覆盖高校/政府/企业官网校招页，不含智联/BOSS/猎聘等招聘平台——它们反爬严格（多为 JS 渲染 SPA，本地抓不到正文），且批量抓取存在合规风险。"
+    ],
+    "result": {
+      "ok": false,
+      "state": "fetch_failed",
+      "reasons": [
+        "静态正文不足（4字符）；浏览器采集未取得有效正文：渲染后的正文仍过短"
+      ]
+    },
+    "audit": null
+  }
+]

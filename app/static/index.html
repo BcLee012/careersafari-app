@@ -38,6 +38,8 @@
     <p class="sub">这些不是「你喜欢什么」，是<b>划定可行范围的事实</b>。培养方案里的中期考核、开题、答辩节点，
       就是最典型的约束——它们不关心你的兴趣，只决定你还有多少时间。</p>
     <div class="grid g3">
+      <div class="f"><label>求职阶段</label><select id="f-stage"><option>实习</option><option>校招</option></select></div>
+      <div class="f"><label>已取得学历</label><select id="f-degree"><option value="">尚未补充</option><option>本科</option><option>硕士</option><option>博士</option></select></div>
       <div class="f"><label>人设</label><select id="f-persona"></select></div>
       <div class="f"><label>专业 / 学科</label><input type="text" id="f-major" value="管理科学与工程"></div>
       <div class="f"><label>年级</label>
@@ -62,8 +64,7 @@
   <div class="card step-pane" data-step="2" hidden>
     <div class="eyebrow">第二步 · 能力</div>
     <h2>「你说你会」和「你做过」是两回事</h2>
-    <p class="sub">标为<b>有证据</b>时必须写清是哪门课、哪个项目、哪段实习。写不出来就会自动降级为「仅自述」——
-      这不是刁难，是因为后端要比对的是企业的硬要求。</p>
+    <p class="sub">未填写的能力保持未知。可以补充课程或实践经历，并附作品引用；提供引用不代表已验证掌握。</p>
     <div class="grid g2">
       <div class="skcol"><div class="hd">通用可迁移</div><div id="skills-transferable"></div></div>
       <div class="skcol"><div class="hd">目标岗位相关</div><div id="skills-specific"></div></div>
@@ -74,13 +75,12 @@
   <div class="card step-pane" data-step="3" hidden>
     <div class="eyebrow">第三步 · 兴趣</div>
     <h2>RIASEC 六型 —— 主结构</h2>
-    <p class="sub">霍兰德职业兴趣理论，18 题。它只测兴趣、不测能力，所以只用来<b>给候选方向排序</b>，
-      不用来排除方向。请按真实反应作答，不要按「我应该喜欢」作答。</p>
+    <p class="sub">这18题是按职业兴趣框架编写的探索问卷，尚未完成群体测量验证。当前用于自我反思，不决定方向排名。</p>
     <div class="riasec" id="riasec"></div>
     <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
       <div class="grid g2">
-        <div class="f"><label>MBTI（可选 · 辅助标签）</label>
-          <input type="text" id="f-mbti" placeholder="如 INTJ，可留空" maxlength="4"></div>
+        <div class="f"><label>MBTI / 16P（可选 · 辅助标签）</label>
+          <input type="text" id="f-mbti" placeholder="如 INTJ，可留空" maxlength="4"><a href="https://www.16personalities.com" target="_blank" rel="noopener noreferrer">前往 16Personalities（结果手动填写）</a></div>
         <div class="f"><label>信度确认</label>
           <label style="font-size:12.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start">
             <input type="checkbox" id="f-mbti-ack" style="margin-top:4px;flex:none">
@@ -124,9 +124,7 @@
 <section id="sec-jd" class="view">
   <div class="hero">
     <h1>把一则 JD，拆成可单独验证的需求</h1>
-    <p>原子化的判据不是「拆得够细」，而是<b>「拆到能否被单独验证」</b>。
-      「熟悉 SQL」不可验证；「能独立编写多表 JOIN 查询」才可验证。
-      不可验证的条目拿去和用户自评比对，比出来的数是假的。</p>
+    <p>保留 JD 原文的要求与程度，每条结论关联引用。来源、结构与语义检查通过后自动保存；疑点进入待确认队列。</p>
   </div>
 
   <div class="card">
@@ -160,11 +158,20 @@
       <div id="file-msg" style="margin-top:10px"></div>
     </div>
 
+    <div class="f" style="margin-top:14px"><label>招聘原文来源 URL（用于自动核对）</label><input id="jd-source-url" type="url" placeholder="https://…"></div>
     <div class="btn-row" style="margin-top:16px">
-      <button class="btn btn-p" onclick="parseJd()">拆解为原子化需求</button>
-      <span class="muted" style="font-size:12.5px">拆解结果必须经你逐条确认才入库</span>
+      <button class="btn btn-p" onclick="parseJd()">自动检查并保存</button>
+      <span class="muted" style="font-size:12.5px">通过检查后自动入库，异常自动隔离</span>
     </div>
     <div id="parse-out" style="margin-top:18px"></div>
+    <h3>待确认队列</h3><div id="reviews"></div>
+    <h3>首批岗位覆盖进度</h3><div id="coverage-status"></div>
+    <h3>职业资料参考</h3>
+    <p class="muted">查询 O*NET 中的职业任务与能力资料，回答附原文引用。美国职业资料用于辅助理解，不能直接作为国内招聘条件。</p>
+    <div class="f"><label>探索方向</label><select id="knowledge-family"><option value="采购">采购</option><option value="数据分析">数据分析</option></select></div>
+    <div class="f"><label>想了解什么</label><input id="knowledge-question" maxlength="300" placeholder="例如：采购相关职业怎样选择和评估供应商？"></div>
+    <button class="btn" id="knowledge-button" onclick="explainOccupation()">查看有依据的解释</button>
+    <div id="knowledge-result"></div>
   </div>
 
   <div class="card">

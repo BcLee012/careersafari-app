@@ -1,0 +1,85 @@
+{
+  "synthetic_profile": true,
+  "profile_response": {
+    "ok": true,
+    "card": {
+      "persona": "研一 · 方向未定型",
+      "hard_constraints": [
+        {
+          "label": "专业/学科",
+          "value": "管理科学与工程",
+          "evidence": "user_stated"
+        },
+        {
+          "label": "年级",
+          "value": "研一",
+          "evidence": "user_stated"
+        },
+        {
+          "label": "倾向的研究方向",
+          "value": "大数据分析与决策",
+          "evidence": "user_stated"
+        }
+      ],
+      "interest": {
+        "riasec_code": "",
+        "riasec_scores": {
+          "R": 0,
+          "I": 0,
+          "A": 0,
+          "S": 0,
+          "E": 0,
+          "C": 0
+        },
+        "mbti_hint": "",
+        "mbti_caveat": ""
+      },
+      "skills": {
+        "verified": [],
+        "unverified": []
+      },
+      "values": {
+        "salary": 0,
+        "stability": 0,
+        "growth": 0,
+        "autonomy": 0,
+        "impact": 0,
+        "balance": 0
+      },
+      "top_value": {
+        "dimension": "",
+        "weight": 0,
+        "tied": [],
+        "note": "未填写价值观权重。"
+      },
+      "unknowns": [],
+      "honesty_summary": [
+        "已填写约束 3 项，来源为用户自述，尚未独立核实。",
+        "能力项 0 项提供作品引用，0 项为课程学习或自述。作品引用尚未核实贡献和熟练度。",
+        "未登记任何未知项。"
+      ],
+      "consistency_warnings": [
+        "人设为「方向未定型」但未登记任何未知项。对目标人群而言，通常至少有一项是无法自行判断的——建议补登。"
+      ],
+      "schema_version": "0.2.0",
+      "profile_id": "PROF-21283A28",
+      "response_id": "RESP-D9B0C18B"
+    },
+    "advice": {
+      "headline": "岗位知识库还是空的——先去「岗位知识库」页沉淀几条 JD，否则没有任何可比对的对象。",
+      "positions": [],
+      "learning_plan": [],
+      "two_week_actions": [],
+      "evidence_strength": {
+        "level": "无法评估",
+        "note": "无比对对象"
+      },
+      "excluded": [],
+      "generated_by": "deterministic"
+    }
+  },
+  "report_text": "求职意向定义卡\n研一 · 方向未定型\n\nprofile PROF-21283A28 · response RESP-D9B0C18B · schema 0.2.0\n\n⚠\n输入一致性警告\n人设为「方向未定型」但未登记任何未知项。对目标人群而言，通常至少有一项是无法自行判断的——建议补登。\n硬约束 · 客观事实，划定可行范围\n专业/学科\n管理科学与工程\nuser_stated\n年级\n研一\nuser_stated\n倾向的研究方向\n大数据分析与决策\nuser_stated\n兴趣\n兴趣码未生成 · 各维度未分化\n能力 · 提供作品引用（贡献与熟练度待核实）\n无\n能力 · 课程学习或自述\n无\n价值观最高项\n并列：\n\n未填写价值观权重。\n\n显式未知\n未登记任何未知项\n诚实性摘要\n✓\n已填写约束 3 项，来源为用户自述，尚未独立核实。\n能力项 0 项提供作品引用，0 项为课程学习或自述。作品引用尚未核实贡献和熟练度。\n未登记任何未知项。\n机器可读（完整 JSON）\n岗位探索报告\n\n岗位知识库还是空的——先去「岗位知识库」页沉淀几条 JD，否则没有任何可比对的对象。\n\n无比对对象\n\n当前暂无正式匹配结果",
+  "review_text": "JD-FDB72AF4\n\nstage 缺少内容或依据；招聘阶段未知；主岗位族待分类；family 引用不在原文\n\n重新检查\nJD-76BEAA4B\n\ncompany 缺少内容或依据\n\n重新检查\nJD-2106B339\n\ncompany 缺少内容或依据；family 引用不在原文\n\n重新检查\nJD-9018813F\n\ncompany 缺少内容或依据\n\n重新检查\nJD-EFAE01A0\n\ncompany 缺少内容或依据\n\n重新检查",
+  "queue_count": 5,
+  "page_errors": []
+}

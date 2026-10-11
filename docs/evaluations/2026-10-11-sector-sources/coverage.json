@@ -1,0 +1,1378 @@
+{
+  "catalog_version": "curriculum-families-1",
+  "directions": {
+    "金融服务与金融工程": [
+      "金融分析与研究",
+      "风控合规",
+      "数据分析",
+      "商业/经营分析"
+    ],
+    "复杂工程与智能管理": [
+      "运筹优化与仿真",
+      "项目管理",
+      "智能系统与信息系统",
+      "战略分析"
+    ],
+    "大数据分析与决策": [
+      "数据分析",
+      "商业/经营分析",
+      "数据工程",
+      "金融分析与研究",
+      "产品运营"
+    ],
+    "运营与供应链管理": [
+      "供应链计划",
+      "采购",
+      "物流履约",
+      "运筹优化与仿真",
+      "商业/经营分析"
+    ],
+    "智能系统管理": [
+      "智能系统与信息系统",
+      "产品经理",
+      "数据工程",
+      "项目管理",
+      "产品运营"
+    ]
+  },
+  "rows": [
+    {
+      "family": "金融分析与研究",
+      "stage": "实习",
+      "directions": [
+        "金融服务与金融工程",
+        "大数据分析与决策"
+      ],
+      "onet_candidates": [
+        "13-2051.00",
+        "13-2099.01"
+      ],
+      "candidate_count": 4,
+      "jd_count": 4,
+      "employer_count": 1,
+      "eligible": false,
+      "missing_jds": 2,
+      "missing_employers": 2,
+      "reasons": [
+        "近24个月有效去重 JD 4/6 份",
+        "独立企业 1/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=7364c80c-d6c8-429c-bb65-d512125a0f2a&jc=3&hideMenu=1",
+          "published_date": "2026-08-21",
+          "jd_id": "JD-5C7E59A4"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=c4af42f5-8c19-401d-811a-069db1cc52ca&jc=3&hideMenu=1",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-C8E04A40"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=036bbd46-8ec4-4f0d-8278-d1ce6f5828a2&jc=3&hideMenu=1",
+          "published_date": "2026-08-20",
+          "jd_id": "JD-C4C6574F"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=9c83c33f-1c1d-4448-a42b-ddb4f4970b79&jc=3&hideMenu=1",
+          "published_date": "2026-08-20",
+          "jd_id": "JD-CF9C10ED"
+        }
+      ]
+    },
+    {
+      "family": "金融分析与研究",
+      "stage": "校招",
+      "directions": [
+        "金融服务与金融工程",
+        "大数据分析与决策"
+      ],
+      "onet_candidates": [
+        "13-2051.00",
+        "13-2099.01"
+      ],
+      "candidate_count": 6,
+      "jd_count": 4,
+      "employer_count": 1,
+      "eligible": false,
+      "missing_jds": 2,
+      "missing_employers": 2,
+      "reasons": [
+        "近24个月有效去重 JD 4/6 份",
+        "独立企业 1/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=c44ff1f3-c66d-4377-91ce-ee840dff0bb4&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-006E1249"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=13123318-fbe9-49c8-b738-e0c1d12ceaed&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-52543B89"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=f1c9c17d-d971-4bb1-941f-f2153fdaa5a7&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-7C91B7D4"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=21d0080a-c9cb-47d4-83a7-ba439e5ee062&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-24A0EB06"
+        }
+      ]
+    },
+    {
+      "family": "数据工程",
+      "stage": "实习",
+      "directions": [
+        "大数据分析与决策",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "15-1243.01",
+        "15-1243.00"
+      ],
+      "candidate_count": 2,
+      "jd_count": 2,
+      "employer_count": 2,
+      "eligible": false,
+      "missing_jds": 4,
+      "missing_employers": 1,
+      "reasons": [
+        "近24个月有效去重 JD 2/6 份",
+        "独立企业 2/3 家"
+      ],
+      "sources": [
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=3781589259&jobShareType=1",
+          "published_date": "2025-09-18",
+          "jd_id": "JD-15FBD354"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7675632239451425077/detail",
+          "published_date": "2026-08-19",
+          "jd_id": "JD-A6B3D93F"
+        }
+      ]
+    },
+    {
+      "family": "数据工程",
+      "stage": "校招",
+      "directions": [
+        "大数据分析与决策",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "15-1243.01",
+        "15-1243.00"
+      ],
+      "candidate_count": 6,
+      "jd_count": 6,
+      "employer_count": 3,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7676399991648553269/detail",
+          "published_date": "2026-08-21",
+          "jd_id": "JD-937FBBDF"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9191",
+          "published_date": "2026-08-04",
+          "jd_id": "JD-C743DEDC"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/4635bd24-347e-4e54-b97f-88d760f1b752",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-81607F13"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7676397665920010549/detail",
+          "published_date": "2026-08-21",
+          "jd_id": "JD-3153DC90"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9089",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-3BA9660E"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9088",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-3CAFF3F1"
+        }
+      ]
+    },
+    {
+      "family": "运筹优化与仿真",
+      "stage": "实习",
+      "directions": [
+        "复杂工程与智能管理",
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "15-2031.00"
+      ],
+      "candidate_count": 1,
+      "jd_count": 1,
+      "employer_count": 1,
+      "eligible": false,
+      "missing_jds": 5,
+      "missing_employers": 2,
+      "reasons": [
+        "近24个月有效去重 JD 1/6 份",
+        "独立企业 1/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7597372827033880885/detail",
+          "published_date": "2026-01-20",
+          "jd_id": "JD-E64FFD3B"
+        }
+      ]
+    },
+    {
+      "family": "运筹优化与仿真",
+      "stage": "校招",
+      "directions": [
+        "复杂工程与智能管理",
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "15-2031.00"
+      ],
+      "candidate_count": 4,
+      "jd_count": 4,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 2,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 4/6 份"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667580689662970117/detail",
+          "published_date": "2026-07-28",
+          "jd_id": "JD-84960406"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4694982477&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-D723AFBF"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9195",
+          "published_date": "2026-08-04",
+          "jd_id": "JD-52130F9C"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667579729587063093/detail",
+          "published_date": "2026-07-28",
+          "jd_id": "JD-FBFE93A4"
+        }
+      ]
+    },
+    {
+      "family": "智能系统与信息系统",
+      "stage": "实习",
+      "directions": [
+        "复杂工程与智能管理",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "15-1211.00",
+        "15-1299.08"
+      ],
+      "candidate_count": 0,
+      "jd_count": 0,
+      "employer_count": 0,
+      "eligible": false,
+      "missing_jds": 6,
+      "missing_employers": 3,
+      "reasons": [
+        "尚无通过当前核验的岗位证据"
+      ],
+      "sources": []
+    },
+    {
+      "family": "智能系统与信息系统",
+      "stage": "校招",
+      "directions": [
+        "复杂工程与智能管理",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "15-1211.00",
+        "15-1299.08"
+      ],
+      "candidate_count": 2,
+      "jd_count": 1,
+      "employer_count": 1,
+      "eligible": false,
+      "missing_jds": 5,
+      "missing_employers": 2,
+      "reasons": [
+        "近24个月有效去重 JD 1/6 份",
+        "独立企业 1/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7670100524188502277/detail",
+          "published_date": "2026-08-04",
+          "jd_id": "JD-4DF6272D"
+        }
+      ]
+    },
+    {
+      "family": "数据分析",
+      "stage": "实习",
+      "directions": [
+        "金融服务与金融工程",
+        "大数据分析与决策"
+      ],
+      "onet_candidates": [
+        "15-2051.01",
+        "15-2051.00"
+      ],
+      "candidate_count": 7,
+      "jd_count": 7,
+      "employer_count": 3,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/62f3bd4c-fda7-4cd7-9862-0057961abcc2",
+          "published_date": "2026-10-10",
+          "jd_id": "JD-1D54B4D4"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7478250407183419656/detail",
+          "published_date": "2025-03-05",
+          "jd_id": "JD-212CA075"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7621874050630109445/detail",
+          "published_date": "2026-03-27",
+          "jd_id": "JD-6FB6271C"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7593302122012330293/detail",
+          "published_date": "2026-01-09",
+          "jd_id": "JD-60ECE8D3"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7637024733319317765/detail",
+          "published_date": "2026-05-07",
+          "jd_id": "JD-C4DCB436"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4155951730&jobShareType=1",
+          "published_date": "2026-02-25",
+          "jd_id": "JD-98C81D36"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7628832680382089525/detail",
+          "published_date": "2026-04-15",
+          "jd_id": "JD-69956235"
+        }
+      ]
+    },
+    {
+      "family": "数据分析",
+      "stage": "校招",
+      "directions": [
+        "金融服务与金融工程",
+        "大数据分析与决策"
+      ],
+      "onet_candidates": [
+        "15-2051.01",
+        "15-2051.00"
+      ],
+      "candidate_count": 5,
+      "jd_count": 5,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 1,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 5/6 份"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7669712338309089589/detail",
+          "published_date": "2026-08-03",
+          "jd_id": "JD-30BA9451"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7682681391491025205/detail",
+          "published_date": "2026-09-07",
+          "jd_id": "JD-25C8E1F7"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9081",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-682008E9"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/b9915b1e-791b-4278-a58f-0078543edb41",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-2A316188"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7669707798918007045/detail",
+          "published_date": "2026-08-03",
+          "jd_id": "JD-003B9A40"
+        }
+      ]
+    },
+    {
+      "family": "商业/经营分析",
+      "stage": "实习",
+      "directions": [
+        "金融服务与金融工程",
+        "大数据分析与决策",
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1111.00",
+        "15-2051.01"
+      ],
+      "candidate_count": 5,
+      "jd_count": 5,
+      "employer_count": 2,
+      "eligible": false,
+      "missing_jds": 1,
+      "missing_employers": 1,
+      "reasons": [
+        "近24个月有效去重 JD 5/6 份",
+        "独立企业 2/3 家"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7684101976342530357/detail",
+          "published_date": "2026-09-11",
+          "jd_id": "JD-669937C7"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7672282181927110917/detail",
+          "published_date": "2026-08-10",
+          "jd_id": "JD-D80ACC5E"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7628929211449133365/detail",
+          "published_date": "2026-04-15",
+          "jd_id": "JD-2C8E1B26"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=3974173069&jobShareType=1",
+          "published_date": "2025-11-27",
+          "jd_id": "JD-95513BD0"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7468552942427228423/detail",
+          "published_date": "2025-02-07",
+          "jd_id": "JD-0CFE1058"
+        }
+      ]
+    },
+    {
+      "family": "商业/经营分析",
+      "stage": "校招",
+      "directions": [
+        "金融服务与金融工程",
+        "大数据分析与决策",
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1111.00",
+        "15-2051.01"
+      ],
+      "candidate_count": 4,
+      "jd_count": 4,
+      "employer_count": 2,
+      "eligible": false,
+      "missing_jds": 2,
+      "missing_employers": 1,
+      "reasons": [
+        "近24个月有效去重 JD 4/6 份",
+        "独立企业 2/3 家"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7673491655744604469/detail",
+          "published_date": "2026-08-13",
+          "jd_id": "JD-476D04F0"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7673101204725991733/detail",
+          "published_date": "2026-08-12",
+          "jd_id": "JD-66B14AA1"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4694982338&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-22801309"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7665592617611692293/detail",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-CE87BD65"
+        }
+      ]
+    },
+    {
+      "family": "战略分析",
+      "stage": "实习",
+      "directions": [
+        "复杂工程与智能管理"
+      ],
+      "onet_candidates": [
+        "13-1111.00",
+        "13-1161.00"
+      ],
+      "candidate_count": 5,
+      "jd_count": 4,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 2,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 4/6 份"
+      ],
+      "sources": [
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=b88e998c-13e3-4eb0-ae0e-b016047bdef6&jc=3&hideMenu=1",
+          "published_date": "2026-07-01",
+          "jd_id": "JD-891E9A57"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7525330681146460424/detail",
+          "published_date": "2025-07-10",
+          "jd_id": "JD-98190B61"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/56c70b4f-4de1-450c-989d-effcda8ba4a0",
+          "published_date": "2026-09-16",
+          "jd_id": "JD-A0526B0A"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7639665619631278341/detail",
+          "published_date": "2026-05-14",
+          "jd_id": "JD-792011CE"
+        }
+      ]
+    },
+    {
+      "family": "战略分析",
+      "stage": "校招",
+      "directions": [
+        "复杂工程与智能管理"
+      ],
+      "onet_candidates": [
+        "13-1111.00",
+        "13-1161.00"
+      ],
+      "candidate_count": 2,
+      "jd_count": 2,
+      "employer_count": 2,
+      "eligible": false,
+      "missing_jds": 4,
+      "missing_employers": 1,
+      "reasons": [
+        "近24个月有效去重 JD 2/6 份",
+        "独立企业 2/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/ab2c6525-f336-4128-8136-91bd7e06b024",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-2637A04C"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7669687543886022965/detail",
+          "published_date": "2026-08-03",
+          "jd_id": "JD-4EF0E72C"
+        }
+      ]
+    },
+    {
+      "family": "供应链计划",
+      "stage": "实习",
+      "directions": [
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1081.02",
+        "13-1081.00"
+      ],
+      "candidate_count": 2,
+      "jd_count": 1,
+      "employer_count": 1,
+      "eligible": false,
+      "missing_jds": 5,
+      "missing_employers": 2,
+      "reasons": [
+        "近24个月有效去重 JD 1/6 份",
+        "独立企业 1/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7694910630961170741/detail",
+          "published_date": "2026-10-10",
+          "jd_id": "JD-1D0CC759"
+        }
+      ]
+    },
+    {
+      "family": "供应链计划",
+      "stage": "校招",
+      "directions": [
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1081.02",
+        "13-1081.00"
+      ],
+      "candidate_count": 7,
+      "jd_count": 4,
+      "employer_count": 2,
+      "eligible": false,
+      "missing_jds": 2,
+      "missing_employers": 1,
+      "reasons": [
+        "近24个月有效去重 JD 4/6 份",
+        "独立企业 2/3 家"
+      ],
+      "sources": [
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9105",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-9A0E256D"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4694853960&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-F87C5BBE"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9120",
+          "published_date": "2026-07-24",
+          "jd_id": "JD-A9FC924E"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9113",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-637C3A09"
+        }
+      ]
+    },
+    {
+      "family": "采购",
+      "stage": "实习",
+      "directions": [
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1023.00"
+      ],
+      "candidate_count": 3,
+      "jd_count": 1,
+      "employer_count": 1,
+      "eligible": false,
+      "missing_jds": 5,
+      "missing_employers": 2,
+      "reasons": [
+        "近24个月有效去重 JD 1/6 份",
+        "独立企业 1/3 家",
+        "尚无至少两家企业支持的可比对能力"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7673413155523791157/detail",
+          "published_date": "2026-08-13",
+          "jd_id": "JD-19A874BB"
+        }
+      ]
+    },
+    {
+      "family": "采购",
+      "stage": "校招",
+      "directions": [
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1023.00"
+      ],
+      "candidate_count": 8,
+      "jd_count": 6,
+      "employer_count": 4,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4697207939&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-0CF84E6D"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7669691023115897141/detail",
+          "published_date": "2026-08-03",
+          "jd_id": "JD-AF8BB09E"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668648723850316037/detail",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-1534B534"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/feba13ab-0676-468a-8342-d483d232c6ac",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-449D53A7"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668297208588028213/detail",
+          "published_date": "2026-07-30",
+          "jd_id": "JD-E78CA29E"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9057",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-2F626B26"
+        }
+      ]
+    },
+    {
+      "family": "物流履约",
+      "stage": "实习",
+      "directions": [
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1081.00",
+        "13-1081.01"
+      ],
+      "candidate_count": 0,
+      "jd_count": 0,
+      "employer_count": 0,
+      "eligible": false,
+      "missing_jds": 6,
+      "missing_employers": 3,
+      "reasons": [
+        "尚无通过当前核验的岗位证据"
+      ],
+      "sources": []
+    },
+    {
+      "family": "物流履约",
+      "stage": "校招",
+      "directions": [
+        "运营与供应链管理"
+      ],
+      "onet_candidates": [
+        "13-1081.00",
+        "13-1081.01"
+      ],
+      "candidate_count": 8,
+      "jd_count": 5,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 1,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 5/6 份"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668518023789414661/detail",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-8DD7B7BF"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668517886824270085/detail",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-4DB063C9"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4697312507&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-44AFA486"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668518471162054917/detail",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-A5E42A17"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9107",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-B93BBB4E"
+        }
+      ]
+    },
+    {
+      "family": "产品运营",
+      "stage": "实习",
+      "directions": [
+        "大数据分析与决策",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "13-1161.00"
+      ],
+      "candidate_count": 5,
+      "jd_count": 5,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 1,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 5/6 份"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7657788528555870469/detail",
+          "published_date": "2026-07-02",
+          "jd_id": "JD-385A5B80"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/3a2283dd-8261-4961-9503-a64486d6bfb5",
+          "published_date": "2026-09-07",
+          "jd_id": "JD-F98D1C1A"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4491530478&jobShareType=1",
+          "published_date": "2026-10-08",
+          "jd_id": "JD-3A1EAE62"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7512738224515729672/detail",
+          "published_date": "2025-06-06",
+          "jd_id": "JD-464D66C0"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/c325e4e8-d27e-40d4-a517-3dbc27bb4303",
+          "published_date": "2026-10-09",
+          "jd_id": "JD-1017F42D"
+        }
+      ]
+    },
+    {
+      "family": "产品运营",
+      "stage": "校招",
+      "directions": [
+        "大数据分析与决策",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "13-1161.00"
+      ],
+      "candidate_count": 7,
+      "jd_count": 7,
+      "employer_count": 3,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668197844242794805/detail",
+          "published_date": "2026-07-30",
+          "jd_id": "JD-5E84C445"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668288515009169717/detail",
+          "published_date": "2026-07-30",
+          "jd_id": "JD-2ED616DC"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/0aa80bfa-a052-4052-afc1-28c38407c13c",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-7697FAD7"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668544708158753077/detail",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-362CE58B"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7669645620761020725/detail",
+          "published_date": "2026-08-03",
+          "jd_id": "JD-6A5AA702"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7666350237758064901/detail",
+          "published_date": "2026-07-25",
+          "jd_id": "JD-F043BE48"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9119",
+          "published_date": "2026-07-24",
+          "jd_id": "JD-B7C4F2FC"
+        }
+      ]
+    },
+    {
+      "family": "产品经理",
+      "stage": "实习",
+      "directions": [
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "13-1082.00",
+        "13-1161.00",
+        "15-1211.00"
+      ],
+      "candidate_count": 9,
+      "jd_count": 9,
+      "employer_count": 3,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4457054728&jobShareType=1",
+          "published_date": "2026-05-14",
+          "jd_id": "JD-A249C62B"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7606607539121834245/detail",
+          "published_date": "2026-02-14",
+          "jd_id": "JD-385A8C4A"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/6c52d32f-203b-44f7-83c5-548edfcedc95",
+          "published_date": "2026-04-08",
+          "jd_id": "JD-D13292BD"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7612576933059807493/detail",
+          "published_date": "2026-03-02",
+          "jd_id": "JD-83B70314"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7516801780115982610/detail",
+          "published_date": "2025-06-17",
+          "jd_id": "JD-1B6B5450"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/a5d745dd-b2e4-4eff-b10d-23d6e94d302d",
+          "published_date": "2026-10-09",
+          "jd_id": "JD-4A237620"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7612577382213667125/detail",
+          "published_date": "2026-03-02",
+          "jd_id": "JD-0F784926"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/bd0f07c8-9087-4499-bc3b-1a57c15aa0cc",
+          "published_date": "2026-10-09",
+          "jd_id": "JD-CAFB2D27"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7600293338679986485/detail",
+          "published_date": "2026-01-28",
+          "jd_id": "JD-21905BDC"
+        }
+      ]
+    },
+    {
+      "family": "产品经理",
+      "stage": "校招",
+      "directions": [
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "13-1082.00",
+        "13-1161.00",
+        "15-1211.00"
+      ],
+      "candidate_count": 9,
+      "jd_count": 8,
+      "employer_count": 3,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668294646178908469/detail",
+          "published_date": "2026-07-30",
+          "jd_id": "JD-1E6E480B"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9080",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-7ABA0CC6"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667380186237716741/detail",
+          "published_date": "2026-07-28",
+          "jd_id": "JD-AFE5221A"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667824983506553141/detail",
+          "published_date": "2026-07-29",
+          "jd_id": "JD-A2A21AE5"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9122",
+          "published_date": "2026-07-27",
+          "jd_id": "JD-04BB174C"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9085",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-9A1C6288"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-F6FAE575"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667894678415788341/detail",
+          "published_date": "2026-07-29",
+          "jd_id": "JD-432E5EA9"
+        }
+      ]
+    },
+    {
+      "family": "项目管理",
+      "stage": "实习",
+      "directions": [
+        "复杂工程与智能管理",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "13-1082.00"
+      ],
+      "candidate_count": 2,
+      "jd_count": 2,
+      "employer_count": 2,
+      "eligible": false,
+      "missing_jds": 4,
+      "missing_employers": 1,
+      "reasons": [
+        "近24个月有效去重 JD 2/6 份",
+        "独立企业 2/3 家"
+      ],
+      "sources": [
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7672254239335237893/detail",
+          "published_date": "2026-08-10",
+          "jd_id": "JD-B8D55207"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/INTERN/b17312bd-4db0-43b4-a359-abf353fbf789",
+          "published_date": "2026-09-08",
+          "jd_id": "JD-79E0D1E4"
+        }
+      ]
+    },
+    {
+      "family": "项目管理",
+      "stage": "校招",
+      "directions": [
+        "复杂工程与智能管理",
+        "智能系统管理"
+      ],
+      "onet_candidates": [
+        "13-1082.00"
+      ],
+      "candidate_count": 5,
+      "jd_count": 5,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 1,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 5/6 份"
+      ],
+      "sources": [
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9051",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-23AF32E3"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/49e5f2c5-2790-4b20-902e-c20fbbf117f7",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-362D3F66"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4697322170&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-F5BC7886"
+        },
+        {
+          "company": "百度",
+          "url": "https://talent.baidu.com/jobs/detail/GRADUATE/257f5f71-cbdb-4628-87ab-23e6a821ea04",
+          "published_date": "2026-07-08",
+          "jd_id": "JD-EC0AF197"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9096",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-45A24EE4"
+        }
+      ]
+    },
+    {
+      "family": "风控合规",
+      "stage": "实习",
+      "directions": [
+        "金融服务与金融工程"
+      ],
+      "onet_candidates": [
+        "13-2054.00",
+        "13-1041.00",
+        "13-2099.04"
+      ],
+      "candidate_count": 5,
+      "jd_count": 5,
+      "employer_count": 3,
+      "eligible": false,
+      "missing_jds": 1,
+      "missing_employers": 0,
+      "reasons": [
+        "近24个月有效去重 JD 5/6 份"
+      ],
+      "sources": [
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=ae9256d1-4ab7-40f5-9473-0fe79ad261a7&jc=3&hideMenu=1",
+          "published_date": "2026-08-10",
+          "jd_id": "JD-676AF1A7"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/projectxq?jobAdId=2b6babc0-74b5-46eb-8744-9a86a87ddb24&jc=3&hideMenu=1",
+          "published_date": "2026-08-12",
+          "jd_id": "JD-616DC5F6"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7606612990741989685/detail",
+          "published_date": "2026-02-14",
+          "jd_id": "JD-FED2C455"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7604774588666136837/detail",
+          "published_date": "2026-02-09",
+          "jd_id": "JD-21CC357B"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4718009811&jobShareType=1",
+          "published_date": "2026-08-25",
+          "jd_id": "JD-E4F4CED8"
+        }
+      ]
+    },
+    {
+      "family": "风控合规",
+      "stage": "校招",
+      "directions": [
+        "金融服务与金融工程"
+      ],
+      "onet_candidates": [
+        "13-2054.00",
+        "13-1041.00",
+        "13-2099.04"
+      ],
+      "candidate_count": 14,
+      "jd_count": 10,
+      "employer_count": 4,
+      "eligible": true,
+      "missing_jds": 0,
+      "missing_employers": 0,
+      "reasons": [],
+      "sources": [
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=5aada396-478f-49ae-9bea-e4a754f9cb51&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-048A1D1D"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=57d48b71-fa34-4fd2-be21-11c35b157e30&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-F7F231DE"
+        },
+        {
+          "company": "中金公司",
+          "url": "https://cicc.zhiye.com/custom/campusxq?jobAdId=9af8ced1-5368-44e5-aa20-d68d9babd827&jc=2&hideMenu=1",
+          "published_date": "2026-09-03",
+          "jd_id": "JD-ADF9B09C"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667530064128444725/detail",
+          "published_date": "2026-07-28",
+          "jd_id": "JD-734633D1"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668587571433490741/detail",
+          "published_date": "2026-07-31",
+          "jd_id": "JD-1B19D085"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7667560462148290821/detail",
+          "published_date": "2026-07-28",
+          "jd_id": "JD-6A7B3CBA"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7668294727842531589/detail",
+          "published_date": "2026-07-30",
+          "jd_id": "JD-313198EF"
+        },
+        {
+          "company": "美团",
+          "url": "https://zhaopin.meituan.com/web/position/detail?jobUnionId=4696316198&jobShareType=1",
+          "published_date": "2026-08-17",
+          "jd_id": "JD-F26B427E"
+        },
+        {
+          "company": "字节跳动",
+          "url": "https://jobs.bytedance.com/campus/position/7665183601352493365/detail",
+          "published_date": "2026-07-22",
+          "jd_id": "JD-57101B91"
+        },
+        {
+          "company": "京东",
+          "url": "https://campus.jd.com/api/wx/position/detail/9049",
+          "published_date": "2026-07-23",
+          "jd_id": "JD-A186207A"
+        }
+      ]
+    }
+  ],
+  "eligible_count": 7,
+  "target_count": 28,
+  "note": "候选覆盖不代表已有有效岗位画像；6份/3家为运营门槛，不证明市场代表性。"
+}

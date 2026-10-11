@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-11",
+  "pipeline_version": "auto-evidence-3",
+  "schema_version": "0.3.0",
+  "real_model": true,
+  "model": "step-3.7-flash",
+  "production_db_used": false,
+  "states": {
+    "ready": 4,
+    "review": 0,
+    "excluded": 1,
+    "fetch_failed": 1
+  },
+  "extraction_attempts": 4,
+  "semantic_checks": 4,
+  "semantic_claims": 70,
+  "unit_tests_passed": 37,
+  "browser_check_passed": true,
+  "samples": [
+    {
+      "key": "baidu-growth",
+      "name": "百度：用户增长数据分析实习",
+      "url": "https://talent.baidu.com/jobs/detail/INTERN/a361b79c-86e5-4295-8bdd-a1f9c9988a5d",
+      "state": "ready",
+      "family": "数据分析",
+      "stage": "实习",
+      "published_date": "2026-03-12",
+      "updated_date": "2026-07-21",
+      "requirements": 9,
+      "extraction_attempts": 1,
+      "semantic_checks": 1,
+      "processing_seconds": 43.689,
+      "collection_seconds": 0.73,
+      "reasons": []
+    },
+    {
+      "key": "baidu-content",
+      "name": "百度：内容生态数据分析实习",
+      "url": "https://talent.baidu.com/jobs/detail/INTERN/6ad745b1-f7fd-4e0e-8307-d221b6bf298c",
+      "state": "ready",
+      "family": "数据分析",
+      "stage": "实习",
+      "published_date": "2024-07-08",
+      "updated_date": "2026-07-21",
+      "requirements": 6,
+      "extraction_attempts": 1,
+      "semantic_checks": 1,
+      "processing_seconds": 40.129,
+      "collection_seconds": 0.73,
+      "reasons": []
+    },
+    {
+      "key": "baidu-ai-data",
+      "name": "百度：AI数据产品实习（语音方向）",
+      "url": "https://talent.baidu.com/jobs/detail/INTERN/6f945b3c-2223-4b20-aeb5-aae1953dbe46",
+      "state": "ready",
+      "family": "产品经理",
+      "stage": "实习",
+      "published_date": "2026-07-09",
+      "updated_date": "2026-07-21",
+      "requirements": 9,
+      "extraction_attempts": 1,
+      "semantic_checks": 1,
+      "processing_seconds": 49.795,
+      "collection_seconds": 0.731,
+      "reasons": []
+    },
+    {
+      "key": "baidu-ai-campus",
+      "name": "百度：AI产品经理校招",
+      "url": "https://talent.baidu.com/jobs/detail/GRADUATE/423c0fa3-a0f3-4def-a882-7466d3685b79",
+      "state": "ready",
+      "family": "产品经理",
+      "stage": "校招",
+      "published_date": "2026-07-08",
+      "updated_date": "2026-07-21",
+      "requirements": 7,
+      "extraction_attempts": 1,
+      "semantic_checks": 1,
+      "processing_seconds": 38.675,
+      "collection_seconds": 0.269,
+      "reasons": []
+    },
+    {
+      "key": "baidu-supplier-social",
+      "name": "百度：服务商质量管理（社招边界）",
+      "url": "https://talent.baidu.com/jobs/detail/SOCIAL/555f0cc0-8c19-4a95-98a1-59b520bde900",
+      "state": "excluded",
+      "family": null,
+      "stage": "社招",
+      "published_date": "2026-09-28",
+      "updated_date": "2026-09-28",
+      "requirements": 0,
+      "extraction_attempts": 0,
+      "semantic_checks": 0,
+      "processing_seconds": 0.007,
+      "collection_seconds": 0.304,
+      "reasons": [
+        "官方来源明确为社招，不在首批范围"
+      ]
+    },
+    {
+      "key": "dell-supply-campus",
+      "name": "戴尔：全球供应链管理校招",
+      "url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/job/D12257",
+      "state": "fetch_failed",
+      "family": null,
+      "stage": null,
+      "published_date": null,
+      "updated_date": null,
+      "requirements": 0,
+      "extraction_attempts": 0,
+      "semantic_checks": 0,
+      "processing_seconds": null,
+      "collection_seconds": 31.826,
+      "reasons": [
+        "静态正文不足（4字符）；浏览器采集未取得有效正文：渲染后的正文仍过短"
+      ]
+    }
+  ]
+}

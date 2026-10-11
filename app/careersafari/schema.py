@@ -19,7 +19,7 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
-SCHEMA_VERSION = "0.1.0"
+SCHEMA_VERSION = "0.3.0"
 
 # ---------------------------------------------------------------- 证据分级
 
@@ -46,14 +46,18 @@ class HardConstraint(BaseModel):
 
 
 class SkillItem(BaseModel):
-    """一项能力。verified 区分「有证据」与「仅自述」——这是本产品与通用聊天的分界线。"""
+    """能力来源与材料状态分开；提供作品不等于已验证掌握。"""
 
     name: str
     column: str = "transferable"   # transferable（通用可迁移）| job_specific（目标岗位相关）
     self_rating: Optional[int] = None          # 1-5，用户自评
-    verified: bool = False                     # 是否有可验证证据
+    verified: bool = False                     # 兼容旧快照；当前表单不允许设为已验证
     evidence_text: str = ""                    # 「哪门课 / 哪个项目 / 哪段实习」
     evidence: EvidenceType = EvidenceType.UNVERIFIED
+    evidence_state: str = "course_or_self_report"
+    evidence_source: str = "self_report"
+    artifact_reference: str = ""
+    confirmed_gap: bool = False
 
     @field_validator("evidence")
     @classmethod
@@ -68,7 +72,7 @@ class InterestProfile(BaseModel):
     riasec_scores: Dict[str, int] = Field(default_factory=dict)  # R/I/A/S/E/C -> 0-100
     riasec_code: str = ""                    # 如 "IAS"，取前三
     mbti_hint: str = ""                      # 可选；界面必须标注信度局限
-    mbti_caveat_shown: bool = False          # 是否已向用户展示「重测信度约五成」提示
+    mbti_caveat_shown: bool = False          # 是否已向用户展示用途与局限提示
 
 
 class ValueWeights(BaseModel):
@@ -111,9 +115,8 @@ class Requirement(BaseModel):
     """
     一条原子化需求。
 
-    原子化判据（关键）：**拆到「能否被单独验证」为止**。
-    「熟悉 SQL」不是原子项（不可验证）；「能独立写多表 JOIN 查询」才是。
-    这个判据直接决定后端匹配能不能做——拿不可验证的条目比对用户自评，比出来的数是假的。
+    只拆分原文已有要求，保留熟悉/了解/优先等程度；不能扩写成更具体的技能。
+    验证能力的实践任务应另行设计，不得冒充 JD 原始要求。
     """
 
     req_id: str                       # POS-0001-REQ-01
@@ -121,6 +124,7 @@ class Requirement(BaseModel):
     category: str                     # 学历 / 专业 / 证书 / 技能 / 工具 / 经验 / 软能力
     text: str                         # 可单独验证的需求描述
     evidence_span: str = ""           # 对应 JD 原文哪一句 —— 没有这一列就无法验证 LLM 有没有添油加醋
+    evidence_spans: List[str] = Field(default_factory=list)
     confidence: EvidenceType = EvidenceType.EXTERNAL
     team_confidence: Optional[float] = None   # confidence=team 时必填，0-1
 
@@ -136,6 +140,7 @@ class Position(BaseModel):
     stressors: List[str] = Field(default_factory=list)       # 压力来源（9/23 会议明确要求）
     requirements: List[Requirement] = Field(default_factory=list)
     source_jd_ids: List[str] = Field(default_factory=list)
+    admission: Dict[str, Any] = Field(default_factory=dict)
     schema_version: str = SCHEMA_VERSION
 
 
@@ -157,9 +162,15 @@ class JdRecord(BaseModel):
 
 
 class JdExtraction(BaseModel):
-    """LLM 从 JD 原文抽出的结构化结果。人工确认后才变成 Position。"""
+    """LLM 结构化结果；统一自动审查通过后才变成 Position。"""
 
     company: str = ""
+    company_span: str = ""
+    published_date: str = ""
+    published_date_span: str = ""
+    job_type_span: str = ""
+    family: str = ""
+    family_span: str = ""
     title: str = ""
     location: str = ""
     job_type: str = ""                 # 校招 / 实习 / 社招

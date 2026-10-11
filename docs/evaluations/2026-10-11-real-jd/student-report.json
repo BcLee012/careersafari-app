@@ -1,0 +1,33 @@
+{
+  "synthetic_profile": true,
+  "answers": {
+    "persona": "研一 · 方向未定型",
+    "major": "管理科学与工程",
+    "grade": "研一",
+    "direction_interest": "大数据分析与决策",
+    "target_stage": "实习",
+    "skills": [
+      {
+        "name": "SQL 取数",
+        "column": "transferable",
+        "evidence_source": "self_report",
+        "evidence_text": "仅用于测试：学习过 SQL；没有提交作品。"
+      }
+    ]
+  },
+  "response": {
+    "ok": true,
+    "advice": {
+      "headline": "岗位知识库还是空的——先去「岗位知识库」页沉淀几条 JD，否则没有任何可比对的对象。",
+      "positions": [],
+      "learning_plan": [],
+      "two_week_actions": [],
+      "evidence_strength": {
+        "level": "无法评估",
+        "note": "无比对对象"
+      },
+      "excluded": [],
+      "generated_by": "deterministic"
+    }
+  }
+}
